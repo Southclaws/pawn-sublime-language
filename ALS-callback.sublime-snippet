@@ -1,0 +1,25 @@
+<snippet>
+	<description>ALS Callback</description>
+	<content><![CDATA[
+public ${2:Function}(${3:Args})
+{
+	#if defined ${1:Prefix}_${2:Function}
+		return ${1:Prefix}_${2:Function}(${3:Args});
+	#else
+		return 1;
+	#endif
+}
+#if defined _ALS_${2:Function}
+	#undef ${2:Function}
+#else
+	#define _ALS_${2:Function}
+#endif
+ 
+#define ${2:Function} ${1:Prefix}_${2:Function}
+#if defined ${1:Prefix}_${2:Function}
+	forward ${1:Prefix}_${2:Function}(${3:Args});
+#endif
+]]></content>
+	<tabTrigger>ALS</tabTrigger>
+	<scope>source.pawn</scope>
+</snippet>

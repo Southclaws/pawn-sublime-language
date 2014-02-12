@@ -43,75 +43,75 @@
 			<key>match</key>
 			<string>\b(friend|explicit|virtual)\b</string>
 			<key>name</key>
-			<string>storage.modifier.c++</string>
+			<string>storage.modifier.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(private:|protected:|public:)</string>
 			<key>name</key>
-			<string>storage.modifier.c++</string>
+			<string>storage.modifier.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(catch|operator|try|throw|using)\b</string>
 			<key>name</key>
-			<string>keyword.control.c++</string>
+			<string>keyword.control.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bdelete\b(\s*\[\])?|\bnew\b(?!])</string>
 			<key>name</key>
-			<string>keyword.control.c++</string>
+			<string>keyword.control.pawn</string>
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>common C++ instance var naming idiom -- fMemberName</string>
+			<string>common pawn instance var naming idiom -- fMemberName</string>
 			<key>match</key>
 			<string>\b(f|m)[A-Z]\w*\b</string>
 			<key>name</key>
-			<string>variable.other.readwrite.member.c++</string>
+			<string>variable.other.readwrite.member.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bthis\b</string>
 			<key>name</key>
-			<string>variable.language.c++</string>
+			<string>variable.language.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bnullptr\b</string>
 			<key>name</key>
-			<string>constant.language.c++</string>
+			<string>constant.language.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\btemplate\b\s*</string>
 			<key>name</key>
-			<string>storage.type.template.c++</string>
+			<string>storage.type.template.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(const_cast|dynamic_cast|reinterpret_cast|static_cast)\b\s*</string>
 			<key>name</key>
-			<string>keyword.operator.cast.c++</string>
+			<string>keyword.operator.cast.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(and|and_eq|bitand|bitor|compl|not|not_eq|or|or_eq|typeid|xor|xor_eq)\b</string>
 			<key>name</key>
-			<string>keyword.operator.c++</string>
+			<string>keyword.operator.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(class|wchar_t|nullptr_t)\b</string>
 			<key>name</key>
-			<string>storage.type.c++</string>
+			<string>storage.type.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(export|mutable|typename)\b</string>
 			<key>name</key>
-			<string>storage.modifier.c++</string>
+			<string>storage.modifier.pawn</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -127,7 +127,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.c++</string>
+					<string>entity.name.function.pawn</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -146,7 +146,7 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.function.destructor.c++</string>
+			<string>meta.function.destructor.pawn</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -169,7 +169,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.c++</string>
+					<string>entity.name.function.pawn</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -188,7 +188,7 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.function.destructor.prototype.c++</string>
+			<string>meta.function.destructor.prototype.pawn</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -207,7 +207,7 @@
 			<key>end</key>
 			<string>&gt;</string>
 			<key>name</key>
-			<string>meta.angle-brackets.c++</string>
+			<string>meta.angle-brackets.pawn</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -227,7 +227,7 @@
 			<key>end</key>
 			<string>\}</string>
 			<key>name</key>
-			<string>meta.block.c++</string>
+			<string>meta.block.pawn</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -275,7 +275,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.function.c++</string>
+							<string>entity.name.function.pawn</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -294,7 +294,7 @@
 						</dict>
 					</dict>
 					<key>name</key>
-					<string>meta.function.constructor.c++</string>
+					<string>meta.function.constructor.pawn</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -321,7 +321,7 @@
 					<key>end</key>
 					<string>(?=\{)</string>
 					<key>name</key>
-					<string>meta.function.constructor.initializer-list.c++</string>
+					<string>meta.function.constructor.initializer-list.pawn</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -342,13 +342,13 @@
 					<key>end</key>
 					<string>(?&lt;=\})</string>
 					<key>name</key>
-					<string>meta.namespace-block.c++</string>
+					<string>meta.namespace-block.pawn</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.control.c++</string>
+							<string>keyword.control.pawn</string>
 						</dict>
 					</dict>
 					<key>patterns</key>
@@ -380,18 +380,18 @@
 					<key>match</key>
 					<string>\b(class|struct)\s+([_A-Za-z][_A-Za-z0-9]*\b);</string>
 					<key>name</key>
-					<string>meta.class-struct-block.c++</string>
+					<string>meta.class-struct-block.pawn</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.c++</string>
+							<string>storage.type.pawn</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.forward-decl.c++</string>
+							<string>entity.name.type.forward-decl.pawn</string>
 						</dict>
 					</dict>
 				</dict>
@@ -403,18 +403,18 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.c++</string>
+							<string>storage.type.pawn</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.c++</string>
+							<string>entity.name.type.pawn</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>(?&lt;=\})|(?=(;|,|\(|\)|&gt;|\[|\]))</string>
 					<key>name</key>
-					<string>meta.class-struct-block.c++</string>
+					<string>meta.class-struct-block.pawn</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -427,14 +427,14 @@
 							<key>end</key>
 							<string>(?=\{)</string>
 							<key>name</key>
-							<string>meta.class-struct-block.base-classes.c++</string>
+							<string>meta.class-struct-block.base-classes.pawn</string>
 							<key>patterns</key>
 							<array>
 								<dict>
 									<key>match</key>
 									<string>\b(private|protected|public|virtual)</string>
 									<key>name</key>
-									<string>storage.modifier.c++</string>
+									<string>storage.modifier.pawn</string>
 								</dict>
 								<dict>
 									<key>begin</key>
@@ -459,7 +459,7 @@
 								<key>1</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.definition.scope.c++</string>
+									<string>punctuation.definition.scope.pawn</string>
 								</dict>
 							</dict>
 							<key>end</key>
@@ -469,12 +469,12 @@
 								<key>1</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.definition.invalid.c++</string>
+									<string>punctuation.definition.invalid.pawn</string>
 								</dict>
 								<key>2</key>
 								<dict>
 									<key>name</key>
-									<string>invalid.illegal.you-forgot-semicolon.c++</string>
+									<string>invalid.illegal.you-forgot-semicolon.pawn</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -507,13 +507,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>storage.modifier.c++</string>
+							<string>storage.modifier.pawn</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>(?&lt;=\})|(?=\w)</string>
 					<key>name</key>
-					<string>meta.extern-block.c++</string>
+					<string>meta.extern-block.pawn</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -543,7 +543,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.c++</string>
+	<string>source.pawn</string>
 	<key>uuid</key>
 	<string>26251B18-6B1D-11D9-AFDB-000D93589AF6</string>
 </dict>

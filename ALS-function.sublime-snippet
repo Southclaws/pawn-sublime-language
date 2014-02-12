@@ -1,0 +1,19 @@
+<snippet>
+	<description>ALS Function</description>
+	<content><![CDATA[
+stock ${1:Prefix}_${2:Function}(${3:args})
+{
+	${2}(${3});
+	return 1;
+}
+#if defined _ALS_${2}
+    #undef ${2}
+#else
+    #define _ALS_${2}
+#endif
+ 
+#define ${2} ${1}_${2}
+]]></content>
+	<tabTrigger>ALS</tabTrigger>
+	<scope>source.pawn</scope>
+</snippet>
