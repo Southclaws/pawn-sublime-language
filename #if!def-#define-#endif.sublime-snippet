@@ -1,5 +1,5 @@
 <snippet>
-	<description>#ifndef … #define … #endif</description>
+	<description>#if !defined … #define … #endif</description>
     <content><![CDATA[#if !defined ${1/([A-Za-z0-9_]+).*/$1/}
 	#define ${1:SYMBOL} ${2:value}
 #endif]]></content>
