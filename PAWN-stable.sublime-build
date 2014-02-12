@@ -1,0 +1,5 @@
+{
+	"cmd": ["pawncc.exe", "$file", "-o$file_path\\\\$file_base_name", "-;+", "-(+", "-d3"],
+	"file_regex": "(.*?)[(]([0-9]*)[)]",
+	"working_dir": "E:/Games/Projects/SA-MP/pawnostable"
+}
