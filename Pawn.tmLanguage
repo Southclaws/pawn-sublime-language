@@ -2,17 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>comment</key>
-	<string>I don't think anyone uses .hp. .cp tends to be paired with .h. (I could be wrong. :) -- chris</string>
-
 	<key>fileTypes</key>
 	<array>
 		<string>pwn</string>
 		<string>inc</string>
 	</array>
-
-	<key>firstLineMatch</key>
-	<string>-\*- C\+\+ -\*-</string>
 
 	<key>foldingStartMarker</key>
 	<string>(?x)
@@ -22,9 +16,6 @@
 
 	<key>foldingStopMarker</key>
 	<string>(?&lt;!\*)\*\*/|^\s*\}</string>
-
-	<key>keyEquivalent</key>
-	<string>^~C</string>
 
 	<key>name</key>
 	<string>Pawn</string>
@@ -41,71 +32,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(friend|explicit|virtual)\b</string>
-			<key>name</key>
-			<string>storage.modifier.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(private:|protected:|public:)</string>
-			<key>name</key>
-			<string>storage.modifier.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(catch|operator|try|throw|using)\b</string>
-			<key>name</key>
-			<string>keyword.control.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\bdelete\b(\s*\[\])?|\bnew\b(?!])</string>
-			<key>name</key>
-			<string>keyword.control.pawn</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>common pawn instance var naming idiom -- fMemberName</string>
-			<key>match</key>
 			<string>\b(f|m)[A-Z]\w*\b</string>
 			<key>name</key>
 			<string>variable.other.readwrite.member.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\bthis\b</string>
-			<key>name</key>
-			<string>variable.language.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\bnullptr\b</string>
-			<key>name</key>
-			<string>constant.language.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\btemplate\b\s*</string>
-			<key>name</key>
-			<string>storage.type.template.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(const_cast|dynamic_cast|reinterpret_cast|static_cast)\b\s*</string>
-			<key>name</key>
-			<string>keyword.operator.cast.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(and|and_eq|bitand|bitor|compl|not|not_eq|or|or_eq|typeid|xor|xor_eq)\b</string>
-			<key>name</key>
-			<string>keyword.operator.pawn</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(class|wchar_t|nullptr_t)\b</string>
-			<key>name</key>
-			<string>storage.type.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -430,12 +359,6 @@
 							<string>meta.class-struct-block.base-classes.pawn</string>
 							<key>patterns</key>
 							<array>
-								<dict>
-									<key>match</key>
-									<string>\b(private|protected|public|virtual)</string>
-									<key>name</key>
-									<string>storage.modifier.pawn</string>
-								</dict>
 								<dict>
 									<key>begin</key>
 									<string>[_A-Za-z][_A-Za-z0-9]*\b</string>

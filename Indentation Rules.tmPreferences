@@ -5,20 +5,20 @@
 	<key>name</key>
 	<string>Indentation Rules</string>
 	<key>scope</key>
-	<string>source.pwn, source.inc</string>
+	<string>source.pawn</string>
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
 		<string>(?x)
 	    ^ (.*\*/)? \s* \} .* $
-	|   ^ \s* (public|private|protected): \s* $
-	|   ^ \s* @(public|private|protected) \s* $
+	|   ^ \s* (public|stock|static): \s* $
+	|   ^ \s* @(public|stock|static) \s* $
 	</string>
 		<key>increaseIndentPattern</key>
 		<string>(?x)
 	    ^ .* \{ [^}"']* $
-	|   ^ \s* (public|private|protected): \s* $
-	|   ^ \s* @(public|private|protected) \s* $
+	|   ^ \s* (public|stock|static): \s* $
+	|   ^ \s* @(public|stock|static) \s* $
 	</string>
 
 		<key>bracketIndentNextLinePattern</key>
