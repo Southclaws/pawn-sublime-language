@@ -32,15 +32,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(f|m)[A-Z]\w*\b</string>
+			<string>\bdelete\b(\s*\[\])?|\bnew\b(?!])</string>
 			<key>name</key>
-			<string>variable.other.readwrite.member.pawn</string>
+			<string>keyword.control.pawn</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(export|mutable|typename)\b</string>
+			<string>\b(f|m)[A-Z]\w*\b</string>
 			<key>name</key>
-			<string>storage.modifier.pawn</string>
+			<string>variable.other.readwrite.member.pawn</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -129,6 +129,7 @@
 	</array>
 	<key>repository</key>
 	<dict>
+
 		<key>angle_brackets</key>
 		<dict>
 			<key>begin</key>
@@ -149,6 +150,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>block</key>
 		<dict>
 			<key>begin</key>
@@ -176,7 +178,7 @@
 					<key>match</key>
 					<string>(?x)
     				(
-    					(?!while|for|do|if|else|switch|catch|enumerate|return|r?iterate)(?: \b[A-Za-z_][A-Za-z0-9_]*+\b | :: )*+                  # actual name
+    					(?!while|for|do|if|else|switch|enumerate|return|r?iterate)(?: \b[A-Za-z_][A-Za-z0-9_]*+\b | :: )*+                  # actual name
     				)
     				 \s*(\()</string>
 					<key>name</key>
@@ -188,6 +190,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>constructor</key>
 		<dict>
 			<key>patterns</key>
@@ -238,7 +241,7 @@
     				(:)                            # begin-of-line
     				((?=\s*[A-Za-z_][A-Za-z0-9_:]* # actual name
     				 \s*(\()))                      # start bracket or end-of-line
-    			</string>
+    				</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -261,6 +264,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>special_block</key>
 		<dict>
 			<key>patterns</key>
