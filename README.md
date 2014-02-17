@@ -27,6 +27,7 @@ Highlight native SA:MP tags:
 - File
 - PlayerText3D
 - Text
+- PlayerText
 - Text3D
 - Menu
 - DB
