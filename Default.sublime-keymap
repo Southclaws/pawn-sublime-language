@@ -1,0 +1,8 @@
+[
+	{ "keys": ["f3"], "command": "find_next" },
+	{ "keys": ["f4"], "command": "find_prev" },
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "output.exec"} },
+	{ "keys": ["f5"], "command": "build" },
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+]
