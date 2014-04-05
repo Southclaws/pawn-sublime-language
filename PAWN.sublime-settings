@@ -2,6 +2,7 @@
 	"name": "PAWN",
 	"scopeName": "source.syntax_name",
 	"fileTypes": ["pwn", "inc", "own"],
+	"extensions": ["pwn", "inc", "own"],
 	"patterns": [],
 	"uuid": "6f573899-c7ce-4231-a01a-273da9acb675"
 }
