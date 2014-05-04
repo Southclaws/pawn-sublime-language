@@ -1,0 +1,22 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "strlen", "contents": "strlen(${1:string})" },
+		{ "trigger": "strpack", "contents": "strpack(${1:dest}, ${2:source}, ${3:maxlength})" },
+		{ "trigger": "strunpack", "contents": "strunpack(${1:dest}, ${2:source}, ${3:maxlength})" },
+		{ "trigger": "strcat", "contents": "strcat(${1:dest}, ${2:source}, ${3:maxlength})" },
+		{ "trigger": "strmid", "contents": "strmid(${1:dest}, ${2:source}, ${3:start}, ${4:end}, ${5:maxlength})" },
+		{ "trigger": "strins", "contents": "strins(${1:string}, ${2:substr}, ${3:pos}, ${4:maxlength})" },
+		{ "trigger": "strdel", "contents": "strdel(${1:string}, ${2:start}, ${3:end})" },
+		{ "trigger": "strcmp", "contents": "strcmp(${1:string1}, ${2:string2}, ${3:ignorecase}, ${4:length})" },
+		{ "trigger": "strfind", "contents": "strfind(${1:string}, ${2:sub}, ${3:ignorecase}, ${4:pos})" },
+		{ "trigger": "strval", "contents": "strval(${1:string})" },
+		{ "trigger": "valstr", "contents": "valstr(${1:dest}, ${2:value}, ${3:pack})" },
+		{ "trigger": "ispacked", "contents": "ispacked(${1:string})" },
+		{ "trigger": "uudecode", "contents": "uudecode(${1:dest}, ${2:source}, ${3:maxlength})" },
+		{ "trigger": "uuencode", "contents": "uuencode(${1:dest}, ${2:source}, ${3:numbytes}, ${4:maxlength})" },
+		{ "trigger": "memcpy", "contents": "memcpy(${1:dest}, ${2:source}, ${3:index}, ${4:numbytes}, ${5:maxlength})" },
+		"pawn"
+	]
+}

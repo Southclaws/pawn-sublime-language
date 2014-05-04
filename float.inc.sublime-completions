@@ -1,0 +1,31 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "float", "contents": "float(${1:value})" },
+		{ "trigger": "floatstr", "contents": "floatstr(${1:string[]})" },
+		{ "trigger": "floatmul", "contents": "floatmul(${1:oper1}, ${2:oper2})" },
+		{ "trigger": "floatdiv", "contents": "floatdiv(${1:dividend}, ${2:divisor})" },
+		{ "trigger": "floatadd", "contents": "floatadd(${1:oper1}, ${2:oper2})" },
+		{ "trigger": "floatsub", "contents": "floatsub(${1:oper1}, ${2:oper2})" },
+		{ "trigger": "floatfract", "contents": "floatfract(${1:value})" },
+		{ "trigger": "floatround", "contents": "floatround(${1:value}, ${2:method})" },
+		{ "trigger": "floatcmp", "contents": "floatcmp(${1:oper1}, ${2:oper2})" },
+		{ "trigger": "floatsqroot", "contents": "floatsqroot(${1:value})" },
+		{ "trigger": "floatpower", "contents": "floatpower(${1:value}, ${2:exponent})" },
+		{ "trigger": "floatlog", "contents": "floatlog(${1:value}, ${2:base})" },
+		{ "trigger": "floatsin", "contents": "floatsin(${1:value}, ${2:mode})" },
+		{ "trigger": "floatcos", "contents": "floatcos(${1:value}, ${2:mode})" },
+		{ "trigger": "floattan", "contents": "floattan(${1:value}, ${2:mode})" },
+		{ "trigger": "floatabs", "contents": "floatabs(${1:value})" },
+		"floatround_round",
+		"floatround_floor",
+		"floatround_ceil",
+		"floatround_tozero",
+		"floatround_unbiased",
+		"radian",
+		"degrees",
+		"grades",
+		"pawn"
+	]
+}

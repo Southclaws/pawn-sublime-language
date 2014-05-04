@@ -1,0 +1,16 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "sscanf", "contents": "sscanf(${1:data}, ${2:format}, ${3:args})" },
+		{ "trigger": "unformat", "contents": "unformat(${1:data}, ${2:format}, ${3:args})" },
+		{ "trigger": "SSCANF_Option", "contents": "SSCANF_Option(${1:name}, ${2:value})" },
+		"SSCANF_QUIET",
+		"OLD_DEFAULT_NAME",
+		"MATCH_NAME_PARTIAL",
+		"CELLMIN_ON_MATCHES",
+		"OLD_DEFAULT_KUSTOM",
+		"OLD_DEFAULT_CUSTOM",
+		"pawn"
+	]
+}
