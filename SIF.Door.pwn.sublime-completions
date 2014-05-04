@@ -1,0 +1,31 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "CreateDoor", "contents": "CreateDoor(${1:model}, ${2:buttonids}, ${3:px}, ${4:py}, ${5:pz}, ${6:rx}, ${7:ry}, ${8:rz}, ${9:mpx}, ${10:mpy}, ${11:mpz}, ${12:mrx}, ${13:mry}, ${14:mrz}, ${15:movespeed}, ${16:closedelay}, ${17:maxbuttons}, ${		{ "trigger": "DestroyDoor", "contents": "DestroyDoor(${1:doorid})" },
+		{ "trigger": "IsValidDOor", "contents": "IsValidDOor(${1:doorid})" },
+		{ "trigger": "GetDoorObjectID", "contents": "GetDoorObjectID(${1:doorid})" },
+		{ "trigger": "GetDoorModel", "contents": "GetDoorModel(${1:doorid})" },
+		{ "trigger": "SetDoorModel", "contents": "SetDoorModel(${1:doorid}, ${2:model})" },
+		{ "trigger": "GetDoorButton", "contents": "GetDoorButton(${1:doorid}, ${2:slot})" },
+		{ "trigger": "GetDoorButtonCount", "contents": "GetDoorButtonCount(${1:doorid})" },
+		{ "trigger": "GetDoorCloseDelay", "contents": "GetDoorCloseDelay(${1:doorid})" },
+		{ "trigger": "SetDoorCloseDelay", "contents": "SetDoorCloseDelay(${1:doorid}, ${2:closedelay})" },
+		{ "trigger": "GetDoorMoveSpeed", "contents": "GetDoorMoveSpeed(${1:doorid})" },
+		{ "trigger": "SetDoorMoveSpeed", "contents": "SetDoorMoveSpeed(${1:doorid}, ${2:movespeed})" },
+		{ "trigger": "GetDoorMoveSound", "contents": "GetDoorMoveSound(${1:doorid})" },
+		{ "trigger": "SetDoorMoveSound", "contents": "SetDoorMoveSound(${1:doorid}, ${2:movesound})" },
+		{ "trigger": "GetDoorStopSound", "contents": "GetDoorStopSound(${1:doorid})" },
+		{ "trigger": "SetDoorStopSound", "contents": "SetDoorStopSound(${1:doorid}, ${2:stopsound})" },
+		{ "trigger": "GetDoorPos", "contents": "GetDoorPos(${1:doorid}, ${2:&x}, ${3:&y}, ${4:&z})" },
+		{ "trigger": "SetDoorPos", "contents": "SetDoorPos(${1:doorid}, ${2:x}, ${3:y}, ${4:z})" },
+		{ "trigger": "GetDoorRot", "contents": "GetDoorRot(${1:doorid}, ${2:&rx}, ${3:&ry}, ${4:&rz})" },
+		{ "trigger": "SetDoorRot", "contents": "SetDoorRot(${1:doorid}, ${2:rx}, ${3:ry}, ${4:rz})" },
+		{ "trigger": "GetDoorMovePos", "contents": "GetDoorMovePos(${1:doorid}, ${2:&x}, ${3:&y}, ${4:&z})" },
+		{ "trigger": "SetDoorMovePos", "contents": "SetDoorMovePos(${1:doorid}, ${2:x}, ${3:y}, ${4:z})" },
+		{ "trigger": "GetDoorMoveRot", "contents": "GetDoorMoveRot(${1:doorid}, ${2:&rx}, ${3:&ry}, ${4:&rz})" },
+		{ "trigger": "SetDoorMoveRot", "contents": "SetDoorMoveRot(${1:doorid}, ${2:rx}, ${3:ry}, ${4:rz})" },
+		{ "trigger": "GetDoorState", "contents": "GetDoorState(${1:doorid})" },
+		"pawn"
+	]
+}

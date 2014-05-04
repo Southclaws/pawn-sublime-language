@@ -1,0 +1,17 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "IsPlayerInPlayerArea", "contents": "IsPlayerInPlayerArea(${1:playerid}, ${2:targetid})" },
+		{ "trigger": "ShowActionText", "contents": "ShowActionText(${1:playerid}, ${2:message}, ${3:time}, ${4:width})" },
+		{ "trigger": "HideActionText", "contents": "HideActionText(${1:playerid})" },
+		{ "trigger": "IsPlayerViewingActionText", "contents": "IsPlayerViewingActionText(${1:playerid})" },
+		{ "trigger": "sif_absoluteangle", "contents": "sif_absoluteangle(${1:angle})" },
+		{ "trigger": "sif_GetAngleToPoint", "contents": "sif_GetAngleToPoint(${1:fPointX}, ${2:fPointY}, ${3:fDestX}, ${4:fDestY})" },
+		{ "trigger": "sif_Distance", "contents": "sif_Distance(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${6:z2})" },
+		{ "trigger": "sif_IsIdleAnim", "contents": "sif_IsIdleAnim(${1:animidx})" },
+		{ "trigger": "OnPlayerEnterPlayerArea", "contents": "OnPlayerEnterPlayerArea(${1:playerid}, ${2:targetid})" },
+		{ "trigger": "OnPlayerLeavePlayerArea", "contents": "OnPlayerLeavePlayerArea(${1:playerid}, ${2:targetid})" },
+		"pawn"
+	]
+}

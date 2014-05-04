@@ -1,0 +1,20 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "sif_debug_level", "contents": "sif_debug_level(${1:level})" },
+		{ "trigger": "sif_debug_plevel", "contents": "sif_debug_plevel(${1:playerid}, ${2:level})" },
+		{ "trigger": "sif_debug", "contents": "sif_debug(${1:level}, ${2:msg}, ${3:playerid})" },
+		"SIF_DEBUG_LEVEL_NONE",
+		"SIF_DEBUG_LEVEL_CALLBACKS",
+		"SIF_DEBUG_LEVEL_CALLBACKS_DEEP",
+		"SIF_DEBUG_LEVEL_CORE",
+		"SIF_DEBUG_LEVEL_CORE_DEEP",
+		"SIF_DEBUG_LEVEL_INTERNAL",
+		"SIF_DEBUG_LEVEL_INTERNAL_DEEP",
+		"SIF_DEBUG_LEVEL_INTERFACE",
+		"SIF_DEBUG_LEVEL_INTERFACE_DEEP",
+		"SIF_DEBUG_LEVEL_LOOPS",
+		"pawn"
+	]
+}

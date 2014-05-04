@@ -1,0 +1,19 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "DefineDebugLabelType", "contents": "DefineDebugLabelType(${1:name}, ${2:colour})" },
+		{ "trigger": "CreateDebugLabel", "contents": "CreateDebugLabel(${1:type}, ${2:entityid}, ${3:x}, ${4:y}, ${5:z}, ${6:string}, ${7:worldid}, ${8:interiorid})" },
+		{ "trigger": "DestroyDebugLabel", "contents": "DestroyDebugLabel(${1:labelid})" },
+		{ "trigger": "ShowDebugLabelsForPlayer", "contents": "ShowDebugLabelsForPlayer(${1:playerid}, ${2:type})" },
+		{ "trigger": "ShowAllDebugLabelsForPlayer", "contents": "ShowAllDebugLabelsForPlayer(${1:playerid})" },
+		{ "trigger": "HideDebugLabelsForPlayer", "contents": "HideDebugLabelsForPlayer(${1:playerid}, ${2:type})" },
+		{ "trigger": "HideAllDebugLabelsForPlayer", "contents": "HideAllDebugLabelsForPlayer(${1:playerid})" },
+		{ "trigger": "UpdateDebugLabelString", "contents": "UpdateDebugLabelString(${1:labelid}, ${2:string})" },
+		{ "trigger": "IsValidDebugLabel", "contents": "IsValidDebugLabel(${1:labelid})" },
+		{ "trigger": "SetDebugLabelPos", "contents": "SetDebugLabelPos(${1:labelid}, ${2:x}, ${3:y}, ${4:z})" },
+		{ "trigger": "IsPlayerToggledDebugLabels", "contents": "IsPlayerToggledDebugLabels(${1:playerid}, ${2:type})" },
+		{ "trigger": "IsPlayerToggledAllDebugLabels", "contents": "IsPlayerToggledAllDebugLabels(${1:playerid})" },
+		"pawn"
+	]
+}
