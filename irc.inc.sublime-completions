@@ -51,7 +51,6 @@
 		{ "trigger": "IRC_OnUserRequestCTCP", "contents": "IRC_OnUserRequestCTCP(${1:botid}, ${2:user}, ${3:host}, ${4:message})" },
 		{ "trigger": "IRC_OnUserReplyCTCP", "contents": "IRC_OnUserReplyCTCP(${1:botid}, ${2:user}, ${3:host}, ${4:message})" },
 		{ "trigger": "IRC_OnReceiveRaw", "contents": "IRC_OnReceiveRaw(${1:botid}, ${2:message})" },
-		{ "trigger": "IRCCMD", "contents": "IRCCMD:${1:cmd}(${2:botid}, ${3:recipient}, ${4:user}, ${5:host}, ${6:message})" },
 		"E_IRC_CONNECT_ATTEMPTS",
 		"E_IRC_CONNECT_DELAY",
 		"E_IRC_CONNECT_TIMEOUT",
