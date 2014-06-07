@@ -1,5 +1,5 @@
 {
-    "scope": "source.pawn - variable.other.pawn",
+    "scope": "source.pawn",
 
     "completions": [
 
@@ -9,7 +9,7 @@
 		{ "trigger": "FCNPC_OnDeath", "contents": "FCNPC_OnDeath(${1:npcid}, ${2:killerid[]})" },
 		{ "trigger": "FCNPC_OnReachDestination", "contents": "FCNPC_OnReachDestination(${1:npcid})" },
 		{ "trigger": "FCNPC_OnFinishPlayback", "contents": "FCNPC_OnFinishPlayback(${1:npcid})" },
-		{ "trigger": "FCNPC_OnTakeDamage", "contents": "FCNPC_OnTakeDamage(${1:npcid}, ${2:damagerid}, ${3:weaponid, ${4:bodypart}, ${5:health_loss})" },		
+		{ "trigger": "FCNPC_OnTakeDamage", "contents": "FCNPC_OnTakeDamage(${1:npcid}, ${2:damagerid}, ${3:weaponid, ${4:bodypart}, ${5:health_loss})" },
 		{ "trigger": "FCNPC_OnFinishNodePoint", "contents": "FCNPC_OnFinishNodePoint(${1:npcid}, ${2:point})" },
 		{ "trigger": "FCNPC_OnChangeNode", "contents": "FCNPC_OnChangeNode(${1:npcid}, ${2:nodeid})" },
 		{ "trigger": "FCNPC_OnFinishNode", "contents": "FCNPC_OnFinishNode(${1:npcid})" },

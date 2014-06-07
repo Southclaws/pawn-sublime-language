@@ -2,9 +2,12 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "sscanf", "contents": "sscanf(${1:data}, ${2:format}, ${3:args})" },
-		{ "trigger": "unformat", "contents": "unformat(${1:data}, ${2:format}, ${3:args})" },
-		{ "trigger": "SSCANF_Option", "contents": "SSCANF_Option(${1:name}, ${2:value})" },
+		{ "trigger": "sscanf", "contents": "sscanf(${1:data[]}, ${2:format[]}, ${3:{Float}, ${4:_}:...})" },
+		{ "trigger": "unformat", "contents": "unformat(${1:data[]}, ${2:format[]}, ${3:{Float}, ${4:_}:...})" },
+		{ "trigger": "SSCANF_Init", "contents": "SSCANF_Init(${1:players}, ${2:invalid}, ${3:len})" },
+		{ "trigger": "SSCANF_Join", "contents": "SSCANF_Join(${1:playerid}, ${2:name[]}, ${3:npc})" },
+		{ "trigger": "SSCANF_Leave", "contents": "SSCANF_Leave(${1:playerid})" },
+		{ "trigger": "SSCANF_Option", "contents": "SSCANF_Option(${1:name[]}, ${2:value})" },
 		"SSCANF_QUIET",
 		"OLD_DEFAULT_NAME",
 		"MATCH_NAME_PARTIAL",

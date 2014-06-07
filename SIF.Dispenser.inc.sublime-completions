@@ -2,9 +2,14 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "CreateDispenser", "contents": "CreateDispenser(${1:x}, ${2:y}, ${3:z}, ${4:rz}, ${5:type}, ${6:worldid}, ${7:interiorid})" },
+		{ "trigger": "CreateDispenser", "contents": "CreateDispenser(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:Float:rz}, ${5:DispenserType:type}, ${6:worldid = 0}, ${7:interiorid = 0})" },
 		{ "trigger": "DestroyDispenser", "contents": "DestroyDispenser(${1:id})" },
-		{ "trigger": "DefineDispenserType", "contents": "DefineDispenserType(${1:name}, ${2:type}, ${3:price})" },
+		{ "trigger": "DispenserType:DefineDispenserType", "contents": "DispenserType:DefineDispenserType(${1:name[]}, ${2:ItemType:type}, ${3:price})" },
+		{ "trigger": "OnPlayerUseDispenser", "contents": "OnPlayerUseDispenser(${1:playerid}, ${2:dispenserid})" },
+		"MAX_DISPENSER",
+		"MAX_DISPENSER_TYPE",
+		"INVALID_DISPENSER_TYPE",
+		"INVALID_DISPENSER_ID",
 		"pawn"
 	]
 }

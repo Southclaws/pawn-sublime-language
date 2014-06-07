@@ -2,8 +2,8 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "AddItemToInventory", "contents": "AddItemToInventory(${1:playerid}, ${2:itemid}, ${3:call})" },
-		{ "trigger": "RemoveItemFromInventory", "contents": "RemoveItemFromInventory(${1:playerid}, ${2:slotid}, ${3:call})" },
+		{ "trigger": "AddItemToInventory", "contents": "AddItemToInventory(${1:playerid}, ${2:itemid}, ${3:call = 1})" },
+		{ "trigger": "RemoveItemFromInventory", "contents": "RemoveItemFromInventory(${1:playerid}, ${2:slotid}, ${3:call = 1})" },
 		{ "trigger": "GetInventorySlotItem", "contents": "GetInventorySlotItem(${1:playerid}, ${2:slotid})" },
 		{ "trigger": "IsInventorySlotUsed", "contents": "IsInventorySlotUsed(${1:playerid}, ${2:slotid})" },
 		{ "trigger": "IsPlayerInventoryFull", "contents": "IsPlayerInventoryFull(${1:playerid})" },

@@ -4,8 +4,8 @@
 	[
 		{ "trigger": "DisplayPlayerInventory", "contents": "DisplayPlayerInventory(${1:playerid})" },
 		{ "trigger": "GetPlayerSelectedInventorySlot", "contents": "GetPlayerSelectedInventorySlot(${1:playerid})" },
-		{ "trigger": "AddInventoryListItem", "contents": "AddInventoryListItem(${1:playerid}, ${2:itemname})" },
-		{ "trigger": "AddInventoryOption", "contents": "AddInventoryOption(${1:playerid}, ${2:option})" },
+		{ "trigger": "AddInventoryListItem", "contents": "AddInventoryListItem(${1:playerid}, ${2:itemname[]})" },
+		{ "trigger": "AddInventoryOption", "contents": "AddInventoryOption(${1:playerid}, ${2:option[]})" },
 		{ "trigger": "GetInventoryListItems", "contents": "GetInventoryListItems(${1:playerid})" },
 		{ "trigger": "GetInventoryOptions", "contents": "GetInventoryOptions(${1:playerid})" },
 		{ "trigger": "GetInventoryListItemCount", "contents": "GetInventoryListItemCount(${1:playerid})" },
@@ -20,8 +20,6 @@
 		{ "trigger": "OnPlayerRemovedFromInventory", "contents": "OnPlayerRemovedFromInventory(${1:playerid}, ${2:slotid})" },
 		{ "trigger": "OnPlayerViewInventoryOpt", "contents": "OnPlayerViewInventoryOpt(${1:playerid})" },
 		{ "trigger": "OnPlayerSelectInventoryOpt", "contents": "OnPlayerSelectInventoryOpt(${1:playerid}, ${2:option})" },
-		"DIALOG_INVENTORY_LIST",
-		"DIALOG_INVENTORY_OPTIONS",
 		"pawn"
 	]
 }
