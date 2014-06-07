@@ -45,12 +45,12 @@
 		<dict>
 			<key>begin</key>
 			<string>(?x)
-    				(?:  ^                                 # begin-of-line
-    				  |  (?: (?&lt;!else|new|=) )             #  or word + space before name
-    				)
-    				((?:[A-Za-z_][A-Za-z0-9_]*::)*+~[A-Za-z_][A-Za-z0-9_]*) # actual name
-    				 \s*(\()                           # start bracket or end-of-line
-    			</string>
+					(?:  ^                                 # begin-of-line
+					  |  (?: (?&lt;!else|new|=) )             #  or word + space before name
+					)
+					((?:[A-Za-z_][A-Za-z0-9_]*::)*+~[A-Za-z_][A-Za-z0-9_]*) # actual name
+					 \s*(\()                           # start bracket or end-of-line
+				</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -87,12 +87,12 @@
 		<dict>
 			<key>begin</key>
 			<string>(?x)
-    				(?:  ^                                 # begin-of-line
-    				  |  (?: (?&lt;!else|new|=) )             #  or word + space before name
-    				)
-    				((?:[A-Za-z_][A-Za-z0-9_]*::)*+~[A-Za-z_][A-Za-z0-9_]*) # actual name
-    				 \s*(\()                           # terminating semi-colon
-    			</string>
+					(?:  ^                                 # begin-of-line
+					  |  (?: (?&lt;!else|new|=) )             #  or word + space before name
+					)
+					((?:[A-Za-z_][A-Za-z0-9_]*::)*+~[A-Za-z_][A-Za-z0-9_]*) # actual name
+					 \s*(\()                           # terminating semi-colon
+				</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -177,10 +177,10 @@
 					</dict>
 					<key>match</key>
 					<string>(?x)
-    				(
-    					(?!while|for|do|if|else|switch|enumerate|return|r?iterate)(?: \b[A-Za-z_][A-Za-z0-9_]*+\b | :: )*+                  # actual name
-    				)
-    				 \s*(\()</string>
+					(
+						(?!while|for|do|if|else|switch|enumerate|return|r?iterate)(?: \b[A-Za-z_][A-Za-z0-9_]*+\b | :: )*+                  # actual name
+					)
+					 \s*(\()</string>
 					<key>name</key>
 					<string>meta.function-call.c</string>
 				</dict>
@@ -198,10 +198,10 @@
 				<dict>
 					<key>begin</key>
 					<string>(?x)
-    				(?:  ^\s*)                             # begin-of-line
-    				((?!while|for|do|if|else|switch|catch|enumerate|r?iterate)[A-Za-z_][A-Za-z0-9_:]*) # actual name
-    				 \s*(\()                            # start bracket or end-of-line
-    			</string>
+					(?:  ^\s*)                             # begin-of-line
+					((?!while|for|do|if|else|switch|enum)[A-Za-z_][A-Za-z0-9_:]*) # actual name
+					 \s*(\()                            # start bracket or end-of-line
+					</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -238,10 +238,10 @@
 				<dict>
 					<key>begin</key>
 					<string>(?x)
-    				(:)                            # begin-of-line
-    				((?=\s*[A-Za-z_][A-Za-z0-9_:]* # actual name
-    				 \s*(\()))                      # start bracket or end-of-line
-    				</string>
+					(:)                            # begin-of-line
+					((?=\s*[A-Za-z_][A-Za-z0-9_:]* # actual name
+					 \s*(\()))                      # start bracket or end-of-line
+					</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -264,211 +264,8 @@
 				</dict>
 			</array>
 		</dict>
-
-		<key>special_block</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\b(namespace)\s+([A-Za-z_][_A-Za-z0-9:]*\b)?+(?!\s*?(;|=|,))</string>
-					<key>end</key>
-					<string>(?&lt;=\})</string>
-					<key>name</key>
-					<string>meta.namespace-block.pawn</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.control.pawn</string>
-						</dict>
-					</dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>begin</key>
-							<string>\{</string>
-							<key>end</key>
-							<string>\}</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>#special_block</string>
-								</dict>
-								<dict>
-									<key>include</key>
-									<string>#constructor</string>
-								</dict>
-								<dict>
-									<key>include</key>
-									<string>$base</string>
-								</dict>
-							</array>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\b(class|struct)\s+([_A-Za-z][_A-Za-z0-9]*\b);</string>
-					<key>name</key>
-					<string>meta.class-struct-block.pawn</string>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.pawn</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.forward-decl.pawn</string>
-						</dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>\b(class|struct)\s+([_A-Za-z][_A-Za-z0-9]*\b)</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.pawn</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.pawn</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(?&lt;=\})|(?=(;|,|\(|\)|&gt;|\[|\]))</string>
-					<key>name</key>
-					<string>meta.class-struct-block.pawn</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#angle_brackets</string>
-						</dict>
-						<dict>
-							<key>begin</key>
-							<string>(?&lt;!:):(?!:)</string>
-							<key>end</key>
-							<string>(?=\{)</string>
-							<key>name</key>
-							<string>meta.class-struct-block.base-classes.pawn</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>begin</key>
-									<string>[_A-Za-z][_A-Za-z0-9]*\b</string>
-									<key>end</key>
-									<string>,|(?=\{)</string>
-									<key>patterns</key>
-									<array>
-										<dict>
-											<key>include</key>
-											<string>#angle_brackets</string>
-										</dict>
-									</array>
-								</dict>
-							</array>
-						</dict>
-						<dict>
-							<key>begin</key>
-							<string>(\{)</string>
-							<key>beginCaptures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>punctuation.definition.scope.pawn</string>
-								</dict>
-							</dict>
-							<key>end</key>
-							<string>(\})(\s*\n)?</string>
-							<key>endCaptures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>punctuation.definition.invalid.pawn</string>
-								</dict>
-								<key>2</key>
-								<dict>
-									<key>name</key>
-									<string>invalid.illegal.you-forgot-semicolon.pawn</string>
-								</dict>
-							</dict>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>#special_block</string>
-								</dict>
-								<dict>
-									<key>include</key>
-									<string>#constructor</string>
-								</dict>
-								<dict>
-									<key>include</key>
-									<string>$base</string>
-								</dict>
-							</array>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>$base</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>\b(extern)(?=\s*")</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>storage.modifier.pawn</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(?&lt;=\})|(?=\w)</string>
-					<key>name</key>
-					<string>meta.extern-block.pawn</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>begin</key>
-							<string>\{</string>
-							<key>end</key>
-							<string>\}</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>#special_block</string>
-								</dict>
-								<dict>
-									<key>include</key>
-									<string>$base</string>
-								</dict>
-							</array>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>$base</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
 	</dict>
+
 	<key>scopeName</key>
 	<string>source.pawn</string>
 	<key>uuid</key>
