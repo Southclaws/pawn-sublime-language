@@ -2,7 +2,7 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "CreateButton", "contents": "CreateButton(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:text[]}, ${5:world = 0}, ${6:interior = 0}, ${7:Float:areasize = 1.0}, ${8:label = 0}, ${9:labeltext[] = ""}, ${10:labelcolour = 0xFFFF00FF}, ${11:Float:streamdist = BTN_DEFAULT_STREAMDIST})" },
+		{ "trigger": "CreateButton", "contents": "CreateButton(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:text[]}, ${5:world = 0}, ${6:interior = 0}, ${7:Float:areasize = 1.0}, ${8:label = 0}, ${9:labeltext[] = \"\"}, ${10:labelcolour = 0xFFFF00FF}, ${11:Float:streamdist = BTN_DEFAULT_STREAMDIST})" },
 		{ "trigger": "DestroyButton", "contents": "DestroyButton(${1:buttonid})" },
 		{ "trigger": "LinkTP", "contents": "LinkTP(${1:buttonid1}, ${2:buttonid2})" },
 		{ "trigger": "UnLinkTP", "contents": "UnLinkTP(${1:buttonid1}, ${2:buttonid2})" },

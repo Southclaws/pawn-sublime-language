@@ -3,7 +3,7 @@
 	"completions":
 	[
 		{ "trigger": "db_query_hook", "contents": "db_query_hook(${1:iTagOf3 = tagof(_bAutoRelease})" },
-		{ "trigger": "db_escape_string", "contents": "db_escape_string(${1:szString[]}, ${2:szEnclosing[] = "'"}, ${3:iSize = sizeof(szString})" },
+		{ "trigger": "db_escape_string", "contents": "db_escape_string(${1:szString[]}, ${2:szEnclosing[] = \"'\"}, ${3:iSize = sizeof(szString})" },
 		{ "trigger": "db_is_persistent", "contents": "db_is_persistent(${1:DB:db})" },
 		{ "trigger": "db_is_valid_persistent", "contents": "db_is_valid_persistent(${1:DB:db})" },
 		{ "trigger": "db_is_table_exists", "contents": "db_is_table_exists(${1:DB:db}, ${2:szTable[]})" },

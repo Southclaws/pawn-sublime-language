@@ -3,7 +3,7 @@
 	"completions":
 	[
 		{ "trigger": "DefineDebugLabelType", "contents": "DefineDebugLabelType(${1:name[]}, ${2:colour = 0xFFFFFFFF})" },
-		{ "trigger": "CreateDebugLabel", "contents": "CreateDebugLabel(${1:type}, ${2:entityid}, ${3:Float:x}, ${4:Float:y}, ${5:Float:z}, ${6:string[] = ""}, ${7:worldid = -1}, ${8:interiorid = -1})" },
+		{ "trigger": "CreateDebugLabel", "contents": "CreateDebugLabel(${1:type}, ${2:entityid}, ${3:Float:x}, ${4:Float:y}, ${5:Float:z}, ${6:string[] = \"\"}, ${7:worldid = -1}, ${8:interiorid = -1})" },
 		{ "trigger": "DestroyDebugLabel", "contents": "DestroyDebugLabel(${1:labelid})" },
 		{ "trigger": "ShowDebugLabelsForPlayer", "contents": "ShowDebugLabelsForPlayer(${1:playerid}, ${2:type})" },
 		{ "trigger": "ShowAllDebugLabelsForPlayer", "contents": "ShowAllDebugLabelsForPlayer(${1:playerid})" },

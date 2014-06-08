@@ -14,10 +14,10 @@
 		{ "trigger": "min", "contents": "min(${1:value1}, ${2:value2})" },
 		{ "trigger": "max", "contents": "max(${1:value1}, ${2:value2})" },
 		{ "trigger": "clamp", "contents": "clamp(${1:value}, ${2:min=cellmin}, ${3:max=cellmax})" },
-		{ "trigger": "getproperty", "contents": "getproperty(${1:id=0}, ${2:name[]=""}, ${3:value=cellmin}, ${4:string[]=""})" },
-		{ "trigger": "setproperty", "contents": "setproperty(${1:id=0}, ${2:name[]=""}, ${3:value=cellmin}, ${4:string[]=""})" },
-		{ "trigger": "deleteproperty", "contents": "deleteproperty(${1:id=0}, ${2:name[]=""}, ${3:value=cellmin})" },
-		{ "trigger": "existproperty", "contents": "existproperty(${1:id=0}, ${2:name[]=""}, ${3:value=cellmin})" },
+		{ "trigger": "getproperty", "contents": "getproperty(${1:id=0}, ${2:name[]=\"\"}, ${3:value=cellmin}, ${4:string[]=\"\"})" },
+		{ "trigger": "setproperty", "contents": "setproperty(${1:id=0}, ${2:name[]=\"\"}, ${3:value=cellmin}, ${4:string[]=\"\"})" },
+		{ "trigger": "deleteproperty", "contents": "deleteproperty(${1:id=0}, ${2:name[]=\"\"}, ${3:value=cellmin})" },
+		{ "trigger": "existproperty", "contents": "existproperty(${1:id=0}, ${2:name[]=\"\"}, ${3:value=cellmin})" },
 		"pawn"
 	]
 }
