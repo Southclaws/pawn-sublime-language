@@ -3,8 +3,8 @@
 	"completions":
 	[
 		{ "trigger": "print", "contents": "print(${1:string[]})" },
-		{ "trigger": "printf", "contents": "printf(${1:format[]}, ${2:{Float}, ${3:_}:...})" },
-		{ "trigger": "format", "contents": "format(${1:output[]}, ${2:len}, ${3:format[]}, ${4:{Float}, ${5:_}:...})" },
+		{ "trigger": "printf", "contents": "printf(${1:format[]}, ${2:{Float,_}:...})" },
+		{ "trigger": "format", "contents": "format(${1:output[]}, ${2:len}, ${3:format[]}, ${4:{Float,_}:...})" },
 		{ "trigger": "SetTimer", "contents": "SetTimer(${1:funcname[]}, ${2:interval}, ${3:repeating})" },
 		{ "trigger": "KillTimer", "contents": "KillTimer(${1:timerid})" },
 		{ "trigger": "GetTickCount", "contents": "GetTickCount()" },

@@ -112,8 +112,8 @@
 		{ "trigger": "DestroyPlayerGangZone", "contents": "DestroyPlayerGangZone(${1:playerid}, ${2:zoneid}, ${3:removefrompool = 1})" },
 		{ "trigger": "DestroyPlayerPickup", "contents": "DestroyPlayerPickup(${1:playerid}, ${2:pickupid})" },
 		{ "trigger": "CreatePlayerPickup", "contents": "CreatePlayerPickup(${1:playerid}, ${2:pickupid}, ${3:model}, ${4:type}, ${5:Float:X}, ${6:Float:Y}, ${7:Float:Z})" },
-		{ "trigger": "SendRPC", "contents": "SendRPC(${1:playerid}, ${2:RPC}, ${3:{Float}, ${4:_}:...})" },
-		{ "trigger": "SendData", "contents": "SendData(${1:playerid}, ${2:{Float}, ${3:_}:...})" },
+		{ "trigger": "SendRPC", "contents": "SendRPC(${1:playerid}, ${2:RPC}, ${3:{Float,_}:...})" },
+		{ "trigger": "SendData", "contents": "SendData(${1:playerid}, ${2:{Float,_}:...})" },
 		{ "trigger": "YSF_AddPlayer", "contents": "YSF_AddPlayer(${1:playerid})" },
 		{ "trigger": "YSF_RemovePlayer", "contents": "YSF_RemovePlayer(${1:playerid})" },
 		{ "trigger": "YSF_StreamIn", "contents": "YSF_StreamIn(${1:playerid}, ${2:forplayerid})" },
@@ -126,16 +126,6 @@
 		"CON_VARFLAG_READONLY",
 		"CON_VARFLAG_RULE",
 		"CON_VARFLAG_UNREMOVABLE",
-		"OnPlayerConnect",
-		"OnPlayerConnect",
-		"OnPlayerDisconnect",
-		"OnPlayerDisconnect",
-		"OnPlayerStreamIn",
-		"OnPlayerStreamOut",
-		"GangZoneShowForPlayer",
-		"GangZoneHideForPlayer",
-		"GangZoneShowForAll",
-		"GangZoneHideForAll",
 		"pawn"
 	]
 }

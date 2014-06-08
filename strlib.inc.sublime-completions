@@ -2,13 +2,13 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "sprintf", "contents": "sprintf(${1:fmat[]}, ${2:{Float}, ${3:_}:...})" },
+		{ "trigger": "sprintf", "contents": "sprintf(${1:fmat[]}, ${2:{Float, _}:...})" },
 		{ "trigger": "strgetfirstc", "contents": "strgetfirstc(${1:string[]})" },
 		{ "trigger": "strgetc", "contents": "strgetc(${1:string[]}, ${2:index})" },
 		{ "trigger": "strsize", "contents": "strsize(${1:string[]})" },
 		{ "trigger": "isempty", "contents": "isempty(${1:string[]})" },
 		{ "trigger": "isequal", "contents": "isequal(${1:str1[]}, ${2:str2[]}, ${3:bool:ignorecase = false})" },
-		{ "trigger": "strexplode", "contents": "strexplode(${1:output[][]}, ${2:input[]}, ${3:delimiter[] = !"}, ${4:"}, ${5:limit = cellmax}, ${6:bool:trim = true}, ${7:bool:ignorecase = false}, ${8:size1 = sizeof(output})" },
+		{ "trigger": "strexplode", "contents": "strexplode(${1:output[][]}, ${2:input[]}, ${3:delimiter[] = !","}, ${4:limit = cellmax}, ${5:bool:trim = true}, ${6:bool:ignorecase = false}, ${7:size1 = sizeof(output})" },
 		{ "trigger": "strimplode", "contents": "strimplode(${1:glue[]}, ${2:output[]}, ${3:maxlength = sizeof(output})" },
 		{ "trigger": "strreplace", "contents": "strreplace(${1:string[]}, ${2:search[]}, ${3:replacement[]}, ${4:bool:ignorecase = false}, ${5:pos = 0}, ${6:limit = -1}, ${7:maxlength = sizeof(string})" },
 		{ "trigger": "strtrim", "contents": "strtrim(${1:string[]}, ${2:chars[] = !""}, ${3:string_edges:edge = edge_both})" },
