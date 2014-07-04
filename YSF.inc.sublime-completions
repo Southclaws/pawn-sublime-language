@@ -25,7 +25,7 @@
 		{ "trigger": "GetPlayerSpawnPos", "contents": "GetPlayerSpawnPos(${1:playerid}, ${2:&Float:fX}, ${3:&Float:fY}, ${4:&Float:fZ})" },
 		{ "trigger": "GetPlayerSkillLevel", "contents": "GetPlayerSkillLevel(${1:playerid}, ${2:skill})" },
 		{ "trigger": "GetPlayerSirenState", "contents": "GetPlayerSirenState(${1:playerid})" },
-		{ "trigger": "GetPlayerGearState", "contents": "GetPlayerGearState(${1:playerid})" },
+		{ "trigger": "GetPlayerLandingGearState", "contents": "GetPlayerLandingGearState(${1:playerid})" },
 		{ "trigger": "GetPlayerHydraReactorAngle", "contents": "GetPlayerHydraReactorAngle(${1:playerid})" },
 		{ "trigger": "GetPlayerTrainSpeed", "contents": "GetPlayerTrainSpeed(${1:playerid})" },
 		{ "trigger": "GetPlayerZAim", "contents": "GetPlayerZAim(${1:playerid})" },
