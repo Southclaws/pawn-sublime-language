@@ -122,6 +122,37 @@
 		{ "trigger": "YSF_GangZoneHideForPlayer", "contents": "YSF_GangZoneHideForPlayer(${1:playerid}, ${2:zone})" },
 		{ "trigger": "YSF_GangZoneShowForAll", "contents": "YSF_GangZoneShowForAll(${1:zone}, ${2:color})" },
 		{ "trigger": "YSF_GangZoneHideForAll", "contents": "YSF_GangZoneHideForAll(${1:zone})" },
+
+		//R6
+
+
+		{ "trigger": "GetAvailableClasses", "contents": "GetAvailableClasses()" },
+		{ "trigger": "GetPlayerClass", "contents": "GetPlayerClass(${1:}classid, ${2:}&teamid, ${3:}&modelid, ${4:}&Float:spawn_x, ${5:}&Float:spawn_y, ${6:}&Float:spawn_z, ${7:}&Float:z_angle, ${8:}&weapon1, ${9:}&weapon1_ammo, ${10:}&weapon2, ${11:}&weapon2_ammo,${12:}&weapon3, ${13:}&weapon3_ammo)"},
+		{ "trigger": "EditPlayerClass", "contents": "EditPlayerClass(${1:}classid, ${2:}&teamid, ${3:}&modelid, ${4:}&Float:spawn_x, ${5:}&Float:spawn_y, ${6:}&Float:spawn_z, ${7:}&Float:z_angle, ${8:}&weapon1, ${9:}&weapon1_ammo, ${10:}&weapon2, ${11:}&weapon2_ammo,${12:}&weapon3, ${13:}&weapon3_ammo)"},
+		{ "trigger": "GetActiveTimers", "contents": "GetActiveTimers(}"},
+		{ "trigger": "SendBulletData", "contents": "SendBulletData(${1:}sender, ${2:}hitid, ${3:}hittype, ${4:}Float:fHitOriginX, ${5:}Float:fHitOriginY, ${6:}Float:fHitOriginZ, ${7:}Float:fHitTargetX, ${8:}Float:fHitTargetY,${9:}Float:fHitTargetZ, ${10:}Float:fCenterOfHitX, ${11:}Float:fCenterOfHitY, ${12:}Float:fCenterOfHitZ)"},
+		{ "trigger": "SetObjectMoveSpeed", "contents": "Float:SetObjectMoveSpeed(${1:}objectid, ${2:}Float:fSpeed)" },
+		{ "trigger": "GetObjectMoveSpeed", "contents": "Float:GetObjectMoveSpeed(${1:}objectid)"},
+		{ "trigger": "GetObjectTarget", "contents": "GetObjectTarget(${1:}objectid, ${2:}&Float:fX, ${3:}&Float:fY, ${4:}&Float:fZ)" },
+		{ "trigger": "SetPlayerObjectMoveSpeed", "contents": "Float:SetPlayerObjectMoveSpeed(${1:}playerid, ${2:}objectid, ${3:}Float:fSpeed)" },
+		{ "trigger": "GetPlayerObjectMoveSpeed", "contents": "Float:GetPlayerObjectMoveSpeed(${1:}playerid, ${2:}objectid)" },
+		{ "trigger": "GetPlayerObjectTarget", "contents": "Float:GetPlayerObjectTarget(${1:}playerid, ${2:}objectid, ${3:}&Float:fX, ${4:}&Float:fY, ${5:}&Float:fZ)" },
+		{ "trigger": "SetVehicleOccupiedTick", "contents": "SetVehicleOccupiedTick(${1:}vehicleid, ${2:}ticks)" },
+		{ "trigger": "IsGangZoneFlashingForPlayer", "contents": "IsGangZoneFlashingForPlayer(${1:}playerid, ${2:}zoneid)" },
+		{ "trigger": "IsPlayerGangZoneFlashing", "contents": "IsPlayerGangZoneFlashing(${1:}playerid, ${2:}zoneid)" },
+		{ "trigger": "TextDrawIsSelectable", "contents": "TextDrawIsSelectable(${1:}textdrawid)" },
+		{ "trigger": "PlayerTextDrawIsSelectable", "contents": "PlayerTextDrawIsSelectable(${1:}playerid, ${2:}PlayerText:textdrawid)" },
+		{ "trigger": "IsObjectMaterialSlotUsed", "contents": "IsObjectMaterialSlotUsed(${1:}objectid, ${2:}materialindex)" },
+		{ "trigger": "GetObjectMaterial", "contents": "GetObjectMaterial(${1:}objectid, ${2:}materialindex, ${3:}&modelid, ${4:}txdname[], ${5:}txdnamelen = sizeof(txdname), ${6:}texturename[], ${7:}texturenamelen = sizeof(txdnamelen),${8:}&materialcoor)" },
+		{ "trigger": "GetObjectMaterialText", "contents": "GetObjectMaterialText(${1:}objectid, ${2:}materialindex, ${3:}text[], ${4:}textlen= sizeof(text), ${5:}&materialsize, ${6:}fontface[], ${7:}fontfacelen = sizeof(fontface),${8:}&fontsize, ${9:}&bold, ${10:}&fontcolor, ${11:}&backcolor, ${12:}&textalignment)" },
+		{ "trigger": "IsPlayerObjectMaterialSlotUsed", "contents": "IsPlayerObjectMaterialSlotUsed(${1:}playerid, ${2:}objectid, ${3:}materialindex)" },
+		{ "trigger": "GetPlayerObjectMaterial", "contents": "GetPlayerObjectMaterial(${1:}playerid, ${2:}objectid, ${3:}materialindex, ${4:}&modelid, ${5:}txdname[], ${6:}txdnamelen = sizeof(txdname), ${7:}texturename[], ${8:}texturenamelen = sizeof(txdnamelen), ${9:}&materialcolor)" },
+		{ "trigger": "GetPlayerObjectMaterialText", "contents": "GetPlayerObjectMaterialText(${1:}playerid, ${2:}objectid, ${3:}materialindex, ${4:}text[], ${5:}textlen = sizeof(text), ${6:}&materialsize, ${7:}fontface[], ${8:}fontfacelen = sizeof(fontface), ${9:}&fontsize, ${10:}&bold, ${11:}&fontcolor,${12:} &backcolor, ${13:}&textalignment)" },
+
+
+
+
+
 		"CON_VARFLAG_DEBUG",
 		"CON_VARFLAG_READONLY",
 		"CON_VARFLAG_RULE",
