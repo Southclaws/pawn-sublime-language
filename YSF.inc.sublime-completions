@@ -25,7 +25,6 @@
 		{ "trigger": "GetPlayerSpawnPos", "contents": "GetPlayerSpawnPos(${1:playerid}, ${2:&Float:fX}, ${3:&Float:fY}, ${4:&Float:fZ})" },
 		{ "trigger": "GetPlayerSkillLevel", "contents": "GetPlayerSkillLevel(${1:playerid}, ${2:skill})" },
 		{ "trigger": "GetPlayerSirenState", "contents": "GetPlayerSirenState(${1:playerid})" },
-		{ "trigger": "GetPlayerLandingGearState", "contents": "GetPlayerLandingGearState(${1:playerid})" },
 		{ "trigger": "GetPlayerHydraReactorAngle", "contents": "GetPlayerHydraReactorAngle(${1:playerid})" },
 		{ "trigger": "GetPlayerTrainSpeed", "contents": "GetPlayerTrainSpeed(${1:playerid})" },
 		{ "trigger": "GetPlayerZAim", "contents": "GetPlayerZAim(${1:playerid})" },
@@ -124,8 +123,6 @@
 		{ "trigger": "YSF_GangZoneHideForAll", "contents": "YSF_GangZoneHideForAll(${1:zone})" },
 
 		//R6
-
-
 		{ "trigger": "GetAvailableClasses", "contents": "GetAvailableClasses()" },
 		{ "trigger": "GetPlayerClass", "contents": "GetPlayerClass(${1:}classid, ${2:}&teamid, ${3:}&modelid, ${4:}&Float:spawn_x, ${5:}&Float:spawn_y, ${6:}&Float:spawn_z, ${7:}&Float:z_angle, ${8:}&weapon1, ${9:}&weapon1_ammo, ${10:}&weapon2, ${11:}&weapon2_ammo,${12:}&weapon3, ${13:}&weapon3_ammo)"},
 		{ "trigger": "EditPlayerClass", "contents": "EditPlayerClass(${1:}classid, ${2:}&teamid, ${3:}&modelid, ${4:}&Float:spawn_x, ${5:}&Float:spawn_y, ${6:}&Float:spawn_z, ${7:}&Float:z_angle, ${8:}&weapon1, ${9:}&weapon1_ammo, ${10:}&weapon2, ${11:}&weapon2_ammo,${12:}&weapon3, ${13:}&weapon3_ammo)"},
@@ -148,6 +145,11 @@
 		{ "trigger": "IsPlayerObjectMaterialSlotUsed", "contents": "IsPlayerObjectMaterialSlotUsed(${1:}playerid, ${2:}objectid, ${3:}materialindex)" },
 		{ "trigger": "GetPlayerObjectMaterial", "contents": "GetPlayerObjectMaterial(${1:}playerid, ${2:}objectid, ${3:}materialindex, ${4:}&modelid, ${5:}txdname[], ${6:}txdnamelen = sizeof(txdname), ${7:}texturename[], ${8:}texturenamelen = sizeof(txdnamelen), ${9:}&materialcolor)" },
 		{ "trigger": "GetPlayerObjectMaterialText", "contents": "GetPlayerObjectMaterialText(${1:}playerid, ${2:}objectid, ${3:}materialindex, ${4:}text[], ${5:}textlen = sizeof(text), ${6:}&materialsize, ${7:}fontface[], ${8:}fontfacelen = sizeof(fontface), ${9:}&fontsize, ${10:}&bold, ${11:}&fontcolor,${12:} &backcolor, ${13:}&textalignment)" },
+
+		//R7
+		{ "trigger": "GetPlayerLandingGearState", "contents": "GetPlayerLandingGearState(${1:playerid})" },
+		{ "trigger": "AllowNickNameCharacter", "contents": "AllowNickNameCharacter(${1:character}, ${2:bool:allow})" },
+		{ "trigger": "IsNickNameCharacterAllowed", "contents": "IsNickNameCharacterAllowed(${1:character})" },
 
 
 
