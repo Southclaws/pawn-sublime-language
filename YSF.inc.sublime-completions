@@ -22,7 +22,7 @@
 		{ "trigger": "GetPlayerWeather", "contents": "GetPlayerWeather(${1:playerid})" },
 		{ "trigger": "TogglePlayerWidescreen", "contents": "TogglePlayerWidescreen(${1:playerid}, ${2:bool:set})" },
 		{ "trigger": "IsPlayerWidescreenToggled", "contents": "IsPlayerWidescreenToggled(${1:playerid})" },
-		{ "trigger": "GetPlayerSpawnPos", "contents": "GetPlayerSpawnPos(${1:playerid}, ${2:&Float:fX}, ${3:&Float:fY}, ${4:&Float:fZ})" },
+		{ "trigger": "GetSpawnInfo", "contents": "GetSpawnInfo(${1:playerid}, ${2:&teamid}, ${3:&modelid}, ${4:&Float:spawn_x}, ${5:&Float:spawn_y}, ${6:&Float:spawn_z}, ${7:&Float:z_angle}, ${8:&weapon1}, ${9:&weapon1_ammo}, ${10:&weapon2}, ${11:&weapon2_ammo}, ${12:&weapon3}, ${13:&weapon3_ammo})" }, // R8
 		{ "trigger": "GetPlayerSkillLevel", "contents": "GetPlayerSkillLevel(${1:playerid}, ${2:skill})" },
 		{ "trigger": "GetPlayerSirenState", "contents": "GetPlayerSirenState(${1:playerid})" },
 		{ "trigger": "GetPlayerHydraReactorAngle", "contents": "GetPlayerHydraReactorAngle(${1:playerid})" },
@@ -150,6 +150,29 @@
 		{ "trigger": "GetPlayerLandingGearState", "contents": "GetPlayerLandingGearState(${1:playerid})" },
 		{ "trigger": "AllowNickNameCharacter", "contents": "AllowNickNameCharacter(${1:character}, ${2:bool:allow})" },
 		{ "trigger": "IsNickNameCharacterAllowed", "contents": "IsNickNameCharacterAllowed(${1:character})" },
+
+		//R8
+		{ "trigger": "SetMaxPlayers", "contents": "SetMaxPlayers(${1:maxplayers})" },
+		{ "trigger": "SetMaxNPCs", "contents": "SetMaxNPCs(${1:maxnpcs})" },
+		{ "trigger": "IsValidNickName", "contents": "IsValidNickName(${1:name[]})" },
+		{ "trigger": "IsTimerActive", "contents": "IsTimerActive(${1:timerid})" },  
+		{ "trigger": "GetTimerFunctionName", "contents": "GetTimerFunctionName(${1:timerid}, ${2:funcname[]}, ${3:len = sizeof(funcname))}" },  
+		{ "trigger": "SetTimerInterval", "contents": "SetTimerInterval(${1:timerid}, ${2:time})" },  
+		{ "trigger": "GetTimerInterval", "contents": "GetTimerInterval(${1:timerid})" },  
+		{ "trigger": "IsTimerRepeating", "contents": "IsTimerRepeating(${1:timerid})" },  
+		{ "trigger": "GetTimerRemainingTime", "contents": "GetTimerRemainingTime(${1:timerid})" }, 
+		{ "trigger": "GetPlayerDialogID", "contents": "GetPlayerDialogID(${1:playerid}})" }, 
+		{ "trigger": "GetPlayerSpectateID", "contents": "GetPlayerSpectateID(${1:playerid})" },  		
+		{ "trigger": "GetPlayerSpectateType", "contents": "GetPlayerSpectateType(${1:playerid})" },  		
+		{ "trigger": "ShowPlayerForPlayer", "contents": "ShowPlayerForPlayer(${1:forplayerid}, ${2:playerid})" },  		
+		{ "trigger": "HidePlayerForPlayer", "contents": "HidePlayerForPlayer(${1:forplayerid}, ${2:playerid})" },  			
+		{ "trigger": "TogglePlayerScoresPingsUpdate", "contents": "TogglePlayerScoresPingsUpdate(${1:playerid}, ${2:bool:toggle})" },  		
+		{ "trigger": "TogglePlayerFakePing", "contents": "TogglePlayerFakePing(${1:playerid}, ${2:bool:toggle})" },  		
+		{ "trigger": "SetPlayerFakePing", "contents": "SetPlayerFakePing(${1:playerid}, ${2:ping})" },  			
+		{ "trigger": "IsPlayerPaused", "contents": "IsPlayerPaused(${1:playerid})" },  		
+		{ "trigger": "GetPlayerPausedTime", "contents": "GetPlayerPausedTime(${1:playerid})" }, 
+		{ "trigger": "OnPlayerPauseStateChange", "contents": "public OnPlayerPauseStateChange(${1:playerid}, ${2:pausestate})" },  
+
 
 
 
