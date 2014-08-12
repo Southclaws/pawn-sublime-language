@@ -14,6 +14,7 @@ class PawnBuildPathCommand(sublime_plugin.TextCommand):
 '{\n\
 	"cmd": ["pawncc.exe", "$file", "-o$file_path\\\\$file_base_name", "-;+", "-(+", "-d3"],\n\
 	"file_regex": "(.*?)[(]([0-9]*)[)]",\n\
+	"selector": "source.pwn",\n\
 	"working_dir": "'+input+'"\n\
 }')
 
