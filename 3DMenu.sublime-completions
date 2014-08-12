@@ -9,6 +9,6 @@
 		{ "trigger": "CancelSelect3DMenu", "contents": "CancelSelect3DMenu(${1:playerid})"},
 		{ "trigger": "Destroy3DMenu", "contents": "Destroy3DMenu(${1:MenuID})"},
 		{ "trigger": "OnPlayerSelect3DMenuBox", "contents": "public OnPlayerSelect3DMenuBox(${1:playerid},${2:MenuID},${3:boxid})"},
-		{ "trigger": "OnPlayerChange3DMenuBox", "contents": "public OnPlayerChange3DMenuBox(${1:playerid},${2:MenuID},${3:boxid})"},
+		{ "trigger": "OnPlayerChange3DMenuBox", "contents": "public OnPlayerChange3DMenuBox(${1:playerid},${2:MenuID},${3:boxid})"}
 	]
 }

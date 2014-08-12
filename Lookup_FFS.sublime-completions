@@ -9,7 +9,7 @@
 		{ "trigger": "GetPlayerCountryName", "contents": "GetPlayerCountryName(${1:playerid})" },
 		{ "trigger": "GetPlayerCountryRegion", "contents": "GetPlayerCountryRegion(${1:playerid})" },
 		{ "trigger": "IsProxyUser", "contents": "IsProxyUser(${1:playerid})" },
-		{ "trigger": "OnLookupComplete", "contents": "public OnLookupComplete(${1:playerid})" },
+		{ "trigger": "OnLookupComplete", "contents": "public OnLookupComplete(${1:playerid})" }
 
 	]
 }

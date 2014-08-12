@@ -12,6 +12,6 @@
 		{ "trigger": "Iter_Contains", "contents": "Iter_Contains(${1:name}, ${2:value})"},
 		{ "trigger": "Iter_Count", "contents": "Iter_Count(${1:name})"},
 		{ "trigger": "Iter_Free", "contents": "Iter_Free(${1:name})"},
-		{ "trigger": "Iter_SafeRemove", "contents": "Iter_SafeRemove(${1:name}, ${2:value}, ${3:&prev})"},
+		{ "trigger": "Iter_SafeRemove", "contents": "Iter_SafeRemove(${1:name}, ${2:value}, ${3:&prev})"}
 	]
 }
