@@ -1,0 +1,29 @@
+[
+  {
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children":
+    [
+      {
+        "caption": "Package Settings",
+        "mnemonic": "P",
+        "id": "package-settings",
+        "children":
+        [
+          {
+            "caption": "Pawn Compiler Settings",
+            "mnemonic": "P",
+            "children":
+            [
+              {
+                "caption": "Build Settings",
+                "command": "pawn_build_path"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
