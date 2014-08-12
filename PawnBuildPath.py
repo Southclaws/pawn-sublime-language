@@ -12,10 +12,10 @@ class PawnBuildPathCommand(sublime_plugin.TextCommand):
 		with Edit(view) as edit:
 			edit.insert(0,
 '{\n\
-	"cmd": ["pawncc.exe", "$file", "-o$file_path\\\\$file_base_name", "-;+", "-(+", "-d3"],\n\
+	"cmd": ["pawncc.exe", "$file", "-o$file_path\\\\\\\\$file_base_name", "-;+", "-(+", "-d3"],\n\
 	"file_regex": "(.*?)[(]([0-9]*)[)]",\n\
 	"selector": "source.pwn",\n\
-	"working_dir": "'+input+'"\n\
+	"working_dir": "'+input.replace("\\", "\\\\")+'"\n\
 }')
 
 		view.set_name("Pawn.sublime-build")
