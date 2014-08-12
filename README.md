@@ -9,18 +9,18 @@ Edits/pulls welcome, please contribute!
 
 # Credits
 
-Patrik356b for the .tmTheme file.
-pds2k12 for some stuff
-Misiur for an ALS function snippet to base the ALS snippets off
+- Patrik356b for some of the original ideas and discussion.
+- pds2k12/Patrick for some autocompletions
+- Misiur for an ALS function snippet to base the ALS snippets off
+- Doreto for great autocompletion contribution
+- Everyone on the thread who suggested autocompletions
 
 
 # To do:
 
-Find out where 'int' is defined and remove it.
+Find out where non-Pawn labels (such as 'int' and 'class') is defined and remove them from highlighting.
 
-Add some snippets for keywords from commonly used libraries (YSI, Streamer, etc)
-
-Add an autocomplete for all default SA:MP functions/callbacks.
+Add some snippets for special syntax from commonly used libraries (such as YSI).
 
 Highlight native SA:MP tags:
 - Float
