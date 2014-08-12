@@ -18,17 +18,4 @@ Edits/pulls welcome, please contribute!
 
 # To do:
 
-Find out where non-Pawn labels (such as 'int' and 'class') is defined and remove them from highlighting.
-
 Add some snippets for special syntax from commonly used libraries (such as YSI).
-
-Highlight native SA:MP tags:
-- Float
-- File
-- PlayerText3D
-- Text
-- PlayerText
-- Text3D
-- Menu
-- DB
-- DBResult
