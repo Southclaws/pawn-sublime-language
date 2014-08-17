@@ -17,8 +17,13 @@
             "children":
             [
               {
-                "caption": "Build Settings",
+                "caption": "Generate Build Settings File",
                 "command": "pawn_build_path"
+              },
+              {
+                "caption": "Edit Build Settings (Pawn.sublime-build)",
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Pawn.sublime-build"}
               }
             ]
           }
