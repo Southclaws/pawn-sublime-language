@@ -17,6 +17,7 @@ Edits/pulls welcome, please contribute!
 - pds2k12/Patrick for some autocompletions
 - Misiur for an ALS function snippet to base the ALS snippets off
 - Doreto for great autocompletion contribution
+- Jessyy for some autocompletion contribution
 - Everyone on the thread who suggested autocompletions
 
 
