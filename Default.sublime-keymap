@@ -1,7 +1,7 @@
 [
-	{ "keys": ["f3"], "command": "find_next" },
-	{ "keys": ["f4"], "command": "find_prev" },
-	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "output.exec"} },
-	{ "keys": ["f5"], "command": "build" },
-	{ "keys": ["pause"], "command": "exec", "args": {"kill": true} }
+	{ "keys": ["f3"], "command": "find_next", "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
+	{ "keys": ["f4"], "command": "find_prev", "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "output.exec"}, "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
+	{ "keys": ["f5"], "command": "build", "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
+	{ "keys": ["pause"], "command": "exec", "args": {"kill": true}, "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] }
 ]
