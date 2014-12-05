@@ -1,4 +1,5 @@
 # Pawn Language Definitions and Extra Bits for Sublime Text
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Southclaw/pawn-sublime-language?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![http://img.shields.io/badge/SA%3AMP-0.3z-green.svg](http://img.shields.io/badge/SA%3AMP-0.3z-green.svg)![http://img.shields.io/gittip/Southclaw.svg](http://img.shields.io/gittip/Southclaw.svg)![http://img.shields.io/github/issues/Southclaw/pawn-sublime-text.svg](http://img.shields.io/github/issues/Southclaw/pawn-sublime-text.svg)![http://img.shields.io/badge/download-GitHub-blue.svg](http://img.shields.io/badge/download-GitHub-blue.svg)
 
