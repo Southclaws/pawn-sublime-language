@@ -20,6 +20,7 @@ Edits/pulls welcome, please contribute!
 - Doreto for great autocompletion contribution
 - Jessyy for some autocompletion contribution
 - GtakillerIV for some autocompletion contribution
+- Crayder for syntax contributions
 - Everyone on the thread who suggested autocompletions
 
 
