@@ -56,13 +56,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(public|forward|native|const|static|stock|inline)\b</string>
+			<string>\b(public|forward|native|hook|const|static|stock|inline)\b</string>
 			<key>name</key>
 			<string>storage.modifier.c</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b([A-Za-z0-9]+)\:\b</string>
+			<string>\b([A-Za-z0-9]+)\:.\b</string>
 			<key>name</key>
 			<string>storage.modifier.c</string>
 		</dict>
