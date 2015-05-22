@@ -2,7 +2,7 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "CreateVehicle", "contents": "CreateVehicle(${1:vehicletype}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z}, ${5:Float:rotation}, ${6:color1}, ${7:color2}, ${8:respawn_delay})" },
+		{ "trigger": "CreateVehicle", "contents": "CreateVehicle(${1:vehicletype}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z}, ${5:Float:rotation}, ${6:color1}, ${7:color2}, ${8:respawn_delay}, ${9:addsiren = 0})" },
 		{ "trigger": "DestroyVehicle", "contents": "DestroyVehicle(${1:vehicleid})" },
 		{ "trigger": "IsVehicleStreamedIn", "contents": "IsVehicleStreamedIn(${1:vehicleid}, ${2:forplayerid})" },
 		{ "trigger": "GetVehiclePos", "contents": "GetVehiclePos(${1:vehicleid}, ${2:&Float:x}, ${3:&Float:y}, ${4:&Float:z})" },
@@ -15,6 +15,11 @@
 		{ "trigger": "ManualVehicleEngineAndLights", "contents": "ManualVehicleEngineAndLights()" },
 		{ "trigger": "SetVehicleParamsEx", "contents": "SetVehicleParamsEx(${1:vehicleid}, ${2:engine}, ${3:lights}, ${4:alarm}, ${5:doors}, ${6:bonnet}, ${7:boot}, ${8:objective})" },
 		{ "trigger": "GetVehicleParamsEx", "contents": "GetVehicleParamsEx(${1:vehicleid}, ${2:&engine}, ${3:&lights}, ${4:&alarm}, ${5:&doors}, ${6:&bonnet}, ${7:&boot}, ${8:&objective})" },
+		{ "trigger": "GetVehicleParamsSirenState", "contents": "GetVehicleParamsSirenState(${1:vehicleid})" },
+		{ "trigger": "SetVehicleParamsCarDoors", "contents": "SetVehicleParamsCarDoors(${1:vehicleid}, ${2:driver}, ${3:passenger}, ${4:backleft}, ${5:backright})" },
+		{ "trigger": "GetVehicleParamsCarDoors", "contents": "GetVehicleParamsCarDoors(${1:vehicleid}, ${2:&driver}, ${3:&passenger}, ${4:&backleft}, ${5:&backright})" },
+		{ "trigger": "SetVehicleParamsCarWindows", "contents": "SetVehicleParamsCarWindows(${1:vehicleid}, ${2:driver}, ${3:passenger}, ${4:backleft}, ${5:backright})" },
+		{ "trigger": "GetVehicleParamsCarWindows", "contents": "GetVehicleParamsCarWindows(${1:vehicleid}, ${2:&driver}, ${3:&passenger}, ${4:&backleft}, ${5:&backright})" },
 		{ "trigger": "SetVehicleToRespawn", "contents": "SetVehicleToRespawn(${1:vehicleid})" },
 		{ "trigger": "LinkVehicleToInterior", "contents": "LinkVehicleToInterior(${1:vehicleid}, ${2:interiorid})" },
 		{ "trigger": "AddVehicleComponent", "contents": "AddVehicleComponent(${1:vehicleid}, ${2:componentid})" },
