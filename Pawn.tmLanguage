@@ -44,7 +44,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(break|case|continue|default|do|else|for|foreach|goto|if|return|switch|while)\b</string>
+			<string>\b(assert|break|case|continue|default|do|else|exit|for|foreach|goto|if|return|sleep|state|switch|while)\b</string>
 			<key>name</key>
 			<string>keyword.control.c</string>
 		</dict>
@@ -336,7 +336,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*(define|defined|elif|else|if|ifdef|ifndef|line|pragma|undef)\b</string>
+			<string>^\s*#\s*(assert|define|endinput|error|file|if|elseif|else|line|pragma|section|undef)\b</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -372,7 +372,7 @@
     		       | (?= \s*[A-Za-z_] ) (?&lt;!&amp;&amp;)       (?&lt;=[*&amp;&gt;])   #  or type modifier before name
     		     )
     		)
-    		(\s*) (?!(while|for|foreach|do|if|else|switch|catch|return)\s*\()
+    		(\s*) (?!(assert|break|case|continue|default|do|else|exit|for|foreach|goto|if|return|sleep|state|switch|while)\s*\()
     		(
     			(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ |                  # actual name
     			(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )  # if it is a C++ operator
@@ -509,7 +509,7 @@
 					<key>match</key>
 					<string>(?x) (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
 			(\b
-				(?!(while|for|foreach|do|if|else|switch|catch|return)\s*\()(?:(?!NS)[A-Za-z_][A-Za-z0-9_]*+\b | :: )++                  # actual name
+				(?!(assert|break|case|continue|default|do|else|exit|for|foreach|goto|if|return|sleep|state|switch|while)\s*\()(?:(?!NS)[A-Za-z_][A-Za-z0-9_]*+\b | :: )++                  # actual name
 			)
 			 \s*(\()</string>
 					<key>name</key>
@@ -638,7 +638,7 @@
 		<key>disabled</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*if(n?def)?\b.*$</string>
+			<string>^\s*#\s*if\s*(!?defined)?\b.*$</string>
 			<key>comment</key>
 			<string>eat nested preprocessor if(def)s</string>
 			<key>end</key>
@@ -991,7 +991,7 @@
 		<key>preprocessor-rule-other</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if(n?def)?)\b.*?(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*(if\s*(!?defined)?)\b.*?(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1018,7 +1018,7 @@
 		<key>preprocessor-rule-other-block</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if(n?def)?)\b.*?(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*(if\s*(!?defined)?)\b.*?(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1090,7 +1090,7 @@
 		<key>operators</key>
 		<dict>
 			<key>match</key>
-			<string>\=|\+|\-|\*|\%|\+\+|\-\-|\=\=|\!\=|&lt;|&gt;|&lt;\=|&gt;\=|\!|&amp;&amp;|\ |\||\~|&amp;|\||\^|&lt;lt;|&gt;&gt;|\+\=|\-\=|\*\=|/\=|\%\=|&amp;\=|\|\=|\^\=|&lt;&lt;\=|&gt;&gt;\=|\-&gt;|\-&gt;\*|\.|\.\*|\?|\\:\:</string>
+			<string>\=|\+|\-|\*|\/|\%|\+\+|\-\-|\=\=|\!\=|&lt;|&gt;|&lt;\=|&gt;\=|\!|&amp;&amp;|\ |\||\~|&amp;|\||\^|&lt;lt;|&gt;&gt;|\+\=|\-\=|\*\=|/\=|\%\=|&amp;\=|\|\=|\^\=|&lt;&lt;\=|&gt;&gt;\=|\-&gt;|\-&gt;\*|\.|\.\*|\?|\\:\:</string>
 			<key>name</key>
 			<string>keyword.operator.sizeof.c</string>
 		</dict>
