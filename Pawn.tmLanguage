@@ -336,7 +336,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*(assert|endinput|error|file|else|line|section)\b</string>
+			<string>^\s*#\s*(assert|endinput|file|else|line|section)\b</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -373,6 +373,36 @@
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.preprocessor.c</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(?=(?://|/\*))|$</string>
+			<key>name</key>
+			<string>meta.preprocessor.macro.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?&gt;\\\s*\n)</string>
+					<key>name</key>
+					<string>punctuation.separator.continuation.c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\s*#\s*(error|warning)\s+(.*?)(?:(?=(?://|/\*))|$)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.import.c</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.c</string>
 				</dict>
 			</dict>
 			<key>end</key>
