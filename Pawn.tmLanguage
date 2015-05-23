@@ -188,7 +188,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.control.import.define.c</string>
+					<string>keyword.control.import.c</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -271,7 +271,7 @@
 			<key>end</key>
 			<string>(?=(?://|/\*))|$</string>
 			<key>name</key>
-			<string>meta.preprocessor.c.include</string>
+			<string>meta.preprocessor.macro.c</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -336,7 +336,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*(assert|define|endinput|error|file|if|elseif|else|line|pragma|section|undef)\b</string>
+			<string>^\s*#\s*(assert|endinput|error|file|else|line|section)\b</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -348,7 +348,37 @@
 			<key>end</key>
 			<string>(?=(?://|/\*))|$</string>
 			<key>name</key>
-			<string>meta.preprocessor.c</string>
+			<string>meta.preprocessor.macro.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?&gt;\\\s*\n)</string>
+					<key>name</key>
+					<string>punctuation.separator.continuation.c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\s*#\s*(elseif|pragma|undef)\s+(.*?)(?:(?=(?://|/\*))|$)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.import.c</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.preprocessor.c</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(?=(?://|/\*))|$</string>
+			<key>name</key>
+			<string>meta.preprocessor.macro.c</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -991,18 +1021,23 @@
 		<key>preprocessor-rule-other</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if\s*(!?defined)?)\b.*?(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*(if\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>meta.preprocessor.c</string>
+					<string>meta.preprocessor.macro.c</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.import.c</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.preprocessor.c</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -1018,18 +1053,23 @@
 		<key>preprocessor-rule-other-block</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if\s*(!?defined)?)\b.*?(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*(if\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>meta.preprocessor.c</string>
+					<string>meta.preprocessor.macro.c</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.import.c</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.preprocessor.c</string>
 				</dict>
 			</dict>
 			<key>end</key>
