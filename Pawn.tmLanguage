@@ -748,11 +748,11 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>meta.toc-list.pragma-mark.c</string>
+					<string>keyword.control.import.pragma.c</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(#\s*(pragma\s+mark)\s+(.*))</string>
+			<string>^\s*(#\s*(pragma)\s+(align|amxlimit|amxram|codepage|compress|ctrlchar|deprecated|dynamic|library|overlay|pack|rational|semicolon|tabsize|unused))</string>
 			<key>name</key>
 			<string>meta.section</string>
 		</dict>
