@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"JSON_DEFAULT_DELIMITER",
+		"JSON_NULL",
+		"JSON_STRING",
+		"JSON_NUMBER",
+		"JSON_BOOL",
+		"JSON_ARRAY",
+		"JSON_NODE",
+		{"trigger": "json_parse_file", "contents": "json_parse_file(${1:const file_path[]})"},
+		{"trigger": "json_parse_string", "contents": "json_parse_string(${1:const string[]})"},
+		{"trigger": "json_close", "contents": "json_close(${1:JSONNode:node})"},
+		{"trigger": "json_get_type", "contents": "json_get_type(${1:JSONNode:node}, ${2:const path[] = '\\0'}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_get_node", "contents": "json_get_node(${1:JSONNode:node}, ${2:const path[]}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_get_bool", "contents": "json_get_bool(${1:JSONNode:node}, ${2:const path[] = '\\0'}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_get_int", "contents": "json_get_int(${1:JSONNode:node}, ${2:const path[] = '\\0'}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_get_float", "contents": "json_get_float(${1:JSONNode:node}, ${2:const path[] = '\\0'}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_get_string", "contents": "json_get_string(${1:JSONNode:node}, ${2:dst[]}, ${3:const len = sizeof(dst})"},
+		{"trigger": "json_get_name", "contents": "json_get_name(${1:JSONNode:node}, ${2:dst[]}, ${3:const len = sizeof(dst})"},
+		{"trigger": "json_get_array", "contents": "json_get_array(${1:JSONNode:node}, ${2:const path[] = '\\0'}, ${3:const path_delim = JSON_DEFAULT_DELIMITER})"},
+		{"trigger": "json_array_count", "contents": "json_array_count(${1:JSONArray:array})"},
+		{"trigger": "json_array_at", "contents": "json_array_at(${1:JSONArray:array}, ${2:const index})"}
+	]
+}

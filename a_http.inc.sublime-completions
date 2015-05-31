@@ -1,8 +1,8 @@
+
 {
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "HTTP", "contents": "HTTP(${1:index}, ${2:type}, ${3:url[]}, ${4:data[]}, ${5:callback[]})" },
 		"HTTP_GET",
 		"HTTP_POST",
 		"HTTP_HEAD",
@@ -12,6 +12,7 @@
 		"HTTP_ERROR_CANT_WRITE",
 		"HTTP_ERROR_CONTENT_TOO_BIG",
 		"HTTP_ERROR_MALFORMED_RESPONSE",
-		"pawn"
+		{"trigger": "HTTP", "contents": "HTTP(${1:index}, ${2:type}, ${3:url[]}, ${4:data[]}, ${5:callback[]})"},
+		{"trigger": "MyHttpResponse", "contents": "MyHttpResponse(${1:index}, ${2:response_code}, ${3:data[]})"}
 	]
 }

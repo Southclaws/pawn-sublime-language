@@ -1,0 +1,23 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "CreateActor", "contents": "CreateActor(${1:modelid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z}, ${5:Float:Rotation})"},
+		{"trigger": "DestroyActor", "contents": "DestroyActor(${1:actorid})"},
+		{"trigger": "IsActorStreamedIn", "contents": "IsActorStreamedIn(${1:actorid}, ${2:forplayerid})"},
+		{"trigger": "SetActorVirtualWorld", "contents": "SetActorVirtualWorld(${1:actorid}, ${2:vworld})"},
+		{"trigger": "GetActorVirtualWorld", "contents": "GetActorVirtualWorld(${1:actorid})"},
+		{"trigger": "ApplyActorAnimation", "contents": "ApplyActorAnimation(${1:actorid}, ${2:animlib[]}, ${3:animname[]}, ${4:Float:fDelta}, ${5:loop}, ${6:lockx}, ${7:locky}, ${8:freeze}, ${9:time})"},
+		{"trigger": "ClearActorAnimations", "contents": "ClearActorAnimations(${1:actorid})"},
+		{"trigger": "SetActorPos", "contents": "SetActorPos(${1:actorid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z})"},
+		{"trigger": "GetActorPos", "contents": "GetActorPos(${1:actorid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z})"},
+		{"trigger": "SetActorFacingAngle", "contents": "SetActorFacingAngle(${1:actorid}, ${2:Float:ang})"},
+		{"trigger": "GetActorFacingAngle", "contents": "GetActorFacingAngle(${1:actorid}, ${2:Float:ang})"},
+		{"trigger": "SetActorHealth", "contents": "SetActorHealth(${1:actorid}, ${2:Float:health})"},
+		{"trigger": "GetActorHealth", "contents": "GetActorHealth(${1:actorid}, ${2:Float:health})"},
+		{"trigger": "SetActorInvulnerable", "contents": "SetActorInvulnerable(${1:actorid}, ${2:invulnerable = true})"},
+		{"trigger": "IsActorInvulnerable", "contents": "IsActorInvulnerable(${1:actorid})"},
+		{"trigger": "IsValidActor", "contents": "IsValidActor(${1:actorid})"}
+	]
+}

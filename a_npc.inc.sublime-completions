@@ -1,0 +1,14 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"PLAYER_RECORDING_TYPE_NONE",
+		"PLAYER_RECORDING_TYPE_DRIVER",
+		"PLAYER_RECORDING_TYPE_ONFOOT",
+		{"trigger": "StartRecordingPlayback", "contents": "StartRecordingPlayback(${1:playbacktype}, ${2:recordname[]})"},
+		{"trigger": "StopRecordingPlayback", "contents": "StopRecordingPlayback()"},
+		{"trigger": "PauseRecordingPlayback", "contents": "PauseRecordingPlayback()"},
+		{"trigger": "ResumeRecordingPlayback", "contents": "ResumeRecordingPlayback()"}
+	]
+}
