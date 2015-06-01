@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"DJSON_TYPE_OBJECT",
+		"DJSON_TYPE_ARRAY",
+		"DJSON_TYPE_NUMBER",
+		"DJSON_TYPE_STRING",
+		{"trigger": "djCount", "contents": "djCount(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djIsSet", "contents": "djIsSet(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djUnset", "contents": "djUnset(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djAppend", "contents": "djAppend(${1:file[]}, ${2:path[]}, ${3:value[]}, ${4:use_cached_value=true})"},
+		{"trigger": "djSet", "contents": "djSet(${1:file[]}, ${2:path[]}, ${3:new_value[]}, ${4:use_cached_value=true})"},
+		{"trigger": "djSetInt", "contents": "djSetInt(${1:file[]}, ${2:path[]}, ${3:new_value}, ${4:use_cached_value=true})"},
+		{"trigger": "djSetFloat", "contents": "djSetFloat(${1:file[]}, ${2:path[]}, ${3:Float:new_value}, ${4:use_cached_value=true})"},
+		{"trigger": "dj", "contents": "dj(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djInt", "contents": "djInt(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djFloat", "contents": "djFloat(${1:file[]}, ${2:path[]}, ${3:use_cached_value=true})"},
+		{"trigger": "djAutocommit", "contents": "djAutocommit(${1:toggle})"},
+		{"trigger": "djCommit", "contents": "djCommit(${1:file[]})"},
+		{"trigger": "djRevert", "contents": "djRevert(${1:file[]})"},
+		{"trigger": "djStyled", "contents": "djStyled(${1:toggle})"},
+		{"trigger": "djCreateFile", "contents": "djCreateFile(${1:file[]})"},
+		{"trigger": "djRemoveFile", "contents": "djRemoveFile(${1:file[]})"}
+	]
+}

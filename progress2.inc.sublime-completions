@@ -1,0 +1,30 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"MAX_PLAYER_BARS",
+		"INVALID_PLAYER_BAR_VALUE",
+		"INVALID_PLAYER_BAR_ID",
+		{"trigger": "pb_percent", "contents": "pb_percent(${1:Float:x}, ${2:Float:widthorheight}, ${3:Float:max}, ${4:Float:value}, ${5:direction})"},
+		{"trigger": "CreatePlayerProgressBar", "contents": "CreatePlayerProgressBar(${1:playerid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:width = 55.5}, ${5:Float:height = 3.2}, ${6:colour = 0xFF1C1CFF}, ${7:Float:max = 100.0}, ${8:direction = BAR_DIRECTION_RIGHT})"},
+		{"trigger": "DestroyPlayerProgressBar", "contents": "DestroyPlayerProgressBar(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "ShowPlayerProgressBar", "contents": "ShowPlayerProgressBar(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "HidePlayerProgressBar", "contents": "HidePlayerProgressBar(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "IsValidPlayerProgressBar", "contents": "IsValidPlayerProgressBar(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "GetPlayerProgressBarPos", "contents": "GetPlayerProgressBarPos(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:x}, ${4:Float:y})"},
+		{"trigger": "SetPlayerProgressBarPos", "contents": "SetPlayerProgressBarPos(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:x}, ${4:Float:y})"},
+		{"trigger": "GetPlayerProgressBarWidth", "contents": "GetPlayerProgressBarWidth(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "SetPlayerProgressBarWidth", "contents": "SetPlayerProgressBarWidth(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:width})"},
+		{"trigger": "GetPlayerProgressBarHeight", "contents": "GetPlayerProgressBarHeight(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "SetPlayerProgressBarHeight", "contents": "SetPlayerProgressBarHeight(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:height})"},
+		{"trigger": "GetPlayerProgressBarColour", "contents": "GetPlayerProgressBarColour(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "SetPlayerProgressBarColour", "contents": "SetPlayerProgressBarColour(${1:playerid}, ${2:PlayerBar:barid}, ${3:colour})"},
+		{"trigger": "GetPlayerProgressBarMaxValue", "contents": "GetPlayerProgressBarMaxValue(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "SetPlayerProgressBarMaxValue", "contents": "SetPlayerProgressBarMaxValue(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:max})"},
+		{"trigger": "SetPlayerProgressBarValue", "contents": "SetPlayerProgressBarValue(${1:playerid}, ${2:PlayerBar:barid}, ${3:Float:value})"},
+		{"trigger": "GetPlayerProgressBarValue", "contents": "GetPlayerProgressBarValue(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "GetPlayerProgressBarDirection", "contents": "GetPlayerProgressBarDirection(${1:playerid}, ${2:PlayerBar:barid})"},
+		{"trigger": "SetPlayerProgressBarDirection", "contents": "SetPlayerProgressBarDirection(${1:playerid}, ${2:PlayerBar:barid}, ${3:direction})"}
+	]
+}

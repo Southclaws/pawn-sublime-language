@@ -1,0 +1,9 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "sscanf", "contents": "sscanf(${1:const data[]}, ${2:const format[]}, ${3:...})"},
+		{"trigger": "unformat", "contents": "unformat(${1:const data[]}, ${2:const format[]}, ${3:...})"}
+	]
+}

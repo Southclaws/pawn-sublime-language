@@ -1,0 +1,21 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"GLOBAL_VARTYPE_NONE",
+		"GLOBAL_VARTYPE_INT",
+		"GLOBAL_VARTYPE_STRING",
+		"GLOBAL_VARTYPE_FLOAT",
+		{"trigger": "SetGVarInt", "contents": "SetGVarInt(${1:const name[]}, ${2:value}, ${3:id = 0})"},
+		{"trigger": "GetGVarInt", "contents": "GetGVarInt(${1:const name[]}, ${2:id = 0})"},
+		{"trigger": "SetGVarString", "contents": "SetGVarString(${1:const name[]}, ${2:const value[]}, ${3:id = 0})"},
+		{"trigger": "GetGVarString", "contents": "GetGVarString(${1:const name[]}, ${2:dest[]}, ${3:maxlength = sizeof dest}, ${4:id = 0})"},
+		{"trigger": "SetGVarFloat", "contents": "SetGVarFloat(${1:const name[]}, ${2:Float:value}, ${3:id = 0})"},
+		{"trigger": "GetGVarFloat", "contents": "GetGVarFloat(${1:const name[]}, ${2:id = 0})"},
+		{"trigger": "DeleteGVar", "contents": "DeleteGVar(${1:const name[]}, ${2:id = 0})"},
+		{"trigger": "GetGVarsUpperIndex", "contents": "GetGVarsUpperIndex(${1:id = 0})"},
+		{"trigger": "GetGVarNameAtIndex", "contents": "GetGVarNameAtIndex(${1:index}, ${2:dest[]}, ${3:maxlength = sizeof dest}, ${4:id = 0})"},
+		{"trigger": "GetGVarType", "contents": "GetGVarType(${1:const name[]}, ${2:id = 0})"}
+	]
+}

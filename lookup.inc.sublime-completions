@@ -1,0 +1,21 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "GetPlayerHost", "contents": "GetPlayerHost(${1:%1})"},
+		{"trigger": "GetPlayerISP", "contents": "GetPlayerISP(${2:%1})"},
+		{"trigger": "GetPlayerCountryCode", "contents": "GetPlayerCountryCode(${3:%1})"},
+		{"trigger": "GetPlayerCountryName", "contents": "GetPlayerCountryName(${4:%1})"},
+		{"trigger": "GetPlayerCountryRegion", "contents": "GetPlayerCountryRegion(${5:%1})"},
+		{"trigger": "IsProxyUser", "contents": "IsProxyUser(${6:%1})"},
+		{"trigger": "OnPlayerConnect", "contents": "OnPlayerConnect(${1:playerid})"},
+		{"trigger": "OnLookupResponse", "contents": "OnLookupResponse(${1:sessionid}, ${2:response}, ${3:data[]})"},
+		{"trigger": "LookupPlayerIP", "contents": "LookupPlayerIP(${1:playerid})"},
+		{"trigger": "GetPlayerFromSession", "contents": "GetPlayerFromSession(${1:sessionid})"},
+		{"trigger": "DisplayLookupData", "contents": "DisplayLookupData(${1:playerid}, ${2:targetid})"},
+		{"trigger": "strmidex", "contents": "strmidex(${1:dest[]}, ${2:const src[]}, ${3:start}, ${4:end}, ${5:maxlength=sizeof dest})"},
+		{"trigger": "cleardata", "contents": "cleardata(${1:src[]})"},
+		"OnPlayerConnect"
+	]
+}

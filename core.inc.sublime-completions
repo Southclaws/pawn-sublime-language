@@ -1,0 +1,23 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "heapspace", "contents": "heapspace()"},
+		{"trigger": "funcidx", "contents": "funcidx(${1:const name[]})"},
+		{"trigger": "numargs", "contents": "numargs()"},
+		{"trigger": "getarg", "contents": "getarg(${1:arg}, ${2:index=0})"},
+		{"trigger": "setarg", "contents": "setarg(${1:arg}, ${2:index=0}, ${3:value})"},
+		{"trigger": "tolower", "contents": "tolower(${1:c})"},
+		{"trigger": "toupper", "contents": "toupper(${1:c})"},
+		{"trigger": "swapchars", "contents": "swapchars(${1:c})"},
+		{"trigger": "random", "contents": "random(${1:max})"},
+		{"trigger": "min", "contents": "min(${1:value1}, ${2:value2})"},
+		{"trigger": "max", "contents": "max(${1:value1}, ${2:value2})"},
+		{"trigger": "clamp", "contents": "clamp(${1:value}, ${2:min=cellmin}, ${3:max=cellmax})"},
+		{"trigger": "getproperty", "contents": "getproperty(${1:id=0}, ${2:const name[]=\"\"}, ${3:value=cellmin}, ${4:string[]=\"\"})"},
+		{"trigger": "setproperty", "contents": "setproperty(${1:id=0}, ${2:const name[]=\"\"}, ${3:value=cellmin}, ${4:const string[]=\"\"})"},
+		{"trigger": "deleteproperty", "contents": "deleteproperty(${1:id=0}, ${2:const name[]=\"\"}, ${3:value=cellmin})"},
+		{"trigger": "existproperty", "contents": "existproperty(${1:id=0}, ${2:const name[]=\"\"}, ${3:value=cellmin})"}
+	]
+}

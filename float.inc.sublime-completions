@@ -1,0 +1,23 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "float", "contents": "float(${1:value})"},
+		{"trigger": "floatstr", "contents": "floatstr(${1:const string[]})"},
+		{"trigger": "floatmul", "contents": "floatmul(${1:Float:oper1}, ${2:Float:oper2})"},
+		{"trigger": "floatdiv", "contents": "floatdiv(${1:Float:dividend}, ${2:Float:divisor})"},
+		{"trigger": "floatadd", "contents": "floatadd(${1:Float:oper1}, ${2:Float:oper2})"},
+		{"trigger": "floatsub", "contents": "floatsub(${1:Float:oper1}, ${2:Float:oper2})"},
+		{"trigger": "floatfract", "contents": "floatfract(${1:Float:value})"},
+		{"trigger": "floatround", "contents": "floatround(${1:Float:value}, ${2:floatround_method:method=floatround_round})"},
+		{"trigger": "floatcmp", "contents": "floatcmp(${1:Float:oper1}, ${2:Float:oper2})"},
+		{"trigger": "floatsqroot", "contents": "floatsqroot(${1:Float:value})"},
+		{"trigger": "floatpower", "contents": "floatpower(${1:Float:value}, ${2:Float:exponent})"},
+		{"trigger": "floatlog", "contents": "floatlog(${1:Float:value}, ${2:Float:base=10.0})"},
+		{"trigger": "floatsin", "contents": "floatsin(${1:Float:value}, ${2:anglemode:mode=radian})"},
+		{"trigger": "floatcos", "contents": "floatcos(${1:Float:value}, ${2:anglemode:mode=radian})"},
+		{"trigger": "floattan", "contents": "floattan(${1:Float:value}, ${2:anglemode:mode=radian})"},
+		{"trigger": "floatabs", "contents": "floatabs(${1:Float:value})"}
+	]
+}

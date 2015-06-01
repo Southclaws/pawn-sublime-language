@@ -1,0 +1,21 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "fopen", "contents": "fopen(${1:const name[]}, ${2:filemode: mode = io_readwrite})"},
+		{"trigger": "fclose", "contents": "fclose(${1:File: handle})"},
+		{"trigger": "ftemp", "contents": "ftemp()"},
+		{"trigger": "fremove", "contents": "fremove(${1:const name[]})"},
+		{"trigger": "fwrite", "contents": "fwrite(${1:File: handle}, ${2:const string[]})"},
+		{"trigger": "fread", "contents": "fread(${1:File: handle}, ${2:string[]}, ${3:size = sizeof string}, ${4:bool: pack = false})"},
+		{"trigger": "fputchar", "contents": "fputchar(${1:File: handle}, ${2:value}, ${3:bool: utf8 = true})"},
+		{"trigger": "fgetchar", "contents": "fgetchar(${1:File: handle}, ${2:value}, ${3:bool: utf8 = true})"},
+		{"trigger": "fblockwrite", "contents": "fblockwrite(${1:File: handle}, ${2:const buffer[]}, ${3:size = sizeof buffer})"},
+		{"trigger": "fblockread", "contents": "fblockread(${1:File: handle}, ${2:buffer[]}, ${3:size = sizeof buffer})"},
+		{"trigger": "fseek", "contents": "fseek(${1:File: handle}, ${2:position = 0}, ${3:seek_whence: whence = seek_start})"},
+		{"trigger": "flength", "contents": "flength(${1:File: handle})"},
+		{"trigger": "fexist", "contents": "fexist(${1:const pattern[]})"},
+		{"trigger": "fmatch", "contents": "fmatch(${1:name[]}, ${2:const pattern[]}, ${3:index = 0}, ${4:size = sizeof name})"}
+	]
+}
