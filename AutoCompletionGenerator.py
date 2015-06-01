@@ -143,6 +143,11 @@ def scan_contents(contents):
 				in_comment_block = True
 				continue
 
+
+		if contents.startswith('//', i):
+			skip_until_newline = True
+			continue
+
 		if in_directive:
 
 			db("in_directive")
@@ -151,6 +156,7 @@ def scan_contents(contents):
 				if contents.startswith(directive, i):
 					skip_until_newline = True
 					in_directive = False
+					continue
 
 			if contents.startswith('define', i):
 				skip_until_whitespace_start = True
@@ -173,8 +179,15 @@ def scan_contents(contents):
 					db("reached define contents block at ", i, c)
 
 				else:
-					output_contents += gen_const(contents[pos_directive_define:i])
-					print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'"%contents[pos_directive_define:i])
+					final = contents[pos_directive_define:i]
+
+					if any(x.islower() for x in final):
+						db("constant contains lowercase, not conventionally global, ignore")
+
+					else:
+						output_contents += gen_const(final)
+						print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'"%final)
+
 					in_directive = False
 					in_directive_define = False
 					skip_until_newline = True
@@ -210,6 +223,13 @@ def scan_contents(contents):
 						skip_until_valid_symbol_char = True
 						continue
 
+					if c == '_':
+						db("function name begins with _, skipping")
+						in_function = False
+						in_function_declare = False
+						skip_until_newline = True
+						continue
+
 					db("reading function name from ", i)
 					pos_function_name = i
 					skip_until_invalid_symbol_char = True
@@ -222,10 +242,19 @@ def scan_contents(contents):
 						skip_until_valid_symbol_char = True
 						continue
 
-					else:
+					if c == '(':
 						data_function_name = contents[pos_function_name:i]
 						pos_function_name = -1
 						db("function name '%s'"%data_function_name)
+
+					else:
+						db("not a function, skip")
+						pos_function_name = -1
+						in_function = False
+						in_function_declare = False
+						skip_until_newline = True
+						continue
+
 
 			# Function parameters
 
@@ -291,11 +320,11 @@ def scan_contents(contents):
 			if c == ')':
 				output_contents += gen_func(data_function_name, data_function_params)
 				in_function = False
-				print("[EXTRACTED] FUNCTION '%s' PARAMS: '%s'"%(data_function_name, data_function_params))
+				print("[EXTRACTED] FUNCTION '%s' PARAMS: %s"%(data_function_name, data_function_params))
 				continue
 
 		else:
-			if contents.startswith('native', i) or contents.startswith('public', i):
+			if contents.startswith('native', i) or contents.startswith('forward', i) or contents.startswith('stock', i):
 				skip_until_whitespace_start = True
 				in_function = True
 				in_function_params = False
@@ -340,7 +369,7 @@ def main():
 #
 #	path = sys.argv[1]
 
-	path = "E:\\Games\\Projects\\SA-MP\\pawno\\include\\"
+	path = "E:\\Games\\Projects\\SA-MP\\pawno\\include\\autocomplete\\"
 
 	if os.path.isfile(path):
 		process_file(path)

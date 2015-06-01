@@ -9,6 +9,21 @@
 		{"trigger": "StartRecordingPlayback", "contents": "StartRecordingPlayback(${1:playbacktype}, ${2:recordname[]})"},
 		{"trigger": "StopRecordingPlayback", "contents": "StopRecordingPlayback()"},
 		{"trigger": "PauseRecordingPlayback", "contents": "PauseRecordingPlayback()"},
-		{"trigger": "ResumeRecordingPlayback", "contents": "ResumeRecordingPlayback()"}
+		{"trigger": "ResumeRecordingPlayback", "contents": "ResumeRecordingPlayback()"},
+		{"trigger": "OnNPCModeInit", "contents": "OnNPCModeInit()"},
+		{"trigger": "OnNPCModeExit", "contents": "OnNPCModeExit()"},
+		{"trigger": "OnNPCConnect", "contents": "OnNPCConnect(${1:myplayerid})"},
+		{"trigger": "OnNPCDisconnect", "contents": "OnNPCDisconnect(${1:reason[]})"},
+		{"trigger": "OnNPCSpawn", "contents": "OnNPCSpawn()"},
+		{"trigger": "OnNPCEnterVehicle", "contents": "OnNPCEnterVehicle(${1:vehicleid}, ${2:seatid})"},
+		{"trigger": "OnNPCExitVehicle", "contents": "OnNPCExitVehicle()"},
+		{"trigger": "OnClientMessage", "contents": "OnClientMessage(${1:color}, ${2:text[]})"},
+		{"trigger": "OnPlayerDeath", "contents": "OnPlayerDeath(${1:playerid})"},
+		{"trigger": "OnPlayerText", "contents": "OnPlayerText(${1:playerid}, ${2:text[]})"},
+		{"trigger": "OnPlayerStreamIn", "contents": "OnPlayerStreamIn(${1:playerid})"},
+		{"trigger": "OnPlayerStreamOut", "contents": "OnPlayerStreamOut(${1:playerid})"},
+		{"trigger": "OnVehicleStreamIn", "contents": "OnVehicleStreamIn(${1:vehicleid})"},
+		{"trigger": "OnVehicleStreamOut", "contents": "OnVehicleStreamOut(${1:vehicleid})"},
+		{"trigger": "OnRecordingPlaybackEnd", "contents": "OnRecordingPlaybackEnd()"}
 	]
 }
