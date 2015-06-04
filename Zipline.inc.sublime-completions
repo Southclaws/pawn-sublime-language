@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "CreateZipline", "contents": "CreateZipline(${1:Float:x1}, ${2:Float:y1}, ${3:Float:z1}, ${4:Float:x2}, ${5:Float:y2}, ${6:Float:z2}, ${7:worldid = 0}, ${8:interiorid = 0})"},
+		{"trigger": "DestroyZipline", "contents": "DestroyZipline(${1:ziplineid})"},
+		{"trigger": "zip_OnPlayerEnterDynamicArea", "contents": "zip_OnPlayerEnterDynamicArea(${1:playerid}, ${2:areaid})"},
+		{"trigger": "zip_GetDistancePointLine", "contents": "zip_GetDistancePointLine(${1:Float:line_x}, ${2:Float:line_y}, ${3:Float:line_z}, ${4:Float:vector_x}, ${5:Float:vector_y}, ${6:Float:vector_z}, ${7:Float:point_x}, ${8:Float:point_y}, ${9:Float:point_z})"},
+		{"trigger": "zip_GetAngleToPoint", "contents": "zip_GetAngleToPoint(${1:Float:fPointX}, ${2:Float:fPointY}, ${3:Float:fDestX}, ${4:Float:fDestY})"},
+		{"trigger": "zip_absoluteangle", "contents": "zip_absoluteangle(${1:Float:angle})"},
+		{"trigger": "IsValidZipline", "contents": "IsValidZipline(${1:ziplineid})"},
+		{"trigger": "GetZiplineStartAreaID", "contents": "GetZiplineStartAreaID(${1:ziplineid})"},
+		{"trigger": "GetZiplineEndAreaID", "contents": "GetZiplineEndAreaID(${1:ziplineid})"},
+		{"trigger": "GetZiplineLineID", "contents": "GetZiplineLineID(${1:ziplineid})"},
+		{"trigger": "GetZiplineStartPos", "contents": "GetZiplineStartPos(${1:ziplineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "SetZiplineStartPos", "contents": "SetZiplineStartPos(${1:ziplineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetZiplineEndPos", "contents": "GetZiplineEndPos(${1:ziplineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "SetZiplineEndPos", "contents": "SetZiplineEndPos(${1:ziplineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetZiplineVector", "contents": "GetZiplineVector(${1:ziplineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetZiplineWorld", "contents": "GetZiplineWorld(${1:ziplineid})"},
+		{"trigger": "SetZiplineWorld", "contents": "SetZiplineWorld(${1:ziplineid}, ${2:worldid})"},
+		{"trigger": "GetZiplineInterior", "contents": "GetZiplineInterior(${1:ziplineid})"},
+		{"trigger": "SetZiplineInterior", "contents": "SetZiplineInterior(${1:ziplineid}, ${2:interiorid})"},
+		{"trigger": "IsPlayerOnZipline", "contents": "IsPlayerOnZipline(${1:playerid})"}
+	]
+}

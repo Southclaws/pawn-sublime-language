@@ -1,0 +1,20 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "CreateLadder", "contents": "CreateLadder(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:Float:height}, ${5:Float:angle}, ${6:world = -1}, ${7:interior = -1})"},
+		{"trigger": "DestroyLadder", "contents": "DestroyLadder(${1:ladderid})"},
+		{"trigger": "ldr_OnPlayerEnterDynamicArea", "contents": "ldr_OnPlayerEnterDynamicArea(${1:playerid}, ${2:areaid})"},
+		{"trigger": "ldr_OnPlayerLeaveDynamicArea", "contents": "ldr_OnPlayerLeaveDynamicArea(${1:playerid}, ${2:areaid})"},
+		{"trigger": "IsValidLadder", "contents": "IsValidLadder(${1:ladderid})"},
+		{"trigger": "GetLadderAreaID", "contents": "GetLadderAreaID(${1:ladderid})"},
+		{"trigger": "GetLadderPos", "contents": "GetLadderPos(${1:ladderid}, ${2:Float:x}, ${3:Float:y})"},
+		{"trigger": "GetLadderBase", "contents": "GetLadderBase(${1:ladderid}, ${2:Float:z})"},
+		{"trigger": "GetLadderTop", "contents": "GetLadderTop(${1:ladderid}, ${2:Float:z})"},
+		{"trigger": "GetLadderAngle", "contents": "GetLadderAngle(${1:ladderid}, ${2:Float:angle})"},
+		{"trigger": "IsPlayerOnLadder", "contents": "IsPlayerOnLadder(${1:playerid}, ${2:ladderid})"},
+		{"trigger": "IsPlayerOnAnyLadder", "contents": "IsPlayerOnAnyLadder(${1:playerid})"},
+		{"trigger": "GetPlayerLadder", "contents": "GetPlayerLadder(${1:playerid})"}
+	]
+}

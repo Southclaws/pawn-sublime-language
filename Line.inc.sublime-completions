@@ -1,0 +1,35 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "CreateLineSegment", "contents": "CreateLineSegment(${1:modelid}, ${2:Float:objlength}, ${3:Float:PointX}, ${4:Float:PointY}, ${5:Float:PointZ}, ${6:Float:DestX}, ${7:Float:DestY}, ${8:Float:DestZ}, ${9:Float:RotX = 0.0}, ${10:Float:RotY = 0.0}, ${11:Float:RotZ = 0.0}, ${12:Float:objlengthoffset = 0.0}, ${13:worldid = -1}, ${14:interiorid = -1}, ${15:playerid = -1}, ${16:Float:maxlength = 100.0})"},
+		{"trigger": "DestroyLineSegment", "contents": "DestroyLineSegment(${1:lineid})"},
+		{"trigger": "IsValidLineSegment", "contents": "IsValidLineSegment(${1:lineid})"},
+		{"trigger": "GetLineSegmentModel", "contents": "GetLineSegmentModel(${1:lineid})"},
+		{"trigger": "SetLineSegmentModel", "contents": "SetLineSegmentModel(${1:lineid}, ${2:modelid}, ${3:Float:objlength}, ${4:Float:objlengthoffset})"},
+		{"trigger": "GetLineSegmentObjectCount", "contents": "GetLineSegmentObjectCount(${1:lineid})"},
+		{"trigger": "GetLineSegmentObjectLength", "contents": "GetLineSegmentObjectLength(${1:lineid})"},
+		{"trigger": "SetLineSegmentObjectLength", "contents": "SetLineSegmentObjectLength(${1:lineid}, ${2:Float:objlength})"},
+		{"trigger": "GetLineSegmentObjectOffset", "contents": "GetLineSegmentObjectOffset(${1:lineid})"},
+		{"trigger": "SetLineSegmentObjectOffset", "contents": "SetLineSegmentObjectOffset(${1:lineid}, ${2:Float:objlengthoffset})"},
+		{"trigger": "GetLineSegmentMaxLength", "contents": "GetLineSegmentMaxLength(${1:lineid})"},
+		{"trigger": "SetLineSegmentMaxLength", "contents": "SetLineSegmentMaxLength(${1:lineid}, ${2:Float:maxlength})"},
+		{"trigger": "GetLineSegmentPoint", "contents": "GetLineSegmentPoint(${1:lineid}, ${2:Float:PointX}, ${3:Float:PointY}, ${4:Float:PointZ})"},
+		{"trigger": "SetLineSegmentPoint", "contents": "SetLineSegmentPoint(${1:lineid}, ${2:Float:PointX}, ${3:Float:PointY}, ${4:Float:PointZ})"},
+		{"trigger": "GetLineSegmentDest", "contents": "GetLineSegmentDest(${1:lineid}, ${2:Float:DestX}, ${3:Float:DestY}, ${4:Float:DestZ})"},
+		{"trigger": "SetLineSegmentDest", "contents": "SetLineSegmentDest(${1:lineid}, ${2:Float:DestX}, ${3:Float:DestY}, ${4:Float:DestZ})"},
+		{"trigger": "GetLineSegmentModelAngles", "contents": "GetLineSegmentModelAngles(${1:lineid}, ${2:Float:RotX}, ${3:Float:RotY}, ${4:Float:RotZ})"},
+		{"trigger": "SetLineSegmentModelAngles", "contents": "SetLineSegmentModelAngles(${1:lineid}, ${2:Float:RotX}, ${3:Float:RotY}, ${4:Float:RotZ})"},
+		{"trigger": "GetLineSegmentWorld", "contents": "GetLineSegmentWorld(${1:lineid})"},
+		{"trigger": "SetLineSegmentWorld", "contents": "SetLineSegmentWorld(${1:lineid}, ${2:world})"},
+		{"trigger": "GetLineSegmentInterior", "contents": "GetLineSegmentInterior(${1:lineid})"},
+		{"trigger": "SetLineSegmentInterior", "contents": "SetLineSegmentInterior(${1:lineid}, ${2:interior})"},
+		{"trigger": "GetLineSegmentPlayerID", "contents": "GetLineSegmentPlayerID(${1:lineid})"},
+		{"trigger": "SetLineSegmentPlayerID", "contents": "SetLineSegmentPlayerID(${1:lineid}, ${2:playerid})"},
+		{"trigger": "GetLineSegmentVector", "contents": "GetLineSegmentVector(${1:lineid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetDistanceToLineSegmentPoint", "contents": "GetDistanceToLineSegmentPoint(${1:lineid}, ${2:Float:FromX}, ${3:Float:FromY}, ${4:Float:FromZ})"},
+		{"trigger": "GetDistanceToLineSegmentDest", "contents": "GetDistanceToLineSegmentDest(${1:lineid}, ${2:Float:FromX}, ${3:Float:FromY}, ${4:Float:FromZ})"},
+		{"trigger": "GetLineSegmentLength", "contents": "GetLineSegmentLength(${1:lineid})"}
+	]
+}

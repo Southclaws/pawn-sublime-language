@@ -1,0 +1,14 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "modio_push", "contents": "modio_push(${1:file[]}, ${2:tag}, ${3:length}, ${4:data[]}, ${5:forcewrite = false}, ${6:forceclose = true}, ${7:autowrite = true})"},
+		{"trigger": "modio_register_write", "contents": "modio_register_write(${1:file[]})"},
+		{"trigger": "modio_getsession_write", "contents": "modio_getsession_write(${1:file[]})"},
+		{"trigger": "modio_close_session_write", "contents": "modio_close_session_write(${1:session})"},
+		{"trigger": "modio_read", "contents": "modio_read(${1:file[]}, ${2:tag}, ${3:length}, ${4:data[]}, ${5:forceclose = false}, ${6:autoclose = true})"},
+		{"trigger": "modio_register_read", "contents": "modio_register_read(${1:file[]})"},
+		{"trigger": "modio_getsession_read", "contents": "modio_getsession_read(${1:file[]})"}
+	]
+}
