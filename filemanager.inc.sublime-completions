@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "file_move", "contents": "file_move(${1:file[]}, ${2:destination[]})"},
+		{"trigger": "file_copy", "contents": "file_copy(${1:file[]}, ${2:destination[]})"},
+		{"trigger": "file_delete", "contents": "file_delete(${1:file[]})"},
+		{"trigger": "file_create", "contents": "file_create(${1:file[]})"},
+		{"trigger": "file_write", "contents": "file_write(${1:file[]}, ${2:text[]}, ${3:mode[] = \"a\"})"},
+		{"trigger": "file_read", "contents": "file_read(${1:file[]}, ${2:storage[]}, ${3:size = sizeof(storage})"},
+		{"trigger": "file_log", "contents": "file_log()"},
+		{"trigger": "file_exists", "contents": "file_exists(${1:file[]})"},
+		{"trigger": "f_open", "contents": "f_open(${1:file[]}, ${2:mode[] = \"r\"})"},
+		{"trigger": "f_close", "contents": "f_close(${1:File: file})"},
+		{"trigger": "f_read", "contents": "f_read(${1:File: file}, ${2:storage[]}, ${3:size = sizeof(storage})"},
+		{"trigger": "f_write", "contents": "f_write(${1:File: file}, ${2:string[]})"},
+		{"trigger": "dir_create", "contents": "dir_create(${1:directory[]})"},
+		{"trigger": "dir_delete", "contents": "dir_delete(${1:directory[]})"},
+		{"trigger": "dir_exists", "contents": "dir_exists(${1:directory[]})"},
+		{"trigger": "dir_open", "contents": "dir_open(${1:directory[]})"},
+		{"trigger": "dir_close", "contents": "dir_close(${1:dir:handle})"},
+		{"trigger": "dir_list", "contents": "dir_list(${1:dir:handle}, ${2:storage[]}, ${3:type}, ${4:length = sizeof(storage})"},
+		"FM_DIR",
+		"FM_FILE"
+	]
+}

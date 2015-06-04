@@ -1,0 +1,18 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"CLOCKS_PER_SEC",
+		{"trigger": "tm", "contents": "tm<${1:name}>"},
+		{"trigger": "clock", "contents": "clock()"},
+		{"trigger": "difftime", "contents": "difftime(${1:Time: tTime1}, ${2:Time: tTime2})"},
+		{"trigger": "mktime", "contents": "mktime(${1:tm <tmPtr>})"},
+		{"trigger": "asctime", "contents": "asctime(${1:tm <tmPtr>}, ${2:szBuf[]}, ${3:const iSize = sizeof(szBuf})"},
+		{"trigger": "ctime", "contents": "ctime(${1:Time: tTime}, ${2:szBuf[]}, ${3:const iSize = sizeof(szBuf})"},
+		{"trigger": "gmtime", "contents": "gmtime(${1:Time: tTime}, ${2:tm <tmPtr>})"},
+		{"trigger": "localtime", "contents": "localtime(${1:Time: tTime}, ${2:tm <tmPtr>})"},
+		{"trigger": "strftime", "contents": "strftime(${1:szBuf[]}, ${2:const iSize}, ${3:const szFormat[]}, ${4:tm <tmPtr>})"},
+		{"trigger": "time", "contents": "time()"}
+	]
+}

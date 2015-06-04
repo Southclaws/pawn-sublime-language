@@ -1,0 +1,13 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "PrintAmxBacktrace", "contents": "PrintAmxBacktrace()"},
+		{"trigger": "PrintNativeBacktrace", "contents": "PrintNativeBacktrace()"},
+		{"trigger": "GetAmxBacktrace", "contents": "GetAmxBacktrace(${1:string[]}, ${2:size = sizeof(string})"},
+		{"trigger": "GetNativeBacktrace", "contents": "GetNativeBacktrace(${1:string[]}, ${2:size = sizeof(string})"},
+		{"trigger": "OnRuntimeError", "contents": "OnRuntimeError(${1:code}, ${2:bool:suppress})"},
+		{"trigger": "IsCrashDetectPresent", "contents": "IsCrashDetectPresent()"}
+	]
+}
