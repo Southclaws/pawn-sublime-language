@@ -1,0 +1,17 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "GetPlayerCountry", "contents": "GetPlayerCountry(${1:playerid}, ${2:string[]}, ${3:const len = sizeof(string})"},
+		{"trigger": "GetPlayerISP", "contents": "GetPlayerISP(${1:playerid}, ${2:string[]}, ${3:const len = sizeof(string})"},
+		{"trigger": "GetPlayerCity", "contents": "GetPlayerCity(${1:playerid}, ${2:string[]}, ${3:const len = sizeof(string})"},
+		{"trigger": "GetPlayerGMT", "contents": "GetPlayerGMT(${1:playerid})"},
+		{"trigger": "GetPlayerProxy", "contents": "GetPlayerProxy(${1:playerid})"},
+		{"trigger": "GetIPCountry", "contents": "GetIPCountry(${1:ip[]}, ${2:dest[]}, ${3:const len = sizeof(dest})"},
+		{"trigger": "GetIPISP", "contents": "GetIPISP(${1:ip[]}, ${2:dest[]}, ${3:const len = sizeof(dest})"},
+		{"trigger": "GetIPCity", "contents": "GetIPCity(${1:ip[]}, ${2:dest[]}, ${3:const len = sizeof(dest})"},
+		{"trigger": "GetIPGMT", "contents": "GetIPGMT(${1:ip[]})"},
+		{"trigger": "GetIPProxy", "contents": "GetIPProxy(${1:ip[]})"}
+	]
+}

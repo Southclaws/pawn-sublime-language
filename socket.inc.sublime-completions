@@ -1,0 +1,42 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"INVALID_SOCKET",
+		"INVALID_CLIENT_ID",
+		"NO_IP_RETURN",
+		"INADDR_ANY",
+		"METHOD_CLIENT",
+		"METHOD_SERVER",
+		{"trigger": "socket_create", "contents": "socket_create(${1:pType:TCP})"},
+		{"trigger": "socket_bind", "contents": "socket_bind(${1:Socket:id}, ${2:ip[]})"},
+		{"trigger": "socket_connect", "contents": "socket_connect(${1:Socket:id}, ${2:host[]}, ${3:port})"},
+		{"trigger": "socket_listen", "contents": "socket_listen(${1:Socket:id}, ${2:port})"},
+		{"trigger": "socket_stop_listen", "contents": "socket_stop_listen(${1:Socket:id})"},
+		{"trigger": "socket_destroy", "contents": "socket_destroy(${1:Socket:id})"},
+		{"trigger": "socket_send", "contents": "socket_send(${1:Socket:id}, ${2:data[]}, ${3:len})"},
+		{"trigger": "socket_sendto", "contents": "socket_sendto(${1:Socket:id}, ${2:const ip[]}, ${3:port}, ${4:data[]}, ${5:len})"},
+		{"trigger": "socket_send_array", "contents": "socket_send_array(${1:Socket:id}, ${2:data[]}, ${3:size=sizeof(data})"},
+		{"trigger": "is_socket_valid", "contents": "is_socket_valid(${1:Socket:id})"},
+		{"trigger": "socket_set_max_connections", "contents": "socket_set_max_connections(${1:Socket:id}, ${2:max_remote_clients})"},
+		{"trigger": "socket_close_remote_client", "contents": "socket_close_remote_client(${1:Socket:id}, ${2:remote_clientid})"},
+		{"trigger": "socket_sendto_remote_client", "contents": "socket_sendto_remote_client(${1:Socket:id}, ${2:remote_clientid}, ${3:data[]})"},
+		{"trigger": "socket_remote_client_connected", "contents": "socket_remote_client_connected(${1:Socket:id}, ${2:remote_clientid})"},
+		{"trigger": "get_remote_client_ip", "contents": "get_remote_client_ip(${1:Socket:id}, ${2:remote_clientid}, ${3:ip[]})"},
+		{"trigger": "ssl_init", "contents": "ssl_init()"},
+		{"trigger": "ssl_create_context", "contents": "ssl_create_context(${1:Socket:id}, ${2:method})"},
+		{"trigger": "ssl_connect", "contents": "ssl_connect(${1:Socket:id})"},
+		{"trigger": "ssl_load_cert_into_context", "contents": "ssl_load_cert_into_context(${1:Socket:id}, ${2:const certificate[]}, ${3:const private_key[]})"},
+		{"trigger": "ssl_shutdown", "contents": "ssl_shutdown(${1:Socket:id})"},
+		{"trigger": "ssl_get_peer_certificate", "contents": "ssl_get_peer_certificate(${1:Socket:id}, ${2:method}, ${3:subject[]}, ${4:issuer[]}, ${5:remote_clientid = 0xFFFF})"},
+		{"trigger": "ssl_set_accept_timeout", "contents": "ssl_set_accept_timeout(${1:Socket:id}, ${2:interval})"},
+		{"trigger": "ssl_set_mode", "contents": "ssl_set_mode(${1:Socket:id}, ${2:mode})"},
+		{"trigger": "onUDPReceiveData", "contents": "onUDPReceiveData(${1:Socket:id}, ${2:data[]}, ${3:data_len}, ${4:remote_client_ip[]}, ${5:remote_client_port})"},
+		{"trigger": "onSocketAnswer", "contents": "onSocketAnswer(${1:Socket:id}, ${2:data[]}, ${3:data_len})"},
+		{"trigger": "onSocketClose", "contents": "onSocketClose(${1:Socket:id})"},
+		{"trigger": "onSocketReceiveData", "contents": "onSocketReceiveData(${1:Socket:id}, ${2:remote_clientid}, ${3:data[]}, ${4:data_len})"},
+		{"trigger": "onSocketRemoteConnect", "contents": "onSocketRemoteConnect(${1:Socket:id}, ${2:remote_client[]}, ${3:remote_clientid})"},
+		{"trigger": "onSocketRemoteDisconnect", "contents": "onSocketRemoteDisconnect(${1:Socket:id}, ${2:remote_clientid})"}
+	]
+}

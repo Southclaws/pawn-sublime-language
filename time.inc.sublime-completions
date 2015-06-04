@@ -1,0 +1,10 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "gettime", "contents": "gettime(${1:hour=0}, ${2:minute=0}, ${3:second=0})"},
+		{"trigger": "getdate", "contents": "getdate(${1:year=0}, ${2:month=0}, ${3:day=0})"},
+		{"trigger": "tickcount", "contents": "tickcount(${1:granularity=0})"}
+	]
+}
