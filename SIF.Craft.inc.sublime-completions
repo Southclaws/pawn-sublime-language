@@ -1,0 +1,9 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{ "trigger": "DefineItemCombo", "contents": "DefineItemCombo(${1:ItemType:item1}, ${2:ItemType:item2}, ${3:ItemType:result}, ${4:returnitem1 = 0}, ${5:returnitem2 = 0})" },
+		{ "trigger": "WriteAllCombosToFile", "contents": "WriteAllCombosToFile()" },
+		"pawn"
+	]
+}
