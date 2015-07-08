@@ -1,0 +1,14 @@
+{
+    "scope": "source.pawn",
+
+    "completions": [
+    
+		{ "trigger": "Create3DMenu", "contents": "Create3DMenu(${1:Float:x},${2:Float:y},${3:Float:z},${4:Float:rotation},${5:boxes},${6:playerid})"},
+		{ "trigger": "SetBoxText", "contents": "SetBoxText(${1:MenuID},${2:box},${3:text[]},${4:materialsize},${5:fontface[]},${6:fontsize},${7:bold},${8:fontcolor},${9:selectcolor},${10:unselectcolor},${11:textalignment})"},
+		{ "trigger": "Select3DMenu", "contents": "Select3DMenu(${1:playerid},${2:MenuID})"},
+		{ "trigger": "CancelSelect3DMenu", "contents": "CancelSelect3DMenu(${1:playerid})"},
+		{ "trigger": "Destroy3DMenu", "contents": "Destroy3DMenu(${1:MenuID})"},
+		{ "trigger": "OnPlayerSelect3DMenuBox", "contents": "public OnPlayerSelect3DMenuBox(${1:playerid},${2:MenuID},${3:boxid})"},
+		{ "trigger": "OnPlayerChange3DMenuBox", "contents": "public OnPlayerChange3DMenuBox(${1:playerid},${2:MenuID},${3:boxid})"}
+	]
+}
