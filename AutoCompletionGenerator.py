@@ -84,6 +84,9 @@ def scan_contents(contents):
 	in_function_param_subscript		= False
 	in_function_param				= False
 	no_function_params				= False
+	in_enumerator					= False
+	in_enumerator_block				= False
+	pos_enumerator_item				= -1
 
 	for i, c in enumerate(contents):
 
@@ -331,6 +334,41 @@ def scan_contents(contents):
 				data_function_name = ""
 				data_function_params = []
 				no_function_params = False
+				continue
+
+		if in_enumerator:
+			db("in_enumerator")
+
+			if in_enumerator_block:
+				db("in_enumerator_block")
+
+				if pos_enumerator_item == -1:
+					if not is_char_valid_symbol_char(c):
+						skip_until_valid_symbol_char = True
+						continue
+
+					db("begin enumerator item")
+					pos_enumerator_item = i
+					skip_until_invalid_symbol_char = True
+					continue
+
+				else:
+					final = contents[pos_enumerator_item:i]
+					output_contents += gen_const(final)
+					pos_enumerator_item = -1
+					print("[EXTRACTED] ENUMERATED ITEM: '%s'"%final)
+
+			if c == '{':
+				db("entered enumerator block")
+				in_enumerator_block = True
+				continue
+
+		else:
+			if contents.startswith('enum', i):
+				db("entered enumerator line")
+				skip_until_invalid_symbol_char = True
+				in_enumerator = True
+				pos_enumerator_item = -1
 				continue
 
 	output_contents = output_contents.rstrip("\n,")
