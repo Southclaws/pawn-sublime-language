@@ -1,0 +1,12 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"MAILER_MAX_MAIL_SIZE",
+		"MAILER_URL",
+		{"trigger": "SendMail", "contents": "SendMail(${1:const szReceiver[ ]}, ${2:const szSenderMail[ ]}, ${3:const szSenderName[ ]}, ${4:const szSubject[ ]}, ${5:const szMessage[ ] })"},
+		{"trigger": "OnMailScriptResponse", "contents": "OnMailScriptResponse(${1:iIndex}, ${2:iResponseCode}, ${3:const szData[ ] })"},
+		{"trigger": "StringURLEncode", "contents": "StringURLEncode(${1:szString[ ]}, ${2:iSize = sizeof( szString })"}
+	]
+}
