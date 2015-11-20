@@ -62,7 +62,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b([^0-9][A-Za-z0-9_]+)\:\s*\b</string>
+			<string>\b([^0-9][A-Za-z0-9_]*)\:\s*\b</string>
 			<key>name</key>
 			<string>storage.modifier.c</string>
 		</dict>
