@@ -1153,7 +1153,7 @@
 		<key>operators</key>
 		<dict>
 			<key>match</key>
-			<string>\=|\+|\-|\*|\/|\%|\+\+|\-\-|\=\=|\!\=|&lt;|&gt;|&lt;\=|&gt;\=|\!|&amp;&amp;|\ |\||\~|&amp;|\||\^|&lt;lt;|&gt;&gt;|\+\=|\-\=|\*\=|/\=|\%\=|&amp;\=|\|\=|\^\=|&lt;&lt;\=|&gt;&gt;\=|\-&gt;|\-&gt;\*|\.|\.\*|\?|\\:\:</string>
+			<string>\=|\+|\-|\*|\/|\%|\+\+|\-\-|\=\=|\!\=|&lt;|&gt;|&lt;\=|&gt;\=|\!|&amp;&amp;|\||\~|&amp;|\||\^|&lt;lt;|&gt;&gt;|\+\=|\-\=|\*\=|/\=|\%\=|&amp;\=|\|\=|\^\=|&lt;&lt;\=|&gt;&gt;\=|\-&gt;|\-&gt;\*|\.|\.\*|\?|\\:\:</string>
 			<key>name</key>
 			<string>keyword.operator.sizeof.c</string>
 		</dict>
