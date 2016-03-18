@@ -62,7 +62,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b([^0-9][A-Za-z0-9_]*)\:\s*\b</string>
+			<string>\b([A-Za-z_][A-Za-z0-9_]*)\:\s*\b</string>
 			<key>name</key>
 			<string>storage.modifier.c</string>
 		</dict>
@@ -361,7 +361,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*(elseif|pragma|undef)\s+(.*?)(?:(?=(?://|/\*))|$)</string>
+			<string>^\s*#\s*(pragma|undef)\s+([a-zA-Z0-9_]*?)(?:(?=(?://|/\*))|$)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -691,7 +691,7 @@
 		<key>disabled</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*if\s*(!?defined)?\b.*$</string>
+			<string>^\s*#\s*(if|elseif)\s*(!?defined)?\b[a-zA-Z0-9_]*$</string>
 			<key>comment</key>
 			<string>eat nested preprocessor if(def)s</string>
 			<key>end</key>
@@ -1044,7 +1044,7 @@
 		<key>preprocessor-rule-other</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*((if|elseif)\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1057,7 +1057,7 @@
 					<key>name</key>
 					<string>keyword.control.import.c</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.preprocessor.c</string>
@@ -1076,7 +1076,7 @@
 		<key>preprocessor-rule-other-block</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*(if\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*((if|elseif)\s*(!?defined)?)\b\s*([a-zA-Z0-9_]*?)(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1089,7 +1089,7 @@
 					<key>name</key>
 					<string>keyword.control.import.c</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.preprocessor.c</string>
