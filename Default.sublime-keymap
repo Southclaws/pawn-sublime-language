@@ -4,5 +4,6 @@
 	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "output.exec"}, "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
 	{ "keys": ["f5"], "command": "build", "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
 	{ "keys": ["pause"], "command": "exec", "args": {"kill": true}, "context" : [{"key": "selector", "operator": "equal", "operand": "source.pawn", "match_all": true}] },
-	{ "keys": ["ctrl+shift+r"], "command": "sequential_number_insert" }
+	{ "keys": ["ctrl+shift+r"], "command": "sequential_number_insert" },
+	{ "keys": ["ctrl+shift+f1"], "command": "open_wiki_on_string" }
 ]
