@@ -726,7 +726,7 @@
 		<key>disabled</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*#\s*(if|elseif)\s*(!?defined)?\b.*$</string>
+			<string>^\s*#\s*(if|elseif)\s*(!?defined)?\b[a-zA-Z0-9_]*$</string>
 			<key>comment</key>
 			<string>eat nested preprocessor if(def)s</string>
 			<key>end</key>
@@ -1111,7 +1111,7 @@
 		<key>preprocessor-rule-other-block</key>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(#\s*((if|elseif)\s*(!?defined)?)\b\s*(.*?)(?:(?=(?://|/\*))|$))</string>
+			<string>^\s*(#\s*((if|elseif)\s*(!?defined)?)\b\s*([a-zA-Z0-9_]*?)(?:(?=(?://|/\*))|$))</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
