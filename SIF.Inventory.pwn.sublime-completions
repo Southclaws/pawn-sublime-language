@@ -2,18 +2,21 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "AddItemToInventory", "contents": "AddItemToInventory(${1:playerid}, ${2:itemid}, ${3:call = 1})" },
-		{ "trigger": "RemoveItemFromInventory", "contents": "RemoveItemFromInventory(${1:playerid}, ${2:slotid}, ${3:call = 1})" },
-		{ "trigger": "GetInventorySlotItem", "contents": "GetInventorySlotItem(${1:playerid}, ${2:slotid})" },
-		{ "trigger": "IsInventorySlotUsed", "contents": "IsInventorySlotUsed(${1:playerid}, ${2:slotid})" },
-		{ "trigger": "IsPlayerInventoryFull", "contents": "IsPlayerInventoryFull(${1:playerid})" },
-		{ "trigger": "GetInventoryFreeSlots", "contents": "GetInventoryFreeSlots(${1:playerid})" },
-		{ "trigger": "GetItemPlayerInventory", "contents": "GetItemPlayerInventory(${1:itemid})" },
-		{ "trigger": "OnItemAddToInventory", "contents": "OnItemAddToInventory(${1:playerid}, ${2:itemid}, ${3:slot})" },
-		{ "trigger": "OnItemAddedToInventory", "contents": "OnItemAddedToInventory(${1:playerid}, ${2:itemid}, ${3:slot})" },
-		{ "trigger": "OnItemRemoveFromInventory", "contents": "OnItemRemoveFromInventory(${1:playerid}, ${2:itemid}, ${3:slot})" },
-		{ "trigger": "OnItemRemovedFromInventory", "contents": "OnItemRemovedFromInventory(${1:playerid}, ${2:itemid}, ${3:slot})" },
 		"INV_MAX_SLOTS",
-		"pawn"
+		{"trigger": "AddItemToInventory", "contents": "AddItemToInventory(${1:playerid}, ${2:itemid}, ${3:call = 1})"},
+		{"trigger": "RemoveItemFromInventory", "contents": "RemoveItemFromInventory(${1:playerid}, ${2:slotid}, ${3:call = 1})"},
+		{"trigger": "GetInventorySlotItem", "contents": "GetInventorySlotItem(${1:playerid}, ${2:slotid})"},
+		{"trigger": "IsInventorySlotUsed", "contents": "IsInventorySlotUsed(${1:playerid}, ${2:slotid})"},
+		{"trigger": "IsPlayerInventoryFull", "contents": "IsPlayerInventoryFull(${1:playerid})"},
+		{"trigger": "WillItemTypeFitInInventory", "contents": "WillItemTypeFitInInventory(${1:playerid}, ${2:ItemType:itemtype})"},
+		{"trigger": "GetInventoryFreeSlots", "contents": "GetInventoryFreeSlots(${1:playerid})"},
+		{"trigger": "GetItemPlayerInventory", "contents": "GetItemPlayerInventory(${1:itemid})"},
+		{"trigger": "GetItemPlayerInventorySlot", "contents": "GetItemPlayerInventorySlot(${1:itemid})"},
+		{"trigger": "SetPlayerInventorySize", "contents": "SetPlayerInventorySize(${1:playerid}, ${2:slots})"},
+		{"trigger": "GetPlayerInventorySize", "contents": "GetPlayerInventorySize(${1:playerid})"},
+		{"trigger": "OnItemAddToInventory", "contents": "OnItemAddToInventory(${1:playerid}, ${2:itemid}, ${3:slot})"},
+		{"trigger": "OnItemAddedToInventory", "contents": "OnItemAddedToInventory(${1:playerid}, ${2:itemid}, ${3:slot})"},
+		{"trigger": "OnItemRemoveFromInventory", "contents": "OnItemRemoveFromInventory(${1:playerid}, ${2:itemid}, ${3:slot})"},
+		{"trigger": "OnItemRemovedFromInventory", "contents": "OnItemRemovedFromInventory(${1:playerid}, ${2:itemid}, ${3:slot})"}
 	]
 }

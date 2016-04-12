@@ -2,15 +2,24 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{ "trigger": "sif_debug_register_handler", "contents": "sif_debug_register_handler(${1:name[]}, ${2:initstate = 0})" },
-		{ "trigger": "sif_debug_level", "contents": "sif_debug_level(${1:handler}, ${2:level})" },
-		{ "trigger": "sif_debug_plevel", "contents": "sif_debug_plevel(${1:playerid}, ${2:handler}, ${3:level})" },
-		{ "trigger": "sif_debug_print", "contents": "sif_debug_print(${1:handler}, ${2:level}, ${3:playerid}, ${4:msg[]})" },
-		{ "trigger": "sif_debug_printf", "contents": "sif_debug_printf(${1:handler}, ${2:level}, ${3:playerid}, ${4:string[]}, ${5:va_args<>})" },
-		{ "trigger": "sif_debug_handler_search", "contents": "sif_debug_handler_search(${1:name[]})" },
-		{ "trigger": "sif_debug_get_handler_name", "contents": "sif_debug_get_handler_name(${1:handler}, ${2:output[]})" },
 		"MAX_DEBUG_HANDLER",
 		"MAX_DEBUG_HANDLER_NAME",
-		"pawn"
+		"SIF_DEBUG_LEVEL_NONE",
+		"SIF_DEBUG_LEVEL_CALLBACKS",
+		"SIF_DEBUG_LEVEL_CALLBACKS_DEEP",
+		"SIF_DEBUG_LEVEL_CORE",
+		"SIF_DEBUG_LEVEL_CORE_DEEP",
+		"SIF_DEBUG_LEVEL_INTERNAL",
+		"SIF_DEBUG_LEVEL_INTERNAL_DEEP",
+		"SIF_DEBUG_LEVEL_INTERFACE",
+		"SIF_DEBUG_LEVEL_INTERFACE_DEEP",
+		"SIF_DEBUG_LEVEL_LOOPS",
+		{"trigger": "sif_debug_register_handler", "contents": "sif_debug_register_handler(${1:name[]}, ${2:initstate = 0})"},
+		{"trigger": "sif_debug_level", "contents": "sif_debug_level(${1:handler}, ${2:level})"},
+		{"trigger": "sif_debug_plevel", "contents": "sif_debug_plevel(${1:playerid}, ${2:handler}, ${3:level})"},
+		{"trigger": "sif_debug_print", "contents": "sif_debug_print(${1:handler}, ${2:level}, ${3:playerid}, ${4:msg[]})"},
+		{"trigger": "sif_debug_printf", "contents": "sif_debug_printf(${1:handler}, ${2:level}, ${3:playerid}, ${4:string[]}, ${5:va_args<>})"},
+		{"trigger": "sif_debug_handler_search", "contents": "sif_debug_handler_search(${1:name[]})"},
+		{"trigger": "sif_debug_get_handler_name", "contents": "sif_debug_get_handler_name(${1:handler}, ${2:output[]})"}
 	]
 }
