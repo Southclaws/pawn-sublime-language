@@ -62,7 +62,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b([A-Za-z_][A-Za-z0-9_]*)\:\s*\b</string>
+			<string>\b([A-Za-z_][A-Za-z0-9_]*)\:\s*((%)?|$)</string>
 			<key>name</key>
 			<string>storage.modifier.c</string>
 		</dict>
@@ -98,7 +98,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F\_]*)|(0(b|B)[0-1\_]*)|(([0-9\_]+\.?[0-9\_]*)|(\.[0-9\_]+))?)?\b</string>
+			<string>\b((0(x|X)[0-9a-fA-F\_]*)|(0(b|B)[0-1\_]*)|(([0-9]+(?:(\_|\.))?[0-9]*)|(\.[0-9]+\_[0-9]+))?)?\b</string>
 			<key>name</key>
 			<string>constant.numeric.c</string>
 		</dict>
@@ -174,8 +174,9 @@
 				^\s*(\#|@)\s*(emit) #pre-processor directive
 				(\s+
 					([A-Z0-9a-z]+)
-					((\.)
-					([A-Za-z]+)
+					(
+						(\.)([A-Za-z]+)
+						((\.)([A-Za-z]+))?
 					)?
 				|\s*)
 			</string>
@@ -191,12 +192,17 @@
 					<key>name</key>
 					<string>entity.name.function.preprocessor.c</string>
 				</dict>
-				<key>5</key>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.separator.parameters.c</string>
 				</dict>
 				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.preprocessor.c</string>
+				</dict>
+				<key>10</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.preprocessor.c</string>
