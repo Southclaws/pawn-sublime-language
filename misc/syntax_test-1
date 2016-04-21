@@ -1,0 +1,256 @@
+// SYNTAX TEST "Pawn.tmLanguage"
+testFunction()
+//^source.pawn meta.function.c entity.name.function.definition.c
+{
+
+}
+
+#if HOLIDAY_CHRISTMAS == (true) || HOLIDAY_HALLOWEEN == (true) || HOLIDAY_EASTER == (true)
+//^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
+#define MAX_HOLIDAY_PICKUPS 250
+
+testFunction2()
+//^source.pawn meta.function.c entity.name.function.definition.c
+{
+    #if HOLIDAY_EASTER == (true)
+    //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
+        model = 19341 + random(5);
+    #elseif HOLIDAY_HALLOWEEN == (true)
+    //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
+        model = 19320;
+    #elseif HOLIDAY_CHRISTMAS == (true)
+    //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
+        model = 19054 + random(5);
+    #endif
+    //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
+}
+
+#endif
+
+testFunction3()
+//^source.pawn meta.function.c entity.name.function.definition.c
+{
+#if USE_LOCALIZATION == (true)
+    playerProcessGeoIP(playerid, localizationType = 0)
+    {
+        if(IsPlayerNPC(playerid)) {
+            return 0;
+        }
+        if(server_mode == SERVER_MODE_TESTING) {
+            printf("[SYSTEM: playerProcessGeoIP(%d, %d, %s)]", playerid, localizationType, playerData[playerid][pIP]);
+        }
+        g_cPlayerCountryIndex{ playerid } = 0;
+        format(gLookupData[playerid][Hostname], LOCAL_HOSTNAME_LEN, "Unknown");
+        format(gLookupData[playerid][ISP],      ISP_LEN,            "Unknown");
+        format(gLookupData[playerid][Code],     COUNTRY_CODE_LEN,   "\0");
+        format(gLookupData[playerid][Country],  MAX_COUNTRY_NAME,   "Unknown");
+        format(gLookupData[playerid][Region],   LOCAL_REGION_LEN,   "Unknown");
+        gLookupData[playerid][Proxy] = 0;
+
+        if(strcmp(playerData[playerid][pIP], "127.0.0.1") == 0) {
+            checkPlayerBanStatus(playerid);
+            return 0;
+        }
+        g_cPlayerGeoIPState{ playerid } = GEOIP_STATE_RETRIEVING;
+
+        #if USE_LOCALIZATION_MYSQL == (true)
+            format(gQuery, sizeof(gQuery), "SELECT c.country_code, c.country_name FROM list_ipv4 i JOIN list_countries c ON i.country_code = c.country_code WHERE INET_ATON('%s') BETWEEN range_start AND range_end;", playerData[playerid][pIP]);
+            mysql_tquery(mysqlConnHandle, gQuery, "Thread_OnPlayerMySQLLocalize", "i", playerid);
+        #else
+            SetPVarInt(playerid, "pLocalizationType", localizationType);
+            new strURL[64] = "\0";
+            switch(localizationType)
+            {
+                case 1: strcat(strURL, "spelsajten.net/geoip.php?ip="); // expires august 2015
+                //case 2: strcat(strURL, "geoiptool.com/en/?ip="); // expires 2020
+                //default: strcat(strURL, "lookupffs.com/api.php?ip="); // expires 2016 lookupffs died
+                default: strcat(strURL, "iphub.info/api.php?ip="); // expires 2016-03-20
+            }
+            strcat(strURL, playerData[playerid][pIP]);
+            if(server_mode == SERVER_MODE_TESTING) {
+                printf("[SYSTEM: playerProcessGeoIP(strURL: %s)]", strURL);
+            }
+            HTTP(playerid, HTTP_GET, strURL, "", "OnPlayerLocalize");
+        #endif
+        return 1;
+    }
+    #if USE_LOCALIZATION_MYSQL == (false)
+        public OnPlayerLocalize(playerid, response_code, data[])
+        {
+            if(server_mode == SERVER_MODE_TESTING) {
+                printf("[SYSTEM: OnPlayerLocalize(%d, %d, %s, %d)]", playerid, response_code, data, GetPVarInt(playerid, "pLocalizationType"));
+            }
+            if(!IsPlayerConnected(playerid)) {
+                return 0;
+            }
+            else if(response_code != 200 || isnull(data)) {
+                new localizationType = GetPVarInt(playerid, "pLocalizationType");
+                switch(localizationType)
+                {
+                    case 0: {
+                        playerProcessGeoIP(playerid, localizationType + 1);
+                    }
+                    default: { // end localization check, failed.
+                        CallLocalFunction("OnPlayerGeoIPComplete", "ii", playerid, response_code);
+                    }
+                }
+                return 1;
+            }
+            switch(GetPVarInt(playerid, "pLocalizationType"))
+            {
+                case 0: // lookupffs / iphub
+                {
+                    new xml[5][2];
+                    xml[0][0] = strfind(data,   "<host>", true);
+                    xml[0][1] = strfind(data,   "</host>", true);
+
+                    xml[1][0] = strfind(data,   "<code>", true);
+                    xml[1][1] = strfind(data,   "</code>", true);
+
+                    xml[2][0] = strfind(data,  "<country>", true);
+                    xml[2][1] = strfind(data, "</country>", true);
+
+                    xml[3][0] = strfind(data,   "<region>", true);
+                    xml[3][1] = strfind(data,  "</region>", true);
+
+                    xml[4][0] = strfind(data,    "<isp>", true);
+                    xml[4][1] = strfind(data,   "</isp>", true);
+
+                    strmidXML(gLookupData[playerid][Hostname],  data,  6 + xml[0][0], xml[0][1], LOCAL_HOSTNAME_LEN);
+                    strmidXML(gLookupData[playerid][Code],      data,  6 + xml[1][0], xml[1][1], COUNTRY_CODE_LEN);
+                    strmidXML(gLookupData[playerid][Country],   data,  9 + xml[2][0], xml[2][1], MAX_COUNTRY_NAME);
+                    strmidXML(gLookupData[playerid][Region],    data,  8 + xml[3][0], xml[3][1], LOCAL_REGION_LEN);
+                    strmidXML(gLookupData[playerid][ISP],       data,  5 + xml[4][0], xml[4][1], ISP_LEN);
+                    gLookupData[playerid][Proxy] = strval(data[strfind(data, "<proxy>", true) + 7]);
+                }
+                case 1:
+                {
+                    new iCountryIndex = strval( data );
+                    if ( !( 0 <= iCountryIndex <= 240 ) )
+                        iCountryIndex = 0;
+
+                    g_cPlayerCountryIndex{ playerid } = iCountryIndex;
+
+                    strunpack(gLookupData[playerid][Code], g_aszCountryInfo[iCountryIndex][e_szCountryCode]);
+                    strunpack(gLookupData[playerid][Country], g_aszCountryInfo[iCountryIndex][e_szCountryName]);
+                }
+            }
+            g_cPlayerGeoIPState{playerid} = GEOIP_STATE_RETRIEVED;
+
+            CallLocalFunction("OnPlayerGeoIPComplete", "ii", playerid, response_code);
+            return 1;
+        }
+    #else
+        THREAD:OnPlayerMySQLLocalize(playerid)
+        {
+            if(cache_get_row_count()) {
+                cache_get_row(0, 0, gLookupData[playerid][Code]);
+                cache_get_row(0, 1, gLookupData[playerid][Country]);
+                CallLocalFunction("OnPlayerGeoIPComplete", "ii", playerid, 200);
+            } else {
+                CallLocalFunction("OnPlayerGeoIPComplete", "ii", playerid, 0);
+            }
+            g_cPlayerGeoIPState{playerid} = GEOIP_STATE_RETRIEVED;
+        }
+    #endif
+    public OnPlayerGeoIPComplete(playerid, response_code)
+    {
+        printf("[LOOKUP: %s(%d)]: County: %s (%s) - ISP: %s", playerName(playerid), playerid, GetPlayerCountryName(playerid), GetPlayerCountryCode(playerid), GetPlayerISP(playerid));
+        messageKCNRAdmins(_, "[LOOKUP: %s(%d)]: County: %s (%s) - ISP: %s", playerName(playerid), playerid, GetPlayerCountryName(playerid), GetPlayerCountryCode(playerid), GetPlayerISP(playerid));
+        if(response_code != 200) {
+            IRC_GroupSayFormatted(ircGroupChatID, ADMIN_IRC_CHANNEL, "��4[BAD LOOKUP: %s(%d)]:� Response Code: �14%d.", playerName(playerid), playerid, response_code);
+        }
+        IRC_GroupSayFormatted(ircGroupChatID, ADMIN_IRC_CHANNEL, "��6[LOOKUP: %s(%d)]:� County: �14%s (%s) �6- Hostname: �14%s �6- ISP: �14%s �6- Region: �14%s.", playerName(playerid), playerid, GetPlayerCountryName(playerid), GetPlayerCountryCode(playerid), GetPlayerHostname(playerid), GetPlayerISP(playerid), GetPlayerRegion(playerid));
+        if(IsProxyUser(playerid)) {
+            safeKickPlayer(playerid, "Proxies are not allowed", .rulebreak = false);
+        }
+        else if(strcmp(gLookupData[playerid][Code], "JP", true) == 0 && !isnull(gLookupData[playerid][Code])) {
+            safeKickPlayer(playerid, "VPNs are not allowed", .rulebreak = false);
+        } else {
+            checkPlayerBanStatus(playerid);
+        }
+        return 1;
+    }
+
+    strmidXML(dest[], const src[], start, end, maxlength=sizeof dest)
+    {
+        if(end - start > 1)
+            strmid(dest, src, start, end, maxlength);
+        if(src[0] == '?' || !isnull(src) && strcmp(src, "?") == 0) // Lookups
+            dest[0] = EOS;
+    }
+
+    CMD:whois(playerid, params[]) return cmd_lookup(playerid, params);
+    CMD:lookup(playerid, params[])
+    {
+        if(!isKCNRAdmin(playerid)) return 0;
+        new targetID = NO_PLAYER;
+        if(sscanf(params, "K<player_name>("#NO_PLAYER")", targetID)) return sendClientSyntax(playerid, "/lookup [user / id]");
+        if(!playerParamScan(playerid, targetID, playerid)) return 1;
+        showKCNRMenu(playerid, _, "Lookup Data", "~b~%s(%d)~n~~n~~p~IP: ~w~%s~n~~p~Country: ~w~%s (%s)~n~~p~Hostname: ~w~%s~n~~p~ISP: ~w~%s~n~~p~Region: ~w~%s", _, true, false, _, _, _, playerName(targetID), targetID, playerData[targetID][pIP], GetPlayerCountryName(targetID), GetPlayerCountryCode(targetID), GetPlayerHostname(targetID), GetPlayerISP(targetID), GetPlayerRegion(targetID));
+        return 1;
+    }
+
+    /*GetPlayerCountryIndex(playerid)
+    {
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED)
+            return g_cPlayerCountryIndex{ playerid };
+        return 0;
+    }*/
+
+    GetPlayerCountryName(playerid)
+    {
+        new szCountryName[ MAX_COUNTRY_NAME ] = "Unknown";
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED) {
+            if(!isnull(gLookupData[playerid][Country]))
+                strmid(szCountryName, gLookupData[playerid][Country], 0, strlen(gLookupData[playerid][Country]));
+        }
+        return szCountryName;
+    }
+    GetPlayerCountryCode(playerid)
+    {
+        new szCountryCode[ COUNTRY_CODE_LEN ] = "\0";
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED) {
+            if(!isnull(gLookupData[playerid][Code]))
+                strmid(szCountryCode, gLookupData[playerid][Code], 0, strlen(gLookupData[playerid][Code]));
+        }
+        return szCountryCode;
+    }
+    GetPlayerISP( playerid)
+    {
+        new szISP[ ISP_LEN ] = "Unknown";
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED) {
+            if(!isnull(gLookupData[playerid][ISP])) {
+                format(szISP, ISP_LEN, "%s", gLookupData[playerid][ISP]);
+            }
+        }
+        return szISP;
+    }
+    GetPlayerHostname(playerid)
+    {
+        new strHostname[ LOCAL_HOSTNAME_LEN ] = "Unknown";
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED) {
+            if(!isnull(gLookupData[playerid][Hostname]))
+                strmid(strHostname, gLookupData[playerid][Hostname], 0, strlen(gLookupData[playerid][Hostname]));
+        }
+        return strHostname;
+    }
+    GetPlayerRegion(playerid)
+    {
+        new strRegion[ LOCAL_REGION_LEN ] = "Unknown";
+        if(g_cPlayerGeoIPState{ playerid } == GEOIP_STATE_RETRIEVED) {
+            if(!isnull(gLookupData[playerid][Region]))
+                strmid(strRegion, gLookupData[playerid][Region], 0, strlen(gLookupData[playerid][Region]));
+        }
+        return strRegion;
+    }
+#endif
+}
+
+testfunction4()
+//^source.pawn meta.function.c entity.name.function.definition.c
+{
+	//
+
+	return c;
+}
