@@ -1,0 +1,11 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "OnDialogPerformed", "contents": "OnDialogPerformed(${1:playerid}, ${2:dialog[]}, ${3:response}, ${4:success})"},
+		{"trigger": "Dialog_Opened", "contents": "Dialog_Opened(${1:playerid})"},
+		{"trigger": "Dialog_Close", "contents": "Dialog_Close(${1:playerid})"},
+		{"trigger": "Dialog_Show", "contents": "Dialog_Open(${1:playerid}, ${2:function[]}, ${3:style}, ${4:caption[]}, ${5:info[]}, ${6:button1[]}, ${7:button2[]}, ${8:...})"},
+		{"trigger": "Dialog", "contents": "Dialog:${1:name}(${2:params})"}
+	]
+}
