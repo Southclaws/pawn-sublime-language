@@ -56,6 +56,7 @@
 		{"trigger": "SetSVarString", "contents": "SetSVarString(${1:varname[]}, ${2:string_value[]})"},
 		{"trigger": "GetSVarString", "contents": "GetSVarString(${1:varname[]}, ${2:string_return[]}, ${3:len})"},
 		{"trigger": "SetSVarFloat", "contents": "SetSVarFloat(${1:varname[]}, ${2:Float:float_value})"},
+		{"trigger": "GetSVarFloat", "contents": "GetSVarFloat(${1:varname[]})"},
 		{"trigger": "DeleteSVar", "contents": "DeleteSVar(${1:varname[]})"},
 		"SERVER_VARTYPE_NONE",
 		"SERVER_VARTYPE_INT",

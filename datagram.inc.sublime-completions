@@ -5,6 +5,8 @@
 	[
 		{"trigger": "sendstring", "contents": "sendstring(${1:const message[]}, ${2:const destination[]=\"\"})"},
 		{"trigger": "sendpacket", "contents": "sendpacket(${1:const packet[]}, ${2:size}, ${3:const destination[]=\"\"})"},
-		{"trigger": "listenport", "contents": "listenport(${1:port})"}
+		{"trigger": "listenport", "contents": "listenport(${1:port})"},
+		{"trigger": "receivestring", "contents": "receivestring(${1:const message[]}, ${2:const source[]})"},
+		{"trigger": "receivepacket", "contents": "receivepacket(${1:const packet[]}, ${2:size}, ${3:const source[]})"}
 	]
 }

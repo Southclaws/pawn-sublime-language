@@ -184,12 +184,8 @@ def scan_contents(contents):
 				else:
 					final = contents[pos_directive_define:i]
 
-					if any(x.islower() for x in final):
-						db("constant contains lowercase, not conventionally global, ignore")
-
-					else:
-						output_contents += gen_const(final)
-						print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'"%final)
+					output_contents += gen_const(final)
+					print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'"%final)
 
 					in_directive = False
 					in_directive_define = False
@@ -239,7 +235,7 @@ def scan_contents(contents):
 					continue
 
 				else:
-					if c == ':':
+					if c == ':' or c == ' ':
 						db("extracted string is tag, starting again")
 						pos_function_name = -1
 						skip_until_valid_symbol_char = True
