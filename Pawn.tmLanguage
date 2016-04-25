@@ -654,7 +654,7 @@
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key> <string>\s*\b(inline|hook)\b</string>
+					<key>match</key> <string>\s*\b(inline|using)\b</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key> <dict> <key>name</key> <string>storage.modifier.c</string> </dict>
@@ -926,7 +926,7 @@
 					</dict>
 				</dict>
 				<dict>
-					<key>match</key> <string>\s*\b(public|forward|native|char|const|static|stock)\b</string>
+					<key>match</key> <string>\s*\b(public|forward|native|char|const|static|stock|hook|task|ptask)\b</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key> <dict> <key>name</key> <string>storage.modifier.c</string> </dict>
@@ -945,6 +945,14 @@
 					<string>^(?!case.*)\s*\b([A-Za-z_]\w*)\:\s*\b</string>
 					<key>name</key>
 					<string>storage.modifier.c</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(Iterator:)(\t)</string>
+					<key>captures</key>
+					<dict>
+						<key>2</key> <dict> <key>name</key> <string>invalid.illegal.invalid-indentation</string> </dict>
+					</dict>
 				</dict>
 
 				<dict>

@@ -1,4 +1,34 @@
 // SYNTAX TEST "Pawn.tmLanguage"
+
+#define t:%1<%2>                    ((%1)|=(%2))
+#define f:%1<%2>                    ((%1)&=~(%2))
+
+#define SetSpawn(%0,%1,%2,%3,%4)    SetSpawnInfo(%0, NO_TEAM, 0, %1, %2, %3, %4, 0,0,0,0,0,0)
+
+#define CMD:%1(%2)                  forward cmd_%1(%2);\
+                                    public cmd_%1(%2)
+
+#define ACMD:%1[%2](%3)             forward acmd_%1_%2(%3);\
+                                    public acmd_%1_%2(%3)
+
+#define SCMD:%1(%2)                 forward scmd_%1(%2);\
+                                    public scmd_%1(%2)
+
+#define HOLDING(%0)                 ((newkeys & (%0)) == (%0))
+#define RELEASED(%0)                (((newkeys & (%0)) != (%0)) && ((oldkeys & (%0)) == (%0)))
+#define PRESSED(%0)                 (((newkeys & (%0)) == (%0)) && ((oldkeys & (%0)) != (%0)))
+
+#define IsValidPlayerID(%0)         (0<=%0<MAX_PLAYERS)
+
+
+new str = "
+//         ^invalid.illegal.unexpected-end-of-line.c
+new
+            myData1,
+Iterator:	g;
+//       ^invalid.illegal.invalid-indentation
+
+
 testFunction()
 //^source.pawn meta.function.c entity.name.function.definition.c
 {
