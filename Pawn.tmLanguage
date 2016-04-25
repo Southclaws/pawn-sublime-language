@@ -991,9 +991,11 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(\.|-&gt;)(?=(?:\s|/\*.*?\*/)*+[A-Za-z_]\w*+)</string>
-					<key>name</key>
-					<string>keyword.operator.dereference.c</string>
+					<string>([^.])(\.{2})([^.])</string>
+					<key>captures</key>
+					<dict>
+						<key>2</key> <dict> <key>name</key> <string>keyword.operator.switch-range.c</string> </dict>
+					</dict>
 				</dict>
 			</array>
 		</dict>

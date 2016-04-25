@@ -5,6 +5,24 @@ testFunction()
 
 }
 
+hook testFunction()
+//   ^source.pawn meta.function.c entity.name.function.definition.c
+{
+
+}
+
+task testFunction()
+//   ^source.pawn meta.function.c entity.name.function.definition.c
+{
+
+}
+
+ptask testFunction()
+//    ^source.pawn meta.function.c entity.name.function.definition.c
+{
+    Dialog_ShowCallback(playerid, using inline, (range..range), elipsis_va_args, ...);
+}
+
 #if HOLIDAY_CHRISTMAS == (true) || HOLIDAY_HALLOWEEN == (true) || HOLIDAY_EASTER == (true)
 //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
 #define MAX_HOLIDAY_PICKUPS 250
