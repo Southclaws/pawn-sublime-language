@@ -201,7 +201,7 @@
 				    (?&lt;= \w ) \s
 
 				  | #  or type modifier / closing bracket before name
-				    (?&lt;= [^&amp;]&amp; | [*&gt;)}\]] ) ) \s*
+				    (?&lt;= [^&amp;]&amp; | [*&gt;)}\]\:] ) ) \s*
 
 				(   (?: [A-Za-z_]\w*+ | ::[^:] )++
 				    (?: (?&lt;= ^ operator | \W operator )  # C++ operator?
@@ -912,6 +912,22 @@
 					</dict>
 				</dict>
 				<dict>
+					<key>begin</key> <string>^\s*(case)\s+</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key> <dict> <key>name</key> <string>keyword.control.c</string> </dict>
+					</dict>
+					<key>end</key> <string>(:)|(?&lt;=^|[^\\])\s*(\n)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key> <dict> <key>name</key> <string>keyword.operator.ternary.c</string> </dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict> <key>include</key> <string>#lex-core</string> </dict>
+					</array>
+				</dict>
+				<dict>
 					<key>match</key> <string>\s*\b(assert|break|case|continue|default|do|else|exit|for|goto|if|return|sleep|state|switch|while)\b</string>
 					<key>captures</key>
 					<dict>
@@ -934,15 +950,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>case\s*(([a-zA-Z_@0-9])*([\s,\.]))*(([a-zA-Z_@0-9])*\:)</string>
-					<key>captures</key>
-					<dict>
-						<key>1</key> <dict> <key>name</key> <string>storage.type.c</string> </dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>^(?!case.*)\s*\b([A-Za-z_]\w*)\:\s*\b</string>
+					<string>([A-Za-z_]\w*)\:</string>
 					<key>name</key>
 					<string>storage.modifier.c</string>
 				</dict>

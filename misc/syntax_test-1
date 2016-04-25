@@ -53,6 +53,23 @@ ptask testFunction()
     Dialog_ShowCallback(playerid, using inline, (range..range), elipsis_va_args, ...);
 }
 
+Tag:testFunction(Tag:testParam, Tag:testParam)
+{
+
+}
+
+stock Tag:testFunction(Tag:testParam, Tag:testParam)
+{
+    new Tag:var,
+        Tag:var;
+
+    switch (var) {
+        case VAR: 
+        case VAR: return 0;
+        case VAR1, 1..3, 454, VAR2: return 0;
+    }
+}
+
 #if HOLIDAY_CHRISTMAS == (true) || HOLIDAY_HALLOWEEN == (true) || HOLIDAY_EASTER == (true)
 //^source.pawn meta.preprocessor.directive.c keyword.other.preprocessor.c
 #define MAX_HOLIDAY_PICKUPS 250
