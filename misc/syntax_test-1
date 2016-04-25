@@ -250,7 +250,24 @@ testFunction3()
 testfunction4()
 //^source.pawn meta.function.c entity.name.function.definition.c
 {
-	//
+    Tag:variable;
+    Briefcase:variable;
+ 
+    switch(x)
+    {
+        case CONST_ONE, CONST_TWO, CONST_THREE, CONST_FOUR .. CONST_RANGE_5, CONST_6: return 2;
+//             ^source.pawn meta.function.c meta.block.c meta.block.c
+//                                     ^-source.pawn meta.function.c meta.block.c meta.block.c storage.modifier.c
+    }
+
+    switch(x)
+    {
+        case CONST_ONE, CONST_TWO, CONST_THREE:
+            some_variable = 4;
+
+        case CONST_FOUR .. CONST_RANGE_5, CONST_6:
+            some_variable = 4;
+    }
 
 	return c;
 }
