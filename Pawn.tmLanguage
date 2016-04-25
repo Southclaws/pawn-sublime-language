@@ -859,19 +859,11 @@
 			<key>patterns</key>
 			<array>
 				<dict> <key>include</key> <string>#comments</string> </dict>
-				<dict> <key>include</key> <string>#lex-access</string> </dict>
 				<dict> <key>include</key> <string>#lex-continuation</string> </dict>
 				<dict> <key>include</key> <string>#lex-newline</string> </dict>
 				<dict> <key>include</key> <string>#lex-number</string> </dict>
 				<dict> <key>include</key> <string>#lex-string</string> </dict>
 			</array>
-		</dict>
-		<key>lex-access</key>
-		<dict>
-			<key>match</key>
-			<string>(?:(?&lt;=\.)|(?&lt;=-&gt;))\b([a-zA-Z_]\w*+)\b(?!(?:\s|/\*.*?\*/)*+\()</string>
-			<key>name</key>
-			<string>variable.other.dot-access.c</string>
 		</dict>
 		<key>lex-continuation</key>
 		<dict>
@@ -946,13 +938,6 @@
 					<key>captures</key>
 					<dict>
 						<key>1</key> <dict> <key>name</key> <string>storage.type.c</string> </dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>match</key> <string>\s*\b(public|forward|native|char|const|static|stock)\b</string>
-					<key>captures</key>
-					<dict>
-						<key>1</key> <dict> <key>name</key> <string>storage.modifier.c</string> </dict>
 					</dict>
 				</dict>
 				<dict>
@@ -1218,7 +1203,7 @@
 				</dict>
 				<dict>
 					<key>match</key> <string>(?ix)
-						(?&lt;!\.) \b
+						\b
 
 						[0-9][0-9_]*
 
@@ -1228,7 +1213,7 @@
 						# the remainder (after invalid chars, if any) and a type
 						[0-9]* (u?l{0,2}|lul?|llu)
 
-						\b (?!\.)
+						\b
 					</string>
 					<key>name</key> <string>constant.numeric.integer.decimal.c</string>
 					<key>captures</key>
