@@ -912,6 +912,14 @@
 					</dict>
 				</dict>
 				<dict>
+					<key>match</key>
+					<string>(Iterator:)(\t)</string>
+					<key>captures</key>
+					<dict>
+						<key>2</key> <dict> <key>name</key> <string>invalid.illegal.invalid-indentation</string> </dict>
+					</dict>
+				</dict>
+				<dict>
 					<key>begin</key> <string>^\s*(case)\s+</string>
 					<key>beginCaptures</key>
 					<dict>
@@ -953,14 +961,6 @@
 					<string>([A-Za-z_]\w*)\:</string>
 					<key>name</key>
 					<string>storage.modifier.c</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(Iterator:)(\t)</string>
-					<key>captures</key>
-					<dict>
-						<key>2</key> <dict> <key>name</key> <string>invalid.illegal.invalid-indentation</string> </dict>
-					</dict>
 				</dict>
 
 				<dict>
@@ -1005,14 +1005,6 @@
 					<key>name</key>
 					<string>keyword.operator.bitwise.c</string>
 				</dict>
-				<dict>
-					<key>match</key>
-					<string>([^.])(\.{2})([^.])</string>
-					<key>captures</key>
-					<dict>
-						<key>2</key> <dict> <key>name</key> <string>keyword.operator.switch-range.c</string> </dict>
-					</dict>
-				</dict>
 			</array>
 		</dict>
 		<key>lex-constant</key>
@@ -1032,6 +1024,14 @@
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>match</key>
+					<string>([^.])(\.{2})([^.])</string>
+					<key>captures</key>
+					<dict>
+						<key>2</key> <dict> <key>name</key> <string>keyword.operator.switch-range.c</string> </dict>
+					</dict>
+				</dict>
 				<dict>
 					<key>match</key> <string>(?ix)  # hexadecimal float
 						(?&lt;!\.) \b

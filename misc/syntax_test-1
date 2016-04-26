@@ -22,7 +22,7 @@
 
 
 new str = "
-//         ^invalid.illegal.unexpected-end-of-line.c
+//          ^invalid.illegal.unexpected-end-of-line.c
 new
             myData1,
 Iterator:	g;
@@ -51,6 +51,7 @@ ptask testFunction()
 //    ^source.pawn meta.function.c entity.name.function.definition.c
 {
     Dialog_ShowCallback(playerid, using inline, (range..range), elipsis_va_args, ...);
+//                                                    ^keyword.operator.switch-range.c
 }
 
 Tag:testFunction(Tag:testParam, Tag:testParam)
@@ -67,6 +68,7 @@ stock Tag:testFunction(Tag:testParam, Tag:testParam)
         case VAR: 
         case VAR: return 0;
         case VAR1, 1..3, 454, VAR2: return 0;
+//                  ^keyword.operator.switch-range.c
     }
 }
 
