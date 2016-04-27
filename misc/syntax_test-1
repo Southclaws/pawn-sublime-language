@@ -65,9 +65,9 @@ stock Tag:testFunction(Tag:testParam, Tag:testParam)
         Tag:var;
 
     switch (var) {
-        case VAR: 
+        case VAR:
         case VAR: return 0;
-        case VAR1, 1..3, 454, VAR2: return 0;
+        case VAR1, 1..3, 12..321, 454, VAR2: return 0;
 //                  ^keyword.operator.switch-range.c
     }
 }
@@ -319,7 +319,7 @@ testfunction4()
 {
     Tag:variable;
     Briefcase:variable;
- 
+
     switch(x)
     {
         case CONST_ONE, CONST_TWO, CONST_THREE, CONST_FOUR .. CONST_RANGE_5, CONST_6: return 2;
