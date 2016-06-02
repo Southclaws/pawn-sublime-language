@@ -309,6 +309,7 @@
 				</dict>
 				<dict> <key>include</key> <string>#ppline-macro-head-function</string> </dict>
 				<dict> <key>include</key> <string>#ppline-macro-head-object</string> </dict>
+				<dict> <key>include</key> <string>#ppline-macro-param</string> </dict>
 				<dict> <key>include</key> <string>#lex-in-preprocessor</string> </dict>
 
 				<dict> <key>include</key> <string>#support</string> </dict>
@@ -340,117 +341,16 @@
 			<key>contentName</key> <string>meta.preprocessor.macro.parameters.c</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>match</key> <string>\)</string>
-				</dict>
-				<dict>
-					<key>begin</key> <string>(%[0-9]+)</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key> <dict> <key>name</key> <string>variable.parameter.c</string> </dict>
-					</dict>
-					<key>end</key> <string>(?&lt;=\))|(?=(?&lt;=^|[^\\])\s*(\n))</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>match</key> <string>\)</string>
-						</dict>
-						<dict> <key>include</key> <string>#ppline-macro-param-next</string> </dict>
-						<dict> <key>include</key> <string>#ppline-macro-param-vararg</string> </dict>
-						<dict> <key>include</key> <string>#ppline-macro-param-lex</string> </dict>
-						<dict> <key>include</key> <string>#ppline-macro-param-lex-invalid</string> </dict>
-					</array>
-				</dict>
-				<dict> <key>include</key> <string>#ppline-macro-param-vararg</string> </dict>
-				<dict> <key>include</key> <string>#ppline-macro-param-lex</string> </dict>
-				<dict> <key>include</key> <string>#ppline-macro-param-lex-invalid</string> </dict>
+				<dict> <key>include</key> <string>#ppline-macro-param</string> </dict>
 			</array>
 		</dict>
-		<key>ppline-macro-param-next</key>
+		<key>ppline-macro-param</key>
 		<dict>
-			<key>begin</key> <string>(,)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key> <dict> <key>name</key> <string>punctuation.separator.parameter.c</string> </dict>
-			</dict>
-			<key>end</key> <string>(%[0-9]+)|(?=\.\.\.)|(\))|(?=(?&lt;=^|[^\\])\s*(\n))</string>
-			<key>endCaptures</key>
+			<key>match</key> <string>(%[0-9]+)</string>
+			<key>captures</key>
 			<dict>
 				<key>1</key> <dict> <key>name</key> <string>variable.parameter.c</string> </dict>
-				<key>2</key> <dict> <key>name</key> <string>invalid.illegal.unexpected-closing-paren.c</string> </dict>
 			</dict>
-			<key>patterns</key>
-			<array>
-				<dict> <key>include</key> <string>#ppline-macro-param-lex</string> </dict>
-				<dict>
-					<key>match</key>
-					<string>(?x)
-						(?: (?! (?:\s|/\*.*?\*/)*+
-							    (?: (%[0-9]+) | \.\.\. | \) | (?&gt;(?:\\\s*)?$\n?) | /[/*] ) )
-						    .)*
-					</string>
-					<key>name</key> <string>invalid.illegal.unexpected-character.c</string>
-				</dict>
-			</array>
-		</dict>
-		<key>ppline-macro-param-vararg</key>
-		<dict>
-			<key>begin</key>
-			<string>(\.\.\.)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key> <dict> <key>name</key> <string>punctuation.definition.ellipsis.c</string> </dict>
-			</dict>
-			<key>end</key> <string>(\))|(?=(?&lt;=^|[^\\])\s*(\n))</string>
-			<key>patterns</key>
-			<array>
-				<dict> <key>include</key> <string>#ppline-macro-param-lex</string> </dict>
-				<dict>
-					<key>match</key>
-					<string>(?x)
-						(?: (?! (?:\s|/\*.*?\*/)*+
-							    (?: \) | (?&gt;(?:\\\s*)?$\n?) | /[/*] ) )
-						    .)*
-					</string>
-					<key>name</key> <string>invalid.illegal.unexpected-character.c</string>
-				</dict>
-			</array>
-		</dict>
-		<key>ppline-macro-param-lex</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict> <key>match</key> <string>\s*</string> </dict>
-				<dict>
-					<key>begin</key> <string>\s*//</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key> <dict> <key>name</key> <string>punctuation.definition.comment.c</string> </dict>
-					</dict>
-					<key>end</key> <string>(?&lt;=^|[^\\])\s*(?=\n)$</string>
-					<key>name</key> <string>invalid.illegal.unexpected-end-of-line.c</string>
-					<key>patterns</key>
-					<array>
-						<dict> <key>include</key> <string>#lex-continuation</string> </dict>
-					</array>
-				</dict>
-				<dict> <key>include</key> <string>#preprocessor-lex</string> </dict>
-			</array>
-		</dict>
-		<key>ppline-macro-param-lex-invalid</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>(?x)
-						(?: (?! (?:\s|/\*.*?\*/)*+
-						        (?: \) | (?&gt;(?:\\\s*)?$\n?) | /[/*] ) )
-						    .) # no star unlike its friends in arg/vararg
-					</string>
-					<key>name</key> <string>invalid.illegal.unexpected-character.c</string>
-				</dict>
-			</array>
 		</dict>
 
 		<key>ppline-undef</key>
