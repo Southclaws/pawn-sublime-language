@@ -1,0 +1,13 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "PlayYoutubeVideoForPlayer", "contents": "PlayYoutubeVideoForPlayer(${1:playerid}, ${2:url[]}, ${3:start=0})"},
+		{"trigger": "StopYoutubeVideoForPlayer", "contents": "StopYoutubeVideoForPlayer()"},
+		{"trigger": "IsYouTubeVideoPlaying", "contents": "IsYouTubeVideoPlaying(${1:playerid})"},
+		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:playerid})"},
+		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:playerid})"},
+		{"trigger": "GetVideoLink", "contents": "GetVideoLink(${1:playerid})"},
+		{"trigger": "OnYoutubeVideoFinished", "contents": "OnYoutubeVideoFinished(${1:playerid})"}
+	]
+}
