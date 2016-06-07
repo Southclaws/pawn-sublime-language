@@ -2,8 +2,8 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{"trigger": "PlayYoutubeVideoForPlayer", "contents": "PlayYoutubeVideoForPlayer(${1:playerid}, ${2:url[]}, ${3:start=0})"},
-		{"trigger": "StopYoutubeVideoForPlayer", "contents": "StopYoutubeVideoForPlayer()"},
+		{"trigger": "PlayYoutubeVideoForPlayer", "contents": "PlayYoutubeVideoForPlayer(${1:playerid}, ${2:url[]}, ${3:start=0}, ${4:Float:distance = 50.0}, ${5:bool:usepos = false})"},
+		{"trigger": "StopYoutubeVideoForPlayer", "contents": "StopYoutubeVideoForPlayer(${1:playerid})"},
 		{"trigger": "IsYouTubeVideoPlaying", "contents": "IsYouTubeVideoPlaying(${1:playerid})"},
 		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:playerid})"},
 		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:playerid})"},
