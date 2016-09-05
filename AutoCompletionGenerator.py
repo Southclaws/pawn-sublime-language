@@ -43,9 +43,17 @@ def gen_func(funcname, params):
 
 def gen_const(string):
 	"""generates a sublime-completions line based on a single string"""
-
-	out = '\t\t"%s",\n'%string
-
+	args = string
+	if "%" in string:
+		i = 0
+		for x in xrange(-1,9):
+		    if string.find("%%%d"%(x)) != -1:
+		    	i += 1
+		    	args = args.replace("%%%d"%(x), "${%d:%d}"%(i,x))
+		out = '\t\t{"trigger": "%s", "contents": "%s'%(string, args)
+		out += '"},\n'
+	else:
+		out = '\t\t"%s",\n'%string
 	return out
 
 
