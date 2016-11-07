@@ -15,6 +15,7 @@ import string
 
 debug = False
 
+
 def db(*args):
 	if not debug:
 		return
@@ -28,10 +29,10 @@ def db(*args):
 def gen_func(funcname, params):
 	"""generates a sublime-completions line based on a function"""
 
-	out = '\t\t{"trigger": "%s", "contents": "%s('%(funcname, funcname)
+	out = '\t\t{"trigger": "%s", "contents": "%s(' % (funcname, funcname)
 
 	for i, param in enumerate(params):
-		out += '${%d:%s}'%(i + 1, param.replace('\\', '\\\\').replace('"', '\\\"'))
+		out += '${%d:%s}' % (i + 1, param.replace('\\', '\\\\').replace('"', '\\\"'))
 
 		if(i != len(params) - 1):
 			out += ', '
@@ -46,24 +47,29 @@ def gen_const(string):
 	args = string
 	if "%" in string:
 		i = 0
-		for x in xrange(-1,9):
-		    if string.find("%%%d"%(x)) != -1:
-		    	i += 1
-		    	args = args.replace("%%%d"%(x), "${%d:%d}"%(i,x))
-		out = '\t\t{"trigger": "%s", "contents": "%s'%(string, args)
+		for x in range(-1, 9):
+			if string.find("%%%d" % (x)) != -1:
+				i += 1
+				args = args.replace("%%%d" % (x), "${%d:%d}" % (i, x))
+		out = '\t\t{"trigger": "%s", "contents": "%s' % (string, args)
 		out += '"},\n'
 	else:
-		out = '\t\t"%s",\n'%string
+		out = '\t\t"%s",\n' % string
 	return out
 
 
 def is_char_valid_symbol_char(character):
-
-	return character in string.ascii_lowercase + string.ascii_uppercase + string.digits + '_'
+	return (
+		character in string.ascii_lowercase +
+		string.ascii_uppercase + string.digits + '_'
+	)
 
 
 def scan_contents(contents):
-	"""scans through a string character by character extracting defines and functions"""
+	"""
+	scans through a string character by character extracting defines and
+	functions
+	"""
 
 	output_contents = """
 {
@@ -72,29 +78,29 @@ def scan_contents(contents):
 	[
 """
 
-	skip_until_newline				= False
-	skip_until_whitespace_start		= False
-	skip_until_whitespace_end		= False
-	skip_until_invalid_symbol_char	= False
-	skip_until_valid_symbol_char	= False
-	in_comment_block				= False
-	in_directive					= False
-	in_directive_define				= False
-	pos_directive_define			= -1
-	in_function						= False
-	in_function_declare				= False
-	in_function_params				= False
-	pos_function_name				= -1
-	pos_function_param				= -1
-	data_function_name				= ""
-	data_function_params			= []
-	count_function_params			= 0
-	in_function_param_subscript		= False
-	in_function_param				= False
-	no_function_params				= False
-	in_enumerator					= False
-	in_enumerator_block				= False
-	pos_enumerator_item				= -1
+	skip_until_newline = False
+	skip_until_whitespace_start = False
+	skip_until_whitespace_end = False
+	skip_until_invalid_symbol_char = False
+	skip_until_valid_symbol_char = False
+	in_comment_block = False
+	in_directive = False
+	in_directive_define = False
+	pos_directive_define = -1
+	in_function = False
+	in_function_declare = False
+	in_function_params = False
+	pos_function_name = -1
+	pos_function_param = -1
+	data_function_name = ""
+	data_function_params = []
+	# count_function_params = 0
+	in_function_param_subscript = False
+	in_function_param = False
+	no_function_params = False
+	# in_enumerator = False
+	# in_enumerator_block = False
+	# pos_enumerator_item = -1
 
 	for i, c in enumerate(contents):
 
@@ -154,7 +160,6 @@ def scan_contents(contents):
 				in_comment_block = True
 				continue
 
-
 		if contents.startswith('//', i):
 			skip_until_newline = True
 			continue
@@ -193,7 +198,7 @@ def scan_contents(contents):
 					final = contents[pos_directive_define:i]
 
 					output_contents += gen_const(final)
-					print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'"%final)
+					print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'" % final)
 
 					in_directive = False
 					in_directive_define = False
@@ -217,7 +222,7 @@ def scan_contents(contents):
 			# Function name
 
 			if not in_function_declare:
-				db("not in function declare (in storage modifier) skipping until whitespace finishes")
+				db("not in function declare (in storage modifier) skipping")
 				skip_until_whitespace_end = True
 				in_function_declare = True
 				continue
@@ -252,7 +257,7 @@ def scan_contents(contents):
 					if c == '(':
 						data_function_name = contents[pos_function_name:i]
 						pos_function_name = -1
-						db("function name '%s'"%data_function_name)
+						db("function name '%s'" % data_function_name)
 
 					else:
 						db("not a function, skip")
@@ -261,7 +266,6 @@ def scan_contents(contents):
 						in_function_declare = False
 						skip_until_newline = True
 						continue
-
 
 			# Function parameters
 
@@ -276,7 +280,7 @@ def scan_contents(contents):
 					else:
 						continue
 					db("invalid symbol character, skipping until valid")
-				
+
 				else:
 					in_function_params = True
 
@@ -320,18 +324,23 @@ def scan_contents(contents):
 
 				if c == ',' or c == ')':
 					data_function_params.append(contents[pos_function_param:i])
-					db("parameter found: '%s'"%contents[pos_function_param:i])
+					db("parameter found: '%s'" % contents[pos_function_param:i])
 					pos_function_param = -1
 					in_function_param = False
 
 			if c == ')':
 				output_contents += gen_func(data_function_name, data_function_params)
 				in_function = False
-				print("[EXTRACTED] FUNCTION '%s' PARAMS: %s"%(data_function_name, data_function_params))
+				print("[EXTRACTED] FUNCTION '%s' PARAMS: %s" % (
+					data_function_name, data_function_params))
 				continue
 
 		else:
-			if contents.startswith('native', i) or contents.startswith('forward', i) or contents.startswith('stock', i):
+			if (
+				contents.startswith('native', i) or
+				contents.startswith('forward', i)  # or
+				# contents.startswith('stock', i)
+			):
 				skip_until_whitespace_start = True
 				in_function = True
 				in_function_params = False
@@ -351,7 +360,10 @@ def scan_contents(contents):
 
 
 def process_file(filename):
-	"""processes a file for outputting extracted contents to a sublime-completions file"""
+	"""
+	processes a file for outputting extracted contents to a sublime-completions
+	file.
+	"""
 
 	print(filename)
 
@@ -368,15 +380,12 @@ def process_file(filename):
 
 def main():
 
-#	if len(sys.argv) == 1:
-#		print("Please enter a filename or a directory as an argument.")
-#		return
-#
-#	print(sys.argv[1])
-#
-#	path = sys.argv[1]
+	if len(sys.argv) > 1:
+		path = sys.argv[1]
+	else:
+		path = "E:\\Games\\Projects\\SA-MP\\pawno\\include\\autocomplete\\"
 
-	path = "E:\\Games\\Projects\\SA-MP\\pawno\\include\\autocomplete\\"
+	print(path)
 
 	if os.path.isfile(path):
 		process_file(path)
@@ -386,7 +395,7 @@ def main():
 			print("Directory not found.")
 			return
 
-		for f in glob.glob(path + '*.inc'):
+		for f in glob.glob(path + '*.pwn'):
 			process_file(f)
 
 
