@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"ITM_ARR_MAX_ARRAY_DATA",
+		"ITM_ARR_REPLACE_ITEM_EXTRADATA",
+		"ITM_ARR_ARRAY_SIZE_PROTECT",
+		{"trigger": "SetItemExtraData(%0,%1)", "contents": "SetItemExtraData(${1:0},${2:1})"},
+		{"trigger": "GetItemExtraData(%0)", "contents": "GetItemExtraData(${1:0})"},
+		{"trigger": "SetItemTypeMaxArrayData", "contents": "SetItemTypeMaxArrayData(${1:ItemType:itemtype}, ${2:size}, ${3:bool:protect = false})"},
+		{"trigger": "GetItemTypeArrayDataSize", "contents": "GetItemTypeArrayDataSize(${1:ItemType:itemtype})"},
+		{"trigger": "SetItemArrayData", "contents": "SetItemArrayData(${1:itemid}, ${2:data[]}, ${3:length}, ${4:call = 1}, ${5:bool:force = false})"},
+		{"trigger": "GetItemArrayData", "contents": "GetItemArrayData(${1:itemid}, ${2:data[]})"},
+		{"trigger": "SetItemArrayDataAtCell", "contents": "SetItemArrayDataAtCell(${1:itemid}, ${2:data}, ${3:cell}, ${4:autoadjustsize = 0}, ${5:call = 1}, ${6:bool:force = false})"},
+		{"trigger": "GetItemArrayDataAtCell", "contents": "GetItemArrayDataAtCell(${1:itemid}, ${2:cell})"},
+		{"trigger": "SetItemArrayDataSize", "contents": "SetItemArrayDataSize(${1:itemid}, ${2:size}, ${3:bool:force = false})"},
+		{"trigger": "GetItemArrayDataSize", "contents": "GetItemArrayDataSize(${1:itemid})"},
+		{"trigger": "GetItemTypeArrayDataMax", "contents": "GetItemTypeArrayDataMax(${1:ItemType:itemtype})"},
+		{"trigger": "AppendItemArray", "contents": "AppendItemArray(${1:itemid}, ${2:data[]}, ${3:length})"},
+		{"trigger": "AppendItemArrayCell", "contents": "AppendItemArrayCell(${1:itemid}, ${2:data})"},
+		{"trigger": "SetItemArrayDataLength", "contents": "SetItemArrayDataLength(${1:itemid}, ${2:length}, ${3:bool:force = false})"},
+		{"trigger": "RemoveItemArrayData", "contents": "RemoveItemArrayData(${1:itemid})"},
+		{"trigger": "SetItemNoResetArrayData", "contents": "SetItemNoResetArrayData(${1:itemid}, ${2:bool:toggle})"},
+		{"trigger": "OnItemArrayDataChanged", "contents": "OnItemArrayDataChanged(${1:itemid})"}
+	]
+}

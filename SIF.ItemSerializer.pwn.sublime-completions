@@ -1,0 +1,23 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"ITEM_SERIALIZER_MAX_ITEMS",
+		"ITEM_SERIALIZER_RAW_SIZE",
+		{"trigger": "SerialiseItems", "contents": "SerialiseItems(${1:items[]}, ${2:maxitems = sizeof(items})"},
+		{"trigger": "DeserialiseItems", "contents": "DeserialiseItems(${1:list[]}, ${2:length = sizeof(list})"},
+		{"trigger": "ClearSerializer", "contents": "ClearSerializer()"},
+		{"trigger": "GetSerialisedSize", "contents": "GetSerialisedSize()"},
+		{"trigger": "GetStoredItemCount", "contents": "GetStoredItemCount()"},
+		{"trigger": "GetStoredItemType", "contents": "GetStoredItemType(${1:index})"},
+		{"trigger": "GetStoredItemPos", "contents": "GetStoredItemPos(${1:index}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetStoredItemRot", "contents": "GetStoredItemRot(${1:index}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "GetStoredItemWorld", "contents": "GetStoredItemWorld(${1:index})"},
+		{"trigger": "GetStoredItemInterior", "contents": "GetStoredItemInterior(${1:index})"},
+		{"trigger": "GetStoredItemArrayData", "contents": "GetStoredItemArrayData(${1:index}, ${2:output[]})"},
+		{"trigger": "GetStoredItemArrayDataSize", "contents": "GetStoredItemArrayDataSize(${1:index})"},
+		{"trigger": "CreateItemFromStored", "contents": "CreateItemFromStored(${1:index})"},
+		{"trigger": "SetItemArrayDataFromStored", "contents": "SetItemArrayDataFromStored(${1:itemid}, ${2:index})"}
+	]
+}

@@ -1,0 +1,27 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"ITM_LST_MAX_LIST",
+		"ITM_LST_MAX_LIST_ITEMS",
+		"ITM_LST_MAX_LIST_SIZE",
+		{"trigger": "ITM_LST_OF_ITEMS(%0)", "contents": "ITM_LST_OF_ITEMS(${1:0})"},
+		{"trigger": "CreateItemList", "contents": "CreateItemList(${1:items[]}, ${2:maxitems = sizeof(items})"},
+		{"trigger": "ExtractItemList", "contents": "ExtractItemList(${1:list[]}, ${2:length = sizeof(list})"},
+		{"trigger": "DestroyItemList", "contents": "DestroyItemList(${1:itemlist})"},
+		{"trigger": "GetItemList", "contents": "GetItemList(${1:itemlist}, ${2:output[]})"},
+		{"trigger": "GetItemListSize", "contents": "GetItemListSize(${1:itemlist})"},
+		{"trigger": "GetItemListElement", "contents": "GetItemListElement(${1:itemlist}, ${2:index})"},
+		{"trigger": "GetItemListItemCount", "contents": "GetItemListItemCount(${1:itemlist})"},
+		{"trigger": "GetItemListItem", "contents": "GetItemListItem(${1:itemlist}, ${2:index})"},
+		{"trigger": "GetItemListItemPos", "contents": "GetItemListItemPos(${1:itemlist}, ${2:index}, ${3:Float:x}, ${4:Float:y}, ${5:Float:z})"},
+		{"trigger": "GetItemListItemRot", "contents": "GetItemListItemRot(${1:itemlist}, ${2:index}, ${3:Float:x}, ${4:Float:y}, ${5:Float:z})"},
+		{"trigger": "GetItemListItemWorld", "contents": "GetItemListItemWorld(${1:itemlist}, ${2:index})"},
+		{"trigger": "GetItemListItemInterior", "contents": "GetItemListItemInterior(${1:itemlist}, ${2:index})"},
+		{"trigger": "GetItemListItemArrayData", "contents": "GetItemListItemArrayData(${1:itemlist}, ${2:index}, ${3:output[]})"},
+		{"trigger": "GetItemListItemArrayDataSize", "contents": "GetItemListItemArrayDataSize(${1:itemlist}, ${2:index})"},
+		{"trigger": "CreateItemFromListItem", "contents": "CreateItemFromListItem(${1:itemlist}, ${2:index})"},
+		{"trigger": "SetItemArrayDataFromListItem", "contents": "SetItemArrayDataFromListItem(${1:itemid}, ${2:itemlist}, ${3:index})"}
+	]
+}

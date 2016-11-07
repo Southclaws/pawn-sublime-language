@@ -1,0 +1,26 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"CFT_MAX_CRAFT_SET",
+		"CFT_MAX_CRAFT_SET_ITEMS",
+		{"trigger": "DefineItemCraftSet", "contents": "DefineItemCraftSet(${1:ItemType:result}, ${2:...})"},
+		{"trigger": "GetCraftSetUniqueID", "contents": "GetCraftSetUniqueID(${1:craftset}, ${2:id[]}, ${3:maxlength = sizeof(id})"},
+		{"trigger": "IsValidCraftSet", "contents": "IsValidCraftSet(${1:craftset})"},
+		{"trigger": "GetCraftSetIngredients", "contents": "GetCraftSetIngredients(${1:craftset}, ${2:output[CFT_MAX_CRAFT_SET_ITEMS][e_craft_item_data]})"},
+		{"trigger": "GetCraftSetItemType", "contents": "GetCraftSetItemType(${1:craftset}, ${2:index})"},
+		{"trigger": "GetCraftSetItemKeep", "contents": "GetCraftSetItemKeep(${1:craftset}, ${2:index})"},
+		{"trigger": "GetCraftSetItemCount", "contents": "GetCraftSetItemCount(${1:craftset})"},
+		{"trigger": "GetCraftSetResult", "contents": "GetCraftSetResult(${1:craftset})"},
+		{"trigger": "GetCraftSetTotal", "contents": "GetCraftSetTotal()"},
+		{"trigger": "GetPlayerSelectedCraftItems", "contents": "GetPlayerSelectedCraftItems(${1:playerid}, ${2:output[CFT_MAX_CRAFT_SET_ITEMS][e_selected_item_data]})"},
+		{"trigger": "GetPlayerSelectedCraftItemType", "contents": "GetPlayerSelectedCraftItemType(${1:playerid}, ${2:index})"},
+		{"trigger": "GetPlayerSelectedCraftItemID", "contents": "GetPlayerSelectedCraftItemID(${1:playerid}, ${2:index})"},
+		{"trigger": "GetPlayerSelectedCraftItemCount", "contents": "GetPlayerSelectedCraftItemCount(${1:playerid})"},
+		{"trigger": "GetPlayerCraftEnvironment", "contents": "GetPlayerCraftEnvironment(${1:playerid})"},
+		{"trigger": "ItemTypeResultForCraftingSet", "contents": "ItemTypeResultForCraftingSet(${1:ItemType:itemtype})"},
+		{"trigger": "OnPlayerCraft", "contents": "OnPlayerCraft(${1:playerid}, ${2:craftset})"},
+		{"trigger": "OnPlayerCrafted", "contents": "OnPlayerCrafted(${1:playerid}, ${2:craftset}, ${3:result})"}
+	]
+}

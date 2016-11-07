@@ -1,0 +1,13 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"MBT_MAX",
+		"MBT_MAX_BUTTONS",
+		"INVALID_MBT_ID",
+		{"trigger": "CreateMultiButtonTrigger", "contents": "CreateMultiButtonTrigger(${1:type}, ${2:timewindow}, ${3:list[]}, ${4:count = sizeof(list})"},
+		{"trigger": "DestroyMultiButtonTrigger", "contents": "DestroyMultiButtonTrigger(${1:triggerid})"},
+		{"trigger": "OnMultiButtonTrigger", "contents": "OnMultiButtonTrigger(${1:triggerid}, ${2:success})"}
+	]
+}

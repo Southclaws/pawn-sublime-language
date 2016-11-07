@@ -1,0 +1,10 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"GEID_LEN",
+		{"trigger": "mkgeid", "contents": "mkgeid(${1:id}, ${2:result[]})"},
+		{"trigger": "b64_encode", "contents": "b64_encode(${1:data[]}, ${2:data_len}, ${3:result[]}, ${4:result_len})"}
+	]
+}

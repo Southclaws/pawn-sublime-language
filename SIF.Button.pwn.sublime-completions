@@ -1,3 +1,4 @@
+
 {
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
@@ -9,14 +10,14 @@
 		"BTN_STREAMER_AREA_IDENTIFIER",
 		"BTN_TELEPORT_FREEZE_TIME",
 		"INVALID_BUTTON_ID",
-		{"trigger": "CreateButton", "contents": "CreateButton(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:text[]}, ${5:world = 0}, ${6:interior = 0}, ${7:Float:areasize = 1.0}, ${8:label = 0}, ${9:labeltext[] = \"\"}, ${10:labelcolour = 0xFFFF00FF}, ${11:Float:streamdist = BTN_DEFAULT_STREAMDIST})"},
+		{"trigger": "CreateButton", "contents": "CreateButton(${1:Float:x}, ${2:Float:y}, ${3:Float:z}, ${4:text[]}, ${5:world = 0}, ${6:interior = 0}, ${7:Float:areasize = 1.0}, ${8:label = 0}, ${9:labeltext[] = \"\"}, ${10:labelcolour = 0xFFFF00FF}, ${11:Float:streamdist = BTN_DEFAULT_STREAMDIST}, ${12:testlos = true})"},
 		{"trigger": "DestroyButton", "contents": "DestroyButton(${1:buttonid})"},
 		{"trigger": "LinkTP", "contents": "LinkTP(${1:buttonid1}, ${2:buttonid2})"},
 		{"trigger": "UnLinkTP", "contents": "UnLinkTP(${1:buttonid1}, ${2:buttonid2})"},
 		{"trigger": "IsValidButton", "contents": "IsValidButton(${1:buttonid})"},
 		{"trigger": "GetButtonArea", "contents": "GetButtonArea(${1:buttonid})"},
 		{"trigger": "SetButtonArea", "contents": "SetButtonArea(${1:buttonid}, ${2:areaid})"},
-		{"trigger": "SetButtonLabel", "contents": "SetButtonLabel(${1:buttonid}, ${2:text[]}, ${3:colour = 0xFFFF00FF}, ${4:Float:range = BTN_DEFAULT_STREAMDIST})"},
+		{"trigger": "SetButtonLabel", "contents": "SetButtonLabel(${1:buttonid}, ${2:text[]}, ${3:colour = 0xFFFF00FF}, ${4:Float:range = BTN_DEFAULT_STREAMDIST}, ${5:testlos = true})"},
 		{"trigger": "DestroyButtonLabel", "contents": "DestroyButtonLabel(${1:buttonid})"},
 		{"trigger": "GetButtonPos", "contents": "GetButtonPos(${1:buttonid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
 		{"trigger": "SetButtonPos", "contents": "SetButtonPos(${1:buttonid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},

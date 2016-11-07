@@ -1,0 +1,18 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "DisplayContainerInventory", "contents": "DisplayContainerInventory(${1:playerid}, ${2:containerid})"},
+		{"trigger": "ClosePlayerContainer", "contents": "ClosePlayerContainer(${1:playerid}, ${2:call = false})"},
+		{"trigger": "GetPlayerCurrentContainer", "contents": "GetPlayerCurrentContainer(${1:playerid})"},
+		{"trigger": "GetPlayerContainerSlot", "contents": "GetPlayerContainerSlot(${1:playerid})"},
+		{"trigger": "AddContainerOption", "contents": "AddContainerOption(${1:playerid}, ${2:option[]})"},
+		{"trigger": "OnPlayerOpenContainer", "contents": "OnPlayerOpenContainer(${1:playerid}, ${2:containerid})"},
+		{"trigger": "OnPlayerCloseContainer", "contents": "OnPlayerCloseContainer(${1:playerid}, ${2:containerid})"},
+		{"trigger": "OnPlayerViewContainerOpt", "contents": "OnPlayerViewContainerOpt(${1:playerid}, ${2:containerid})"},
+		{"trigger": "OnPlayerSelectContainerOpt", "contents": "OnPlayerSelectContainerOpt(${1:playerid}, ${2:containerid}, ${3:option})"},
+		{"trigger": "OnMoveItemToContainer", "contents": "OnMoveItemToContainer(${1:playerid}, ${2:itemid}, ${3:containerid})"},
+		{"trigger": "OnMoveItemToInventory", "contents": "OnMoveItemToInventory(${1:playerid}, ${2:itemid}, ${3:containerid})"}
+	]
+}

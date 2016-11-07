@@ -1,0 +1,9 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "OnPlayerAddToInventory", "contents": "OnPlayerAddToInventory(${1:playerid}, ${2:itemid})"},
+		{"trigger": "OnPlayerAddedToInventory", "contents": "OnPlayerAddedToInventory(${1:playerid}, ${2:itemid})"}
+	]
+}

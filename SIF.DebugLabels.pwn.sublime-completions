@@ -1,0 +1,25 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"MAX_DEBUG_LABELS",
+		"MAX_DEBUG_LABEL_TYPES",
+		"MAX_DEBUG_LABEL_TYPE_NAME",
+		"MAX_DEBUG_LABEL_STRING_LEN",
+		"INVALID_DEBUG_LABEL_TYPE",
+		"INVALID_DEBUG_LABEL_ID",
+		{"trigger": "DefineDebugLabelType", "contents": "DefineDebugLabelType(${1:name[]}, ${2:colour = 0xFFFFFFFF})"},
+		{"trigger": "CreateDebugLabel", "contents": "CreateDebugLabel(${1:type}, ${2:entityid}, ${3:Float:x}, ${4:Float:y}, ${5:Float:z}, ${6:string[] = \"\"}, ${7:worldid = -1}, ${8:interiorid = -1})"},
+		{"trigger": "DestroyDebugLabel", "contents": "DestroyDebugLabel(${1:labelid})"},
+		{"trigger": "ShowDebugLabelsForPlayer", "contents": "ShowDebugLabelsForPlayer(${1:playerid}, ${2:type})"},
+		{"trigger": "ShowAllDebugLabelsForPlayer", "contents": "ShowAllDebugLabelsForPlayer(${1:playerid})"},
+		{"trigger": "HideDebugLabelsForPlayer", "contents": "HideDebugLabelsForPlayer(${1:playerid}, ${2:type})"},
+		{"trigger": "HideAllDebugLabelsForPlayer", "contents": "HideAllDebugLabelsForPlayer(${1:playerid})"},
+		{"trigger": "UpdateDebugLabelString", "contents": "UpdateDebugLabelString(${1:labelid}, ${2:string[]})"},
+		{"trigger": "IsValidDebugLabel", "contents": "IsValidDebugLabel(${1:labelid})"},
+		{"trigger": "SetDebugLabelPos", "contents": "SetDebugLabelPos(${1:labelid}, ${2:Float:x}, ${3:Float:y}, ${4:Float:z})"},
+		{"trigger": "IsPlayerToggledDebugLabels", "contents": "IsPlayerToggledDebugLabels(${1:playerid}, ${2:type})"},
+		{"trigger": "IsPlayerToggledAllDebugLabels", "contents": "IsPlayerToggledAllDebugLabels(${1:playerid})"}
+	]
+}
