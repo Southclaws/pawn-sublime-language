@@ -1,0 +1,11 @@
+<snippet>
+	<description>y_timers: task</description>
+	<content><![CDATA[
+task ${1:name}[${2:delay}]() 
+{
+	${3}
+}
+]]></content>
+	<tabTrigger>task</tabTrigger>
+	<scope>source.pawn</scope>
+</snippet>

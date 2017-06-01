@@ -1,0 +1,11 @@
+<snippet>
+	<description>y_timers: ptask</description>
+	<content><![CDATA[
+ptask ${1:name}[${2:delay}](playerid) 
+{
+	${3}
+}
+]]></content>
+	<tabTrigger>ptask</tabTrigger>
+	<scope>source.pawn</scope>
+</snippet>

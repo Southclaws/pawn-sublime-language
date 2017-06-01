@@ -1,0 +1,12 @@
+<snippet>
+	<description>y_command</description>
+	<content><![CDATA[
+YCMD:${1:command_name}(playerid, params[], help) 
+{
+	${4}
+	return 1;
+}
+]]></content>
+	<tabTrigger>YCMD</tabTrigger>
+	<scope>source.pawn</scope>
+</snippet>

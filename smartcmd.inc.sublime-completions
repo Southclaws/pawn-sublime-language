@@ -1,0 +1,33 @@
+
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		"CMD_DEFAULT_FLAG",
+		"CMD_SUCCESS",
+		"CMD_FAILURE",
+		"MAX_COMMANDS",
+		{"trigger": "DoesCommandExist", "contents": "DoesCommandExist(${1:cmdid})"},
+		{"trigger": "GetCommandID", "contents": "GetCommandID(${1:const cmd[]})"},
+		{"trigger": "GetCommandName", "contents": "GetCommandName(${1:cmdid}, ${2:cmd[]}, ${3:len = sizeof(cmd})"},
+		{"trigger": "GetAlternateCommands", "contents": "GetAlternateCommands(${1:cmdid}, ${2:cmdidlist[]})"},
+		{"trigger": "IsCommandAlternate", "contents": "IsCommandAlternate(${1:cmdid})"},
+		{"trigger": "GetCommandFunctionID", "contents": "GetCommandFunctionID(${1:cmdid})"},
+		{"trigger": "GetPointingCommandFunctionID", "contents": "GetPointingCommandFunctionID(${1:cmdid})"},
+		{"trigger": "GetPointingCommandID", "contents": "GetPointingCommandID(${1:cmdid})"},
+		{"trigger": "GetCommandFunctionName", "contents": "GetCommandFunctionName(${1:cmdid}, ${2:dest[]}, ${3:len = sizeof(dest})"},
+		{"trigger": "GetEnabledCommandCount", "contents": "GetEnabledCommandCount()"},
+		{"trigger": "GetDisabledCommandCount", "contents": "GetDisabledCommandCount()"},
+		{"trigger": "GetTotalCommandCount", "contents": "GetTotalCommandCount()"},
+		{"trigger": "EnableCommand", "contents": "EnableCommand(${1:cmdid})"},
+		{"trigger": "DisableCommand", "contents": "DisableCommand(${1:cmdid})"},
+		{"trigger": "IsCommandEnabled", "contents": "IsCommandEnabled(${1:cmdid})"},
+		{"trigger": "SetCommandFlags", "contents": "SetCommandFlags(${1:cmdid}, ${2:flags})"},
+		{"trigger": "GetCommandFlags", "contents": "GetCommandFlags(${1:cmdid})"},
+		{"trigger": "SetPointingCommandIDToSelf", "contents": "SetPointingCommandIDToSelf(${1:cmdid})"},
+		{"trigger": "ReassignCommandFunction", "contents": "ReassignCommandFunction(${1:cmdid}, ${2:const funcname[]}, ${3:bool:updateCID = false}, ${4:bool:updatePFT = false})"},
+		{"trigger": "EmulateCommandEx", "contents": "EmulateCommandEx(${1:cmdid}, ${2:playerid}, ${3:params[]})"},
+		{"trigger": "EmulateCommand", "contents": "EmulateCommand(${1:playerid}, ${2:cmdtext[]})"},
+		{"trigger": "ExecuteCommand", "contents": "ExecuteCommand(${1:const cmd[]}, ${2:command_mode}, ${3:playerid}, ${4:success}, ${5:params[]=\"\"})"}
+	]
+}
