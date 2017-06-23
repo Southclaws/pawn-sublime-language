@@ -2,12 +2,13 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{"trigger": "PlayYoutubeVideoForPlayer", "contents": "PlayYoutubeVideoForPlayer(${1:playerid}, ${2:url[]}, ${3:start=0}, ${4:Float:distance = 50.0}, ${5:bool:usepos = false})"},
-		{"trigger": "StopYoutubeVideoForPlayer", "contents": "StopYoutubeVideoForPlayer(${1:playerid})"},
-		{"trigger": "IsYouTubeVideoPlaying", "contents": "IsYouTubeVideoPlaying(${1:playerid})"},
-		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:playerid})"},
-		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:playerid})"},
-		{"trigger": "GetVideoLink", "contents": "GetVideoLink(${1:playerid})"},
-		{"trigger": "OnYoutubeVideoFinished", "contents": "OnYoutubeVideoFinished(${1:playerid})"}
+		{"trigger": "PlayYoutubeVideoFor", "contents": "PlayYoutubeVideoFor(${1:url[]}, ${2:playfor = INVALID_PLAYER_ID}, ${3:bool:usepos = false}, ${4:Float:distance = 50.0})"},
+		{"trigger": "StopYoutubeVideo", "contents": "StopYoutubeVideo(${1:youtubeid})"},
+		{"trigger": "IsYouTubeVideoPlaying", "contents": "IsYouTubeVideoPlaying(${1:youtubeid})"},
+		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:youtubeid})"},
+		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:youtubeid})"},
+		{"trigger": "GetVideoLink", "contents": "GetVideoLink(${1:youtubeid})"},
+		{"trigger": "OnYoutubeVideoFinished", "contents": "OnYoutubeVideoFinished(${1:youtubeid})"},
+		{"trigger": "IsValidYoutubeURL", "contents": "IsValidYoutubeURL(${1:string[]})"}
 	]
 }
