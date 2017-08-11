@@ -8,6 +8,9 @@
 		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:youtubeid})"},
 		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:youtubeid})"},
 		{"trigger": "GetVideoLink", "contents": "GetVideoLink(${1:youtubeid})"},
+		{"trigger": "GetVideoStreamLink", "contents": "GetVideoStreamLink(${1:youtubeid})"},
+		{"trigger": "GetVideoTarget", "contents": "GetVideoTarget(${1:youtubeid})"},
+		{"trigger": "OnYoutubeDownloadError", "contents": "OnYoutubeDownloadError(${1:youtubeid}, ${2:message[]})"},
 		{"trigger": "OnYoutubeVideoFinished", "contents": "OnYoutubeVideoFinished(${1:youtubeid})"},
 		{"trigger": "IsValidYoutubeURL", "contents": "IsValidYoutubeURL(${1:string[]})"}
 	]
