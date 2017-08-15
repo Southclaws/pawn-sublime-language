@@ -2,16 +2,29 @@
 	"scope": "source.pawn - variable.other.pawn",
 	"completions":
 	[
-		{"trigger": "PlayYoutubeVideoFor", "contents": "PlayYoutubeVideoFor(${1:url[]}, ${2:playfor = INVALID_PLAYER_ID}, ${3:bool:usepos = false}, ${4:Float:distance = 50.0})"},
+		{"trigger": "PlayYoutubeVideoFor", "contents": "PlayYoutubeVideoFor(${1:url[]}, ${2:playfor = INVALID_PLAYER_ID}, ${3:playlist = INVALID_PLAYLIST_ID}, ${4:bool:usepos = false}, ${5:Float:distance = 50.0})"},
 		{"trigger": "StopYoutubeVideo", "contents": "StopYoutubeVideo(${1:youtubeid})"},
+
 		{"trigger": "IsYouTubeVideoPlaying", "contents": "IsYouTubeVideoPlaying(${1:youtubeid})"},
+		{"trigger": "IsValidYoutubeURL", "contents": "IsValidYoutubeURL(${1:string[]})"},
+		
 		{"trigger": "GetVideoDuration", "contents": "GetVideoDuration(${1:youtubeid})"},
 		{"trigger": "GetVideoTitle", "contents": "GetVideoTitle(${1:youtubeid})"},
 		{"trigger": "GetVideoLink", "contents": "GetVideoLink(${1:youtubeid})"},
 		{"trigger": "GetVideoStreamLink", "contents": "GetVideoStreamLink(${1:youtubeid})"},
 		{"trigger": "GetVideoTarget", "contents": "GetVideoTarget(${1:youtubeid})"},
+
+		{"trigger": "CreatePlaylist", "contents": "CreatePlaylist(${1:name[]})"},
+		{"trigger": "RemovePlaylist", "contents": "RemovePlaylist(${1:playlistid})"},
+		{"trigger": "GetPlaylistName", "contents": "GetPlaylistName(${1:playlistid})"},
+		{"trigger": "GetPlaylistSongs", "contents": "GetPlaylistSongs(${1:playlistid})"},
+		{"trigger": "GetPlaylistSongsCount", "contents": "GetPlaylistSongsCount(${1:playlistid})"},
+		{"trigger": "GetPlaylistFromVideo", "contents": "GetPlaylistFromVideo(${1:youtubeid})"},
+
 		{"trigger": "OnYoutubeDownloadError", "contents": "OnYoutubeDownloadError(${1:youtubeid}, ${2:message[]})"},
 		{"trigger": "OnYoutubeVideoFinished", "contents": "OnYoutubeVideoFinished(${1:youtubeid})"},
-		{"trigger": "IsValidYoutubeURL", "contents": "IsValidYoutubeURL(${1:string[]})"}
+		{"trigger": "OnYoutubeVideoStart", "contents": "OnYoutubeVideoStart(${1:youtubeid})"},
+		{"trigger": "OnPlaylistAddEntry", "contents": "OnPlaylistAddEntry(${1:playlistid}, ${2:youtubeid})"},
+		{"trigger": "OnPlaylistFinished", "contents": "OnPlaylistFinished(${1:playlistid})"}
 	]
 }
