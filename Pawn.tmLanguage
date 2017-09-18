@@ -333,7 +333,7 @@
 				<key>2</key> <dict> <key>name</key> <string>entity.name.function.preprocessor.c</string> </dict>
 				<key>3</key> <dict> <key>name</key> <string>meta.preprocessor.macro.parameters.c</string> </dict>
 			</dict>
-			<key>end</key> <string>(?&lt;=\))|(?&lt;=^|[^\\])\s*(\n)</string>
+			<key>end</key> <string>(?&lt;=\))|(?&lt;=^|[^\\])\s*(\n)?</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key> <dict> <key>name</key> <string>invalid.illegal.unexpected-end-of-line.c</string> </dict>
