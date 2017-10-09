@@ -1,0 +1,10 @@
+<snippet>
+	<description>#if defined … #undef … #endif</description>
+    <content><![CDATA[
+        #if defined ${1/([A-Za-z0-9_]+).*/$1/}
+            #undef ${1:SYMBOL}
+        #endif
+    ]]></content>
+    <tabTrigger>undef</tabTrigger>
+    <scope>source.pawn</scope>
+</snippet>
