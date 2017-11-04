@@ -314,6 +314,7 @@
 		{"trigger": "OnIncomingConnection", "contents": "OnIncomingConnection(${1:playerid}, ${2:ip_address[]}, ${3:port})"},
 		{"trigger": "OnTrailerUpdate", "contents": "OnTrailerUpdate(${1:playerid}, ${2:vehicleid})"},
 		{"trigger": "OnVehicleSirenStateChange", "contents": "OnVehicleSirenStateChange(${1:playerid}, ${2:vehicleid}, ${3:newstate})"},
+		{"trigger": "OnPlayerFinishedDownloading", "contents": "OnPlayerFinishedDownloading(${1:playerid}, ${2:virtualworld})"},
 		"CLICK_SOURCE_SCOREBOARD",
 		{"trigger": "OnPlayerClickPlayer", "contents": "OnPlayerClickPlayer(${1:playerid}, ${2:clickedplayerid}, ${3:source})"},
 		"EDIT_RESPONSE_CANCEL",
