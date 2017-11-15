@@ -1,0 +1,14 @@
+{
+	"scope": "source.pawn - variable.other.pawn",
+	"completions":
+	[
+		{"trigger": "mysql_tquery_inline", "contents": "mysql_tquery_inline(${1:MySQL:connHandle}, ${2:const query[]}, ${3:callback:Callback}, ${4:const format[]}, ${5:{Float, _}:...})"},
+		{"trigger": "mysql_pquery_inline", "contents": "mysql_pquery_inline(${1:MySQL:connHandle}, ${2:const query[]}, ${3:callback:Callback}, ${4:const format[]}, ${5:{Float, _}:...})"},
+		{"trigger": "orm_select_inline", "contents": "orm_select_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:format[]}, ${4:{Float, _}:...})" },
+		{"trigger": "orm_update_inline", "contents": "orm_update_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:const format[]}, ${4:Float, _}:...})"},
+		{"trigger": "orm_insert_inline", "contents": "orm_insert_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:const format[]}, ${4:{Float, _}:...})"},
+		{"trigger": "orm_delete_inline", "contents": "orm_delete_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:const format[]}, ${4:Float, _}:...})"},
+		{"trigger": "orm_load_inline", "contents": "orm_load_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:const format[]}, ${4:Float, _}:...})"},
+		{"trigger": "orm_save_inline", "contents": "orm_save_inline(${1:ORM:id}, ${2:callback:Callback}, ${3:const format[]}, ${4:Float, _}:...})"}
+	]
+}
