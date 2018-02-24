@@ -303,7 +303,7 @@
 		{"trigger": "OnPlayerExitedMenu", "contents": "OnPlayerExitedMenu(${1:playerid})"},
 		{"trigger": "OnPlayerInteriorChange", "contents": "OnPlayerInteriorChange(${1:playerid}, ${2:newinteriorid}, ${3:oldinteriorid})"},
 		{"trigger": "OnPlayerKeyStateChange", "contents": "OnPlayerKeyStateChange(${1:playerid}, ${2:newkeys}, ${3:oldkeys})"},
-		{"trigger": "OnRconLoginAttempt", "contents": "OnRconLoginAttempt(${1:ip[]}, ${2:password[]}, ${3:success })"},
+		{"trigger": "OnRconLoginAttempt", "contents": "OnRconLoginAttempt(${1:ip[]}, ${2:password[]}, ${3:success})"},
 		{"trigger": "OnPlayerUpdate", "contents": "OnPlayerUpdate(${1:playerid})"},
 		{"trigger": "OnPlayerStreamIn", "contents": "OnPlayerStreamIn(${1:playerid}, ${2:forplayerid})"},
 		{"trigger": "OnPlayerStreamOut", "contents": "OnPlayerStreamOut(${1:playerid}, ${2:forplayerid})"},
