@@ -99,7 +99,7 @@
 		{"trigger": "SetPlayerFightingStyle", "contents": "SetPlayerFightingStyle(${1:playerid}, ${2:style})"},
 		{"trigger": "GetPlayerFightingStyle", "contents": "GetPlayerFightingStyle(${1:playerid})"},
 		{"trigger": "SetPlayerVelocity", "contents": "SetPlayerVelocity(${1:playerid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z})"},
-		{"trigger": "GetPlayerVelocity", "contents": "GetPlayerVelocity(${1:playerid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z })"},
+		{"trigger": "GetPlayerVelocity", "contents": "GetPlayerVelocity(${1:playerid}, ${2:Float:X}, ${3:Float:Y}, ${4:Float:Z})"},
 		{"trigger": "PlayCrimeReportForPlayer", "contents": "PlayCrimeReportForPlayer(${1:playerid}, ${2:suspectid}, ${3:crime})"},
 		{"trigger": "PlayAudioStreamForPlayer", "contents": "PlayAudioStreamForPlayer(${1:playerid}, ${2:url[]}, ${3:Float:posX = 0.0}, ${4:Float:posY = 0.0}, ${5:Float:posZ = 0.0}, ${6:Float:distance = 50.0}, ${7:usepos = 0})"},
 		{"trigger": "StopAudioStreamForPlayer", "contents": "StopAudioStreamForPlayer(${1:playerid})"},
