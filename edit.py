@@ -10,6 +10,7 @@ try:
 except AttributeError:
     sublime.edit_storage = {}
 
+
 def run_callback(func, *args, **kwargs):
     spec = inspect.getfullargspec(func)
     if spec.args or spec.varargs:
